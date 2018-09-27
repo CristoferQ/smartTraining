@@ -1,0 +1,12 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,US,Usuario,Registrar nuevo usuario,El sistema deberá permitir el registro de un nuevo usuario en el almacenamiento persistente
+2,,,Editar usuario existente,El sistema deberá permitir la edición de un usuario existente
+3,,,Eliminar usuario existente,El sistema deberá permitir la eliminación de un usuario existente
+4,,,Visualizar usuario,El sistema deberá permitir listar a todos los usuarios y un detalle de los mismos
+5,,,Crear áreas de trabajo,El sistema deberá permitir crear áreas de trabajo para un nuevo usuario
+6,,,Eliminar áreas de trabajo,El sistema deberá permitir eliminar áreas de trabajo para un usuario existente
+7,,,Registrar roles,El sistema deberá permitir el registro de nuevos roles en el almacenamiento persistente
+8,,,Editar roles existente,El sistema deberá permitir la edición de un rol existente
+9,,,Eliminar rol existente,El sistema deberá permitir la eliminación de un rol existente
+10,,,Visualizar roles,El sistema deberá permitir listar los roles existentes en el almacenamiento persistente

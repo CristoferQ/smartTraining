@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.11)  22 AUG 2018 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.11)  27 SEP 2018 00:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -343,8 +343,11 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count123
 \LT@p@ftn=\toks28
 )
-LaTeX Info: Redefining \. on input line 29.
-LaTeX Info: Redefining \% on input line 29.
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+LaTeX Info: Redefining \. on input line 31.
+LaTeX Info: Redefining \% on input line 31.
 \realleftmargin=\dimen130
 \realrightmargin=\dimen131
 \realtopmargin=\dimen132
@@ -725,10 +728,6 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
-Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
-)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
@@ -850,16 +849,57 @@ Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 2.
  []
 
-) (./cap/cap_03.tex [12
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12
 
 ]
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+ [13]
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+ [14]
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+ [15]
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+ [16]
+Overfull \hbox (10.94615pt too wide) in alignment at lines 76--79
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.94615pt too wide) in alignment at lines 79--81
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.94615pt too wide) in alignment at lines 81--93
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+[17]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [18]
+LaTeX Info: Redefining \. on input line 93.
+LaTeX Info: Redefining \% on input line 93.
+ [19]) (./cap/cap_03.tex
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [20]
 Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 3.
  []
 
-) (./cap/cap_04.tex [13
+) (./cap/cap_04.tex [21
 
 ]
 Cap\'{\i }tulo 4.
@@ -868,9 +908,9 @@ Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 4.
  []
 
-) (./cap/bib.tex [14
+) (./cap/bib.tex [22
 
-]) [15] (./smartTraining.aux
+]) [23] (./smartTraining.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 LaTeX Info: Redefining \. on input line 12.
@@ -881,13 +921,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15386 strings out of 493029
- 279317 string characters out of 6136234
- 358619 words of memory out of 5000000
- 18692 multiletter control sequences out of 15000+600000
- 10842 words of font info for 38 fonts, out of 8000000 for 9000
+ 15394 strings out of 493029
+ 279422 string characters out of 6136234
+ 374993 words of memory out of 5000000
+ 18700 multiletter control sequences out of 15000+600000
+ 11201 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,7n,77p,10376b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,10n,84p,10376b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
@@ -896,10 +936,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on smartTraining.pdf (17 pages, 1229937 bytes).
+Output written on smartTraining.pdf (25 pages, 1244023 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

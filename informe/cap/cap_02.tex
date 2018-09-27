@@ -4,6 +4,93 @@ La etapa de análisis del proyecto, contempla la evaluación y determinación de la
 
 \section{Funciones del Sistema}
 
+Las funciones del sistema, hacen referencia a las acciones que se pueden desarrollar en software, las cuales representan flujos completos de trabajo en cuanto a nivel de interacción y coexisten al menos un actor y un concepto.
+
+A continuación se listan un conjunto de funciones, las cuales han sido divididas con respecto a la finalidad que éstas cumplen en el software, cada función posee su número de registro, además de presentar su categoría y su sigla asociada, esto es con el objetivo de poder asociar funciones a módulos y agruparas según el objetivo o la relación que éstas tengan.
+
+Un resumen de estas funciones se expone en la Tabla \ref{analisisTab1}.
+
+
+% Please add the following required packages to your document preamble:
+\begin{table}[!h]
+	\centering
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{|l|l|l|l|}
+			\hline
+			\multicolumn{4}{|c|}{\textit{\textbf{Descripción de categoría de funciones}}}                                                                                                                                             \\ \hline
+			\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \multicolumn{1}{c|}{\textit{\textbf{ID}}} & \multicolumn{1}{c|}{\textit{\textbf{Nombre Categoría}}} & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                     \\ \hline
+			1                                          & US                                        & Usuario                                                 & Funciones relacionadas a las acciones a realizar por parte del usuario \\ \hline
+			2                                          & AC                                        & Acceso                                                  & Funciones relacionadas al sistema de acceso a la aplicación            \\ \hline
+			3                                          & ES                                        & Estadísticas                                            & Funciones relacionadas a las estadísticas de uso de la herramienta     \\ \hline
+			4                                          & AE                                        & Análisis estadístico                                    & Funciones relacionadas al análisis estadístico de los datos de entrada \\ \hline
+			5                                          & ESD                                       & Evaluación set de datos                                 & Funciones relacionadas al chequeo y validación de los datos de entrada \\ \hline
+			6                                          & MANS                                      & Modelos de Aprendizaje No Supervisado                   & Funciones relacionadas al uso de clustering                            \\ \hline
+			7                                          & MAS                                       & Modelos de Aprendizaje Supervisado                      & Funciones relacionadas al entrenamiento de modelos                     \\ \hline
+			8                                          & AF                                        & Análisis de Características                             & Funciones relacionadas al análisis de características                  \\ \hline
+			9                                          & SC                                        & Sistema de Colas                                        & Funciones relacionadas al proceso de jobs en sistemas de colas         \\ \hline
+			10                                         & SN                                        & Sistema de notificaciones                               & Funciones relacionadas a las notificaciones vía correo electrónico     \\ \hline
+			11                                         & AP                                        & Almacenamiento Persistente                              & Funciones relacionadas al sistema de almacenamiento persistente        \\ \hline
+		\end{tabular}%
+	}
+	\caption{Resumen categorías de funciones.}
+	\label{analisisTab1}
+\end{table}
+
+A continuación, se lista y describen cada funciones, según la categoría a la que pertenecen.
+
+\newpage
+\subsection{Funciones asociadas al Usuario}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|c|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                           \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \textit{\textbf{Categoría}}        & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                        & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                           \\ \hline
+	1                                          & \multirow{10}{*}{\textbf{US}}  & \multirow{10}{*}{\textbf{Usuario}} & \begin{tabular}[c]{@{}l@{}}Registrar nuevo \\ \\ usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ el registro de un nuevo \\ usuario en el almace-\\ namiento persistente\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Editar usuario\\ existente\end{tabular}    & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la edición de un usuario\\ existente\end{tabular}                                    \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Eliminar usuario\\ existente\end{tabular}  & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la eliminación de un\\ usuario existente\end{tabular}                                \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                    & Visualizar usuario                                                    & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ listar a todos los usuarios\\ y un detalle de los mismos\end{tabular}                \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Crear áreas de\\ trabajo\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ crear áreas de trabajo\\ para un nuevo usuario\end{tabular}                          \\ \cline{1-1} \cline{4-5} 
+	6                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Eliminar áreas de\\ trabajo\end{tabular}   & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ eliminar áreas de trabajo\\ para un usuario existente\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	7                                          &                                &                                    & Registrar roles                                                       & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ el registro de nuevos roles\\ en el almacenamiento\\ persistente\end{tabular}        \\ \cline{1-1} \cline{4-5} 
+	8                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Editar roles\\ existente\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la edición de un rol existente\end{tabular}                                          \\ \cline{1-1} \cline{4-5} 
+	9                                          &                                &                                    & \begin{tabular}[c]{@{}l@{}}Eliminar rol\\ existente\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la eliminación de un rol\\ existente\end{tabular}                                    \\ \cline{1-1} \cline{4-5} 
+	10                                         &                                &                                    & Visualizar roles                                                      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ listar los roles existentes\\ en el almacenamiento\\ persistente\end{tabular}        \\ \hline
+	\caption{Funciones relacionadas a las acciones de usuario}
+	\label{analisisTab2}\\
+\end{longtable}
+
+\subsection{Funciones asociadas a las acciones en el Acceso al Sistema}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|c|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                          \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \textit{\textbf{Categoría}}      & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                           & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                         \\ \hline
+	1                                          & \multirow{7}{*}{\textbf{AC}}   & \multirow{7}{*}{\textbf{Acceso}} & \begin{tabular}[c]{@{}l@{}}Iniciar sesión\\ de usuario\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ iniciar sesión en el sistema\end{tabular}                                          \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                  & \begin{tabular}[c]{@{}l@{}}Autenticar\\ usuario\end{tabular}             & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ comprobar las credenciales\\ del usuario para el inicio de\\ sesión\end{tabular}   \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                  & Cerrar sesión                                                            & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ cerrar la sesión actual del\\ usuario\end{tabular}                                 \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                  & \begin{tabular}[c]{@{}l@{}}Recuperar cuenta\\ de usuario\end{tabular}    & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ recuperar la cuenta de usuario\\ en caso de olvidar la contraseña\end{tabular}     \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                &                                  & \begin{tabular}[c]{@{}l@{}}Reestablecer\\ cuenta de usuario\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ reestablecer la cuenta de\\ usuario si se solicita una\\ recuperación\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	6                                          &                                &                                  & \begin{tabular}[c]{@{}l@{}}Modificar datos\\ de acceso\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ modificar los datos de\\ acceso asociados al inicio\\ de sesión\end{tabular}       \\ \cline{1-1} \cline{4-5} 
+	7                                          &                                &                                  & \begin{tabular}[c]{@{}l@{}}Notificación de\\ cambios\end{tabular}        & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ notificar el cambio de datos\\ en las credenciales generado\end{tabular}           \\ \hline
+	\caption{Funciones asociadas a la sección de Acceso al sistema}
+	\label{analisisTab3}\\
+\end{longtable}
 \section{Atributos del Sistema}
 
 \section{Actores y Usuarios}

@@ -1,0 +1,13 @@
+Descripción de categoría de funciones,,,
+#,ID,Nombre Categoría,Descripción
+1,US,Usuario,Funciones relacionadas a las acciones a realizar por parte del usuario
+2,AC,Acceso,Funciones relacionadas al sistema de acceso a la aplicación
+3,ES,Estadísticas,Funciones relacionadas a las estadísticas de uso de la herramienta
+4,AE,Análisis estadístico,Funciones relacionadas al análisis estadístico de los datos de entrada
+5,ESD,Evaluación set de datos,Funciones relacionadas al chequeo y validación de los datos de entrada
+6,MANS,Modelos de Aprendizaje No Supervisado,Funciones relacionadas al uso de clustering
+7,MAS,Modelos de Aprendizaje Supervisado,Funciones relacionadas al entrenamiento de modelos
+8,AF,Análisis de Características,Funciones relacionadas al análisis de características
+9,SC,Sistema de Colas,Funciones relacionadas al proceso de jobs en sistemas de colas
+10,SN,Sistema de notificaciones,Funciones relacionadas a las notificaciones vía correo electrónico
+11,AP,Almacenamiento Persistente,Funciones relacionadas al sistema de almacenamiento persistente

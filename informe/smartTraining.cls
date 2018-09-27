@@ -24,7 +24,9 @@
 \usepackage{svg}
 \usepackage{amsmath}
 \usepackage{longtable}
-
+\usepackage{lscape}
+\usepackage{graphicx}
+\usepackage{multirow}
 
 \selectlanguage{spanish}
 \bibliographystyle{plain}
