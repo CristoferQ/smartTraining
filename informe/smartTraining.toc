@@ -1,0 +1,38 @@
+\select@language {spanish}
+\select@language {spanish}
+\contentsline {chapter}{Tabla de Contenidos}{\es@scroman {}}
+\contentsline {chapter}{\'Indice de Figuras}{\es@scroman {ii}}
+\contentsline {chapter}{\'Indice de Tablas}{\es@scroman {iii}}
+\contentsline {chapter}{Resumen}{\es@scroman {iv}}
+\contentsline {chapter}{\numberline {1}INTRODUCCI\'ON}{5}
+\contentsline {section}{\numberline {1.1}Data Mining}{5}
+\contentsline {section}{\numberline {1.2}Problem\'atica}{6}
+\contentsline {subsection}{\numberline {1.2.1}Estado del Arte}{7}
+\contentsline {section}{\numberline {1.3}Smart Training}{7}
+\contentsline {subsection}{\numberline {1.3.1}M\'odulo de Procesamiento de Datos}{8}
+\contentsline {subsection}{\numberline {1.3.2}M\'odulo de An\'alisis Estad\IeC {\'\i }stico}{8}
+\contentsline {subsection}{\numberline {1.3.3}M\'odulo de An\'alisis de Features}{8}
+\contentsline {subsection}{\numberline {1.3.4}M\'odulo de Clustering}{8}
+\contentsline {subsection}{\numberline {1.3.5}M\'odulo de Entrenamiento de Modelos}{9}
+\contentsline {subsection}{\numberline {1.3.6}Diagrama soluci\'on}{9}
+\contentsline {section}{\numberline {1.4}Objetivos y Alcances}{9}
+\contentsline {section}{\numberline {1.5}Metodolog\IeC {\'\i }a de Desarrollo de Software}{10}
+\contentsline {chapter}{\numberline {2}An\'alisis}{12}
+\contentsline {section}{\numberline {2.1}Funciones del Sistema}{12}
+\contentsline {section}{\numberline {2.2}Atributos del Sistema}{12}
+\contentsline {section}{\numberline {2.3}Actores y Usuarios}{12}
+\contentsline {section}{\numberline {2.4}Casos de Uso}{12}
+\contentsline {subsection}{\numberline {2.4.1}Diagramas de casos de uso}{12}
+\contentsline {section}{\numberline {2.5}Diagramas de secuencia o colaboraci\'on}{12}
+\contentsline {section}{\numberline {2.6}Conceptos}{12}
+\contentsline {subsection}{\numberline {2.6.1}Modelo Conceptual}{12}
+\contentsline {section}{\numberline {2.7}Entidades}{12}
+\contentsline {subsection}{\numberline {2.7.1}Modelo de Entidades}{12}
+\contentsline {chapter}{\numberline {3}Dise\~no}{13}
+\contentsline {section}{\numberline {3.1}Arquitectura de Software}{13}
+\contentsline {section}{\numberline {3.2}Diagramas de Interacci\'on}{13}
+\contentsline {section}{\numberline {3.3}Diagrama de Clases}{13}
+\contentsline {section}{\numberline {3.4}Diagramas de Estado}{13}
+\contentsline {chapter}{\numberline {4}Planificaci\'on}{14}
+\contentsline {section}{\numberline {4.1}Etapas del Proyecto}{14}
+\contentsline {chapter}{Bibliograf\'{\i }a}{15}

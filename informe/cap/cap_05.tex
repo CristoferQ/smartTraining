@@ -1,0 +1,367 @@
+\chapter{Resultados Parciales}
+
+Durante el presente cap\'itulo, se exponen los resultados parciales obtenidos a la hora de desarrollar cada una de las etapas expuestas en la metodolog\'ia.
+Es importante mencionar adem\'as, que los resultados expuestos ser\'an divididos en base al set de datos que lo conlleva. No obstante, se har\'a una breve explicaci\'on del set de datos, los atributos y sus caracter\'isticas, partiendo inicialmente con el set de datos completo, luego aplicando la divisi'on por sector de interacci\'on prote\'ina-prote\'ina, luego las divisiones aleatorias, las divisiones asociadas a los clustering, tanto inducidos o divisiones puras, as\'i como tambi\'en la data generada por la b\'usqueda de comunidades mediante sectores de interacci\'on fuertemente conectados a trav\'es de energ\'ias electrost\'aticas o distancias de \'atomos.
+
+\section{Set de datos sin divisiones}
+
+El set de datos sin divisiones es aquel que contempla el 100\% de los datos, al cual, se desarrollaron el procesamiento de los datos, el an\'alisis estad\'istico, el entrenamiento de modelos y la selecci\'on de estos, en base a la informaci\'on de la metodolog\'ia expuesta.
+
+La data de inter\'es contemplaba un total de 256 ejemplos y 15 atributos adicionales a la clasificaci\'on que estos poseen, la cual corresponde a \textbf{Cl\'inicamente Relevante} con un \textbf{52.7\%} y \textbf{No Cl\'inicamente Relevante} \textbf{47.3\%}. Dentro de los atributos se encontraban valores discretos y continuos, los cuales fueron procesados como se explic\'o en la secci\'on \ref{M1}. Los atributos contemplaban informaci\'on filogen\'etica y estructural, asociada tanto a la mutaci\'on como a la data original.
+
+\subsection{An\'alisis Estad\'istico}
+
+El an\'alisis estad\'istico se realiz\'o contemplando box plots, matrices de correlaci\'on, histogramas, etc, adem\'as de resumen de estad\'isticos para cada set de datos, gr\'aficos de barras, etc. Los cuales se exponen a continuaci\'on\footnote{Los restantes gr\'aficos y resultados se encuentran disponibles en el material suplementario adicionado a este trabajo.}.
+
+Al visualizar algunas de las distribuciones de atributos discretos se observa, por ejemplo en la Figura \ref{res1} los diversos valores observados en el atributo SStructural, donde se expone que el 33\% de los ejemplos presenta valor \textbf{E}, 30\% \textbf{L} y 20\% \textbf{A}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.3]{imagenes/results/fullDataSet/r1.png}
+	\caption{Distribuci\'on del Atributo SStructural}
+	\label{res1}
+\end{figure}
+
+Se hicieron histogramas para evaluar posibles distribuciones en los atributos con valores continuos, a modo de ejemplo, se expone el histograma para el atributo \textbf{yDDG}, el cual se observa en la Figura \ref{res2}. La distribuci\'on expone un comportamiento 
+con tendencia a normal. No obstante, los valores se centran entre -0.5 y 0.5, esto es debido a que la data se normaliz\'o previo a desarrollar el histograma, con el fin de poder generar visualizaciones escalables de los datos.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.3]{imagenes/results/fullDataSet/r3.png}
+	\caption{Histograma para el atributo yDDG.}
+	\label{res2}
+\end{figure}
+
+Por otro lado, se generaron box plot, para evaluar las dispersiones de los set de datos, dichas dispersiones, tambi\'en fueron consideradas con la normalizaci\'on de los datos, el cual se observa en la Figura \ref{res3}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.3]{imagenes/results/fullDataSet/r4.png}
+	\caption{Box Plot para el set de datos.}
+	\label{res3}
+\end{figure}
+
+Es importante mencionar, que el box plot, consider\'o s\'olo aquellos atributos que presentaban una distribuci\'on de datos continua. En la Figura \ref{res3} se aprecian gran cantidad de dispersiones en todos los atributos, adem\'as de un n\'umero significativo de puntos outliers en la muestra. Esto denota la gran dispersi\'on que presentan los datos que se trabajaron.
+
+Se evalu\'o la correlaci\'on existente entre los atributos del set de datos y los valores de ejemplos que estos pose\'ian, con el fin de entender relaciones entre las caracter\'isticas y determinar si era factible generar reducci\'on de dimensionalidad evaluando coeficientes de correlaci\'on. La matriz de respuesta es la que se observa el la Figura \ref{res4}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.2]{imagenes/results/fullDataSet/r5.png}
+	\caption{Matriz de Correlaci\'on para el set de datos.}
+	\label{res4}
+\end{figure}
+
+
+Principalmente se observa en la Figura \ref{res4}, que la clasificaci\'on de los ejemplos, no presentan ninguna relaci\'on con atributos en particular, es decir, la relaci\'on cl\'inica no es influenciada por ning\'un atributo. Por otro lado, existen atributos cuyos coeficientes de correlaci\'on es cercano a 1, tales como \textit{SaccW} y \textit{ShbondsW} los cuales se encuentran directamente correlacionados, mientras que \textit{SaccM} y \textit{Sstruct} presentan correlaci\'on inversa.
+
+\subsection{Entrenamiento de Clasificadores}
+
+El entrenamiento de clasificadores fue mediante una fase exploratoria, la cual consisti\'o en la aplicaci\'on de diferentes algoritmos de clasificaci\'on, tales como: Naive Bayes, Random Forest, SVM, KNN, \'Arboles de Decisi\'on, Redes Neuronales, etc.  Adem\'as de  una variaci\'on de sus par\'ametros, tal como fue explicado en la secci\'on \ref{met3L}. En total fueron \textbf{1578} ejecuciones para esta etapa. Resultados los cuales se sometieron a un proceso de selecci\'on.
+
+La selecci\'on se hizo en consideraci\'on de los valores de tasas de verdaderos positivos, falsos negativos, precisi\'on y eficiencia global. Con los resultados de la fase exploratoria, se desarroll\'o una distribuci\'on de medidas de desempe\~no para cada m\'etrica en consideraci\'on, los cuales fueron gr\'aficamente expuestos en histogramas. A modo de ejemplo, se expone en la Figura \ref{res5} el histograma para las tasas de verdaderos positivos obtenidas en la fase exploratoria.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r6.png}
+	\caption{Histograma para distribuci\'on de Tasa de Verdaderos Positivos en Fase Exploratoria.}
+	\label{res5}
+\end{figure}
+
+Se destaca que todo proceso de entrenamiento fue validado por medio de validaci\'on cruzada con un valor de \textit{K} = 10, con el fin de evitar problemas de sobre ajustes y seleccionar modelos generalizados.
+
+Para la selecci\'on de modelos, se evaluaron puntos en la distribuci\'on de medidas de desempe\~no, cuyos valores representaran puntos at\'ipicos u outliers dentro de la muestra, consider\'andose como criterio de selecci\'on, modelos cuya medida de desempe\~no fuese mayor o igual a tres desviaciones est\'andar del promedioo. Dado lo anterior, por cada m\'etrica se seleccionaron un conjunto de modelos que cumplieron con el criterio implantado.
+
+\subsection{Selecci\'on de Modelos}
+
+Los modelos seleccionados y sus par\'ametros se exponen en las siguientes tablas \ref{full1}, \ref{full2}, res\'umes por cada medida de desempe\~no. 
+
+
+\begin{center}
+	
+	\begin{longtable}{|l|l|l|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Algoritmos seleccionados Seg\'un Tasa de Verdaderos Positivos}}                                                                                                                               \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Algoritmo}} & \multicolumn{1}{c|}{\textbf{Descripci\'on}}                                                                                               & \multicolumn{1}{c|}{\textbf{Valor}} \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: logistic, solver: sgd, \\ learning\_rate: invscaling, capas: 15-10-5\end{tabular} & 121                                 \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: tanh, solver: sgd, \\ learning\_rate: invscaling, capas: 15-5-15\end{tabular}  & 107                                 \\ \hline
+		
+		\caption{Modelos seleccionados seg\'un Tasa de verdaderos positivos.}
+		\label{full1}
+			
+	\end{longtable}
+
+\end{center}
+
+\begin{center}
+	\begin{longtable}{|l|l|l|}
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Algoritmos seleccionados seg\'un valor de accuracy}}                                                                                                                                          \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Algoritmo}} & \multicolumn{1}{c|}{\textbf{Descripci\'on}}                                                                                            & \multicolumn{1}{c|}{\textbf{Accuracy}} \\ \hline
+		50                                       & GradientBoostingClassifier                                                                                                           & 0.605874643875                         \\ \hline
+		poly                                     & nuSVC                                                                                                                                & 0.585435897436                         \\ \hline
+		entropy                                  & RandomForest, n\_estimators: 150                                                                                                     & 0.585851851852                         \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: tanh, solver: lbfgs, \\ learning\_rate: adaptive, capas: 15-10-10\end{tabular} & 0.593435897436                         \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: relu, solver: lbfgs, \\ learning\_rate: adaptive, capas: 5-5-10\end{tabular}   & 0.594336182336                         \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: relu, solver: lbfgs, \\ learning\_rate: adaptive, capas: 5-10-10\end{tabular}  & 0.58558974359                          \\ \hline
+		MLP                                      & \begin{tabular}[c]{@{}l@{}}MLPClassifier, activation: relu, solver: lbfgs, \\ learning\_rate: constant, capas: 10-10-10\end{tabular} & 0.585293447293                         \\ \hline
+		\caption{Modelos seleccionados seg\'un Valor de Accuracy.}
+		\label{full2}
+	\end{longtable}
+\end{center}
+
+Al considerar la medida de Precisi\'on, s\'olo el algoritmo Bernoulli, de Naive Bayes cumple con el criterio de selecci\'on, mientras que para la tasa de Verdaderos Positivos, Multi Layer Perceptron, del conjunto de algoritmos de Redes Neuronales, es el \'unico que cumple el criterio. No obstante, se adapta para diferentes tasas de aprendizaje y cantidades de capas.
+
+Para todo modelo de clasificaci\'on seleccionado se aplic\'o un conjunto de procesos que permitieron obtener matrices de confusi\'on, curvas de aprendizaje, \'areas Roc, etc, los cuales, a modo de ilustraci\'on, se exponen a continuaci\'on.
+
+La matriz de confusi\'on para el modelo con algoritmo de clasificaci\'on GradientBoostingClassifier es como se expone en la Figura \ref{res6}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r7.png}
+	\caption{Matriz de Confusi\'on para modelo de Clasificaci\'on con GradientBoostingClassifier.}
+	\label{res6}
+\end{figure}
+
+En la Figura \ref{res6}, se aprecia que la tasa de verdaderos positivos asociados a los elementos clasificados con relevancia cl\'inica es de un \textbf{65}\%, mientras que la tasa de verdaderos negativos posee un valor de \textbf{52}\%, los cuales en particular, son valores que no indican una certeza significativa con respecto a un clasificador de la envergadura que se espera.
+
+Por otro lado, se expone en la Figura \ref{res7} el proceso de evaluaci\'on de generalizaci\'on del modelo mediante validaci\'on cruzada, generando la curva ROC del proceso, en donde en promedio, el \'area bajo la curva, es de un \textbf{0.58}, lo cual tienen relaci\'on con los valores de las tasas de verdaderos positivos y negativos, siendo un valor bajo, indicando un modelo azaroso a la hora de clasificar nuevas mutaciones.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.25]{imagenes/results/fullDataSet/r9.png}
+	\caption{Curva ROC con evaluaci\'on mediante Validaci\'on Cruzada.}
+	\label{res7}
+\end{figure}
+
+\newpage
+
+Otra de las gr\'aficas de inter\'es a la hora de validar los procesos de generalizaci\'on de los modelos son las curvas de aprendizaje de \'este y c\'omo se comportan los valores de entrenamiento con respecto al proceso de validaci\'on. La curva de aprendizaje para el modelo con GradientBoostingClassifier como algoritmo de clasificaci\'on es como se expone en la Figura \ref{res8}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.45]{imagenes/results/fullDataSet/r8.png}
+	\caption{Curva de Aprendizaje para modelo de Clasificaci\'on con GradientBoostingClassifier.}
+	\label{res8}
+\end{figure}
+
+ Adicional a la curva de aprendizaje, todo proceso se eval\'ua mediante curvas de validaci\'on del algoritmo, en la cual se var\'ia alg\'un par\'ametro de distribuci\'on continua y determinar c\'omo afecta a las m\'etricas obtenidas por el clasificador. En este caso de ejemplo, para el modelo de clasificaci\'on con algoritmo GradientBoostingClassifier, se expone su curva de evaluaci\'on con variaci\'on del par\'ametro de cantidad de iteraciones o repeticiones para el ensamble del modelo, lo cual se expone en la Figura \ref{res9}.
+ 
+ \begin{figure}[!h]
+ 	\centering
+ 	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r11.png}
+ 	\caption{Curva de Aprendizaje para modelo de Clasificaci\'on con GradientBoostingClassifier.}
+ 	\label{res9}
+ \end{figure}
+ 
+Tal como se observa en la Figura \ref{res9}, el proceso de validaci\'on y el de entrenamiento debiesen tener valores similares. No obstante, dicha caracter\'istcia no se aprecia en este modelo, adem\'as debido a las variaciones de los par\'ametros, estos debiesen variar en los resultados que exponen con el fin de denotar que el valor del par\'ametro resultado es representativo con respecto a las m\'etricas que exponen sus variaciones.
+
+Finalmente, otra de las gr\'aficas que normalmente se realizan, es la curva de precisi\'on v/s recall, para la evaluaci\'on del \'exito de la relevancia del resultado dado a los que los elementos correctamente clasificados. Esta curva, permite evaluar una compensaci\'on entre el valor de la precisi\'on y el recall. Si esta \'area bajo la curva es alta implica que una alta precisi\'on se relaciona con una baja tasa de falsos positivos y un alto recall con una tasa de falsos negativos baja. En la Figura \ref{res10} se observa la curva para el modelo ejemplo expuesto.
+
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r10.png}
+	\caption{Curva de Precisi\'on v/s Recall para modelo de Clasificaci\'on con GradientBoostingClassifier.}
+	\label{res10}
+\end{figure}
+
+El clasificador con algoritmo GradientBoostingClassifier, presenta un \'area bajo la curva de \textbf{0.58} para la curva de precisi\'on v/s recall, lo cual denota pr\'acticamente un modelo azaroso.
+
+\subsection{An\'alisis de Caracter\'isticas}
+
+El an\'alisis de caracter\'isticas se desarroll\'o con el fin de poder evaluar cuales eran aquellas que entregan m\'as importancia a la hora de evaluar el set de datos, es decir, corroborar aquellos atributos que entregan un mayor aporte a la varianza total de la muestra. Este enfoque, se hizo principalmente en base a t\'ecnicas de PCA y considerando elementos de relevancia asociado a las particiones que se generan en base al entrenamiento de modelos mediante algoritmo Random Forest.
+
+\subsubsection{Evaluaci\'on de Caracter\'isticas con Random Forest}
+
+Tal como se expone en la Figura \ref{car1}, existe una relevancia en las caracter\'isticas que influyen en la divisi\'on de elementos y \'arboles que permiten el entrenamiento mediante el algoritmo de Random Forest. 
+
+Atributos como \textit{Result} y \textit{Positionaccept}, son aquellos que entregan una mayor relevancia a la hora de entrenar. No obstante, el tener en consideraci\'on la evaluaci\'on de caracter\'isticas en base a un algoritmo de entrenamiento, denota una forma de visualizaci\'on en base a una deformaci\'on de espacio, la cual no puede realizarse en otros algoritmos debido a la forma en las que trabajan.
+
+\begin{figure}[!h]
+	
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r12.png}
+	\caption{Importancia de caracter\'isticas en entrenamiento Random Forest.}
+	\label{car1}
+\end{figure}
+
+Por otro lado, la evaluaci\'on de caracter\'isticas mediante PCA, implica cu\'antas caracter\'isticas son las que aportan una mayor varianza. No obstante, no se identifican cu\'ales son dichas features. 
+
+Un gr\'afico de aporte a varianza con respecto a n\'umero de componentes, es el que se expone en la Figura \ref{car2}, en ella se destaca que 6 componentes principales entregan un 90\% de aporte a la varianza, mientras que 12 entregan cerca de un 98\%.
+
+\begin{figure}[!h]
+	
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r13.png}
+	\caption{Aporte de varianza en base al n\'umero de componentes.}
+	\label{car2}
+\end{figure}
+
+Uno de los grandes problemas que presenta la t\'ecnica de PCA es el famoso problema del \textit{Scree Plot}, el cual consiste en la b\'usqueda de un punto de quiebre el cual permita hacer una selecci\'on de la cantidad de componentes a considerar versus la p\'erdida de informaci\'on que se genere, esto mediante un an\'alisis estad\'istico, matem\'atico, diferencial, etc. Esto se ve reflejado en diversas \'areas de investigaci\'on, en donde se necesita generar una reducci\'on de la dimensionalidad, pero no se tiene un criterio matem\'atico estad\'istico el cual permita entregar una cantidad definida, si no, que simplemente se basan en un n\'umero determinado por la expert\'is del investigador asociado al problema en s\'i.
+
+\section{Divisiones inducidas por sectores de interacci\'on Prote\'ina-Prote\'ina}
+
+La adici\'on de informaci\'on topol\'ogica, incluy\'o el conocimiento de los sectores de interacci\'on que presenta VHL en interacciones prote\'ina-prote\'ina (PP). Se han reconocido 13 sectores de interacci\'on, cuya distribuci\'on en el set de datos puede apreciarse en la Figura \ref{splitterPP1}, en ella se observan los sectores correspondientes en conjunto con el porcentaje de ejemplos que abarcan en los ejemplos. 
+
+Tal como se observa en la Figura \ref{splitterPP1}, los sectores R, Z y O, son los que presentan una mayor proporci\'on dentro de la muestra, mientras que H, U, N y C, no superan el 5\% del total de la muestra, raz\'on por la cual, es posible que existan discusiones sobre la relevancia de los resultados en dichos grupos.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/splitterPP/r1.png}
+	\caption{Distribuci\'on de ejemplos seg\'un los sectores de interacci\'on PP en VHL.}
+	\label{splitterPP1}
+\end{figure}
+
+Una vez generada las divisiones, se gener\'o el procesamiento estad\'istico de los datos para cada sector de interacci\'on, el cual arroj\'o cambios significativos en cuanto a las dispersiones de los atributos con distribuciones cont\'inuas, lo cual denota una disminuci\'on de la desviaci\'on est\'andar, adem\'as de presentar una menor cantidad de outliers. Es posible observar este fen\'omeno en la totalidad de sectores estudiados. No obstante, a modo de ejemplo, se expone en la Figura \ref{splitterPP2}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.2]{imagenes/results/splitterPP/r2.png}
+	\caption{Box Plot para el sector de interacci\'on A.}
+	\label{splitterPP2}
+\end{figure}
+
+Tal como fue expuesto en la secci\'on \ref{met3L}, cada set de datos asociado a su sector de interacci\'on fue sometido a los procesos de entrenamiento mediante fase exploratoria, la selecci\'on de modelos y la validaci\'on de estos mediante la generaci\'on de curvas de \'area ROC, validaci\'on, aprendizaje, precisi\'on v/s recall y matrices de confusi\'on.\footnote{Cada uno de estos resultados se encuentra disponible en el repositorio del proyecto, organizado seg\'un los sectores de interacci\'on y los entrenamientos.}
+
+Es importante mencionar que la fase de validaci\'on del modelo fue mediante el uso de la t\'ecnia \textit{Leave One Out}, lo cual permite entrenar y testear el modelo \textit{n} veces, siendo \textit{n} el n\'umero de ejemplos existentes en el set de datos.
+
+Un resumen general de los modelos seleccionados por cada sector de interacci\'on en base a las distintas distribuciones de medidas de desempe\~no, es como se expone en la Tabla, en donde se denota la selecci\'on de modelos y los valores de m\'etricas que estos poseen, adem\'as de las desviaciones est\'andar asociados a la distribuci\'on generada por el proceso iterativo de entrenamiento mediante Leave One Out.
+
+\section{Divisiones inducidas por cl\'uster}
+
+T\'ecnicas de clustering fueron aplicadas con el fin de poder inducir divisiones s\'olo con la informaci\'on de los atributos y aplicar criterios de similitud con respecto a diferentes m\'etricas de distancia. Se aplicaron diversos algoritmos de clustering y medidas de distancia, la selecci\'on de las mejores particiones implica el uso de los criterios expuestos en la secci\'on \ref{metL4}. 
+
+Diversas particiones cumplieron los criterios infringidos, cada una de estas divisiones, se someti\'o al proceso de entrenamiento de modelos en fase exploratoria, mediante el uso de las metodolog\'ias expuestas previamente. 
+
+\subsection{Generaci\'on de 2 particiones}
+
+Al inducir dos divisiones se obtiene un comportamiento de medidas de desempe\~no como se expone en la Figura \ref{cluster1}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/cluster/r1.png}
+	\caption{Medidas de Desempe\~no para dos divisiones.}
+	\label{cluster1}
+\end{figure}
+
+En la Figura \ref{cluster1}, se observa que los valores de recall son 1 y los de precisi\'on cercanos a 0.8 en algunos casos, adem\'as de presentar un valor de accuracy en promedio cercano a 0.8 como lo es para el caso de la divisi\'on inducida por distancias euclidianas mediante un linkage completo. Estas particiones se sometieron a los procesos de entrenamiento de modelos mediante validaci\'on cruzada con un valor de \textit{k} = 5, posterior a ello se evaluaron los mejores modelos, obteniendo los r\'esumenes para cada modelo seleccionado seg\'un sus m\'etricas de inter\'es, en cada grupo.
+
+\subsection{Generaci\'on de 3 particiones}
+
+La generaci\'on de 3 particiones implic\'o una variaci\'on en las mejores medidas de desempe\~no obtenidas en los modelos de clasificaci\'on desarrollados, lo cual se aprecia en la Figura \ref{cluster2}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/cluster/r2.png}
+	\caption{Medidas de Desempe\~no para tres divisiones.}
+	\label{cluster2}
+\end{figure}
+
+Las divisiones inducidas por algoritmos aglomerativos, con un linkage completo y considerando distancia euclideana, fueron las que presentaron en su distribuci\'on mejores valores de medidas de desempe\~no, las particiones se sometieron a una fase de exploraci\'on y se seleccionaron los mejores modelos seg\'un metodolog\'ia.
+
+\subsection{Generaci\'on de 4 particiones}
+
+La generaci\'on de 4 particiones implic\'o una variaci\'on en las mejores medidas de desempe\~no obtenidas en los modelos de clasificaci\'on desarrollados, lo cual se aprecia en la Figura \ref{cluster3}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/cluster/r3.png}
+	\caption{Medidas de Desempe\~no para cuatro divisiones.}
+	\label{cluster3}
+\end{figure}
+	
+Se obtuvieron las mejores divisiones inducidas por algoritmos aglomerativos, mientras que el linkage y la m\'etrica de distancia se mantuvo con respecto a las anteriores, \'estas, fueron las que presentaron en su distribuci\'on mejores valores de medidas de desempe\~no, las particiones se sometieron a una fase de exploraci\'on y se seleccionaron los mejores modelos seg\'un metodolog\'ia.
+
+\subsection{Generaci\'on de 5 particiones}
+
+La generaci\'on de 5 particiones implic\'o una variaci\'on en las mejores medidas de desempe\~no obtenidas en los modelos de clasificaci\'on desarrollados, lo cual se aprecia en la Figura \ref{cluster4}. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/cluster/r4.png}
+	\caption{Medidas de Desempe\~no para cinco divisiones.}
+	\label{cluster4}
+\end{figure}
+
+Las mejores divisiones se obtuvieron aplicando algoritmos ward  y manteniendo las m\'etricas de distancia con respecto a las anteriores, \'estas, fueron las que presentaron en su distribuci\'on mejores valores de medidas de desempe\~no, las particiones se sometieron a una fase de exploraci\'on y se seleccionaron los mejores modelos seg\'un metodolog\'ia. Los valores de medidas de desempe\~no fueron menores con respecto a la data expuesta previamente. Sin embargo, se mantiene con respecto a los grupos, lo cual denota una persistencia de la medida en las distintas divisiones y no se ven favorecidas algunas con respecto a otras.
+
+\subsection{Selecci\'on de Particiones}
+
+La cantidad de particiones fue seleccionada en base a los resultados en promedio de los valores de medidas de desempe\~no que presentaba cada grupo en la partici\'on, para ello se consider\'o la precisi\'on, el recall y la accuracy del modelo. El resumen de este proceso, es decir, las mejores medidas de desempe\~no obtenidas para cada divisi\'on, se exponen en la Tabla \ref{tabPart1}.
+
+\begin{center}
+	\begin{longtable}{|l|l|l|l|l|}
+		\hline
+		\multicolumn{5}{|c|}{\textbf{Resumen Promedio medidas de desempe\~no seg\'un particiones}}                                                                                                                                                                                \\ \hline
+		\multicolumn{1}{|c|}{\textbf{Divisiones}} & \multicolumn{1}{c|}{\textbf{Algoritmo}}                                                         & \multicolumn{1}{c|}{\textbf{Accuracy}} & \multicolumn{1}{c|}{\textbf{Precisi\'on}} & \multicolumn{1}{c|}{\textbf{Recall}} \\ \hline
+		2                                         & \begin{tabular}[c]{@{}l@{}}Aglomerativo, Linkage Completo,\\ Distancia euclideana\end{tabular}  & 0.70                                   & 0.81                                    & 0.81                                 \\ \hline
+		3                                         & \begin{tabular}[c]{@{}l@{}}Aglomerativo, Linkage Completo,\\ Distancia Euclideana.\end{tabular} & 0.69                                   & 0.81                                    & 0.72                                 \\ \hline
+		4                                         & \begin{tabular}[c]{@{}l@{}}Aglomerativo, Linkage Completo,\\ Distancia Euclideana.\end{tabular} & 0.67                                   & 0.92                                    & 0.74                                 \\ \hline
+		5                                         & \begin{tabular}[c]{@{}l@{}}Aglomerativo, Linkage Completo,\\ Distancia Euclideana.\end{tabular} & 0.70                                   & 0.75                                    & 0.83                                 \\ \hline
+	\caption{Resumen de medidas de desempe\~no promedios para las particiones generadas.}
+	\label{tabPart1}
+	\end{longtable}
+	
+\end{center}
+
+Tal como se expone en la Tabla \ref{tabPart1}, se observa que en promedio la accuracy es similar en casi todas las particiones. Sin embargo, la precisi\'on y el recall, var\'ian. En base a esto, y debido a que lo que se requiere es altos valores en las tasas de verdaderos positivos y negativos, se toma en consideraci\'on aquellas particiones que en promedio, presenten una alta precisi\'on, raz\'on por la cual se seleccionan 5 particiones.
+
+Otro punto importante a destacar es que las medidas de desempe\~no en las particiones seleccionadas, presentaban menor desviaci\'on est\'andar intra grupos, en todas las m\'etricas evaluadas, lo cual implica que las medidas estar\'an menos dispersas entre los grupos.
+
+Se destaca adem\'as, que a cada una de las divisiones generadas se les aplic\'o la evaluaci\'on de los modelos y el procesamiento de las diferentes curvas de evaluaci\'on, adicional a ello se evalu\'o la independencia de las particiones mediante aplicaci\'on de modelos para predicci\'on de valores diferentes a la partici\'on que corresponde.
+
+Al seleccionar 5 particiones, la cantidad de ejemplos por partici\'on es como se expone en la Tabla \ref{tabPart2}.
+
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{|l|l|l|}
+			\hline
+			\multicolumn{3}{|c|}{\textbf{Cantidad de ejemplos en Partici\'on Generada}}                                                       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{\#}} & \multicolumn{1}{c|}{\textbf{Partici\'on}} & \multicolumn{1}{c|}{\textbf{Ejemplos}} \\ \hline
+			1.                                & Part. 0                                & 38                                    \\ \hline
+			2.                                & Part. 1                                & 120                                     \\ \hline
+			3.                                & Part. 2                                & 41                                     \\ \hline
+			4.                                & Part. 3                                & 34                                     \\ \hline
+			5.                                & Part. 4                                & 23                                     \\ \hline
+		\end{tabular}
+		\caption{Cantidad de ejemplos en partici\'on generada.}
+		\label{tabPart2}
+	\end{table}
+
+Tal como se observa en la Tabla \ref{tabPart2}, la cantidad de ejemplos es similar en 4 particiones, abarcando una mayor proporci\'on la primera partici\'on con 120 ejemplos.
+
+
+\section{Divisiones inducidas por comunidades}
+
+La divisi\'on inducida por comunidades, implica la utilizaci\'on de teor\'ia de grafos para la b\'usqueda de sectores fuertemente acoplados, estas conexiones vienen dados por las energ\'ias electrost\'aticas que presenta la prote\'ina. Se generaron diversas matrices de adyacencia con respecto a diferentes m\'etricas de inter\'es, tales como: distancias con C$\beta$ como centroide, distancias con induci\'on de centroides, fuerzas electrost\'aticas mediante el c\'alculo de energ\'ias covalentes, puentes de hidr\'ogeno y energ\'ias de repulsi\'on o efectos de Van der Walls.
+
+Cada una de estas matrices fue utilizada para implementar diversos grafos, dentro de los cuales, a modo de ejemplo se expone en la Figura \ref{com1}. 
+
+A partir del grafo generado, se aplicaron diversos algoritmos de b\'usqueda de sectores fuertemente interconectados en la estructura, a partir de ello se aislaron dichos sitios obteniendo comunidades. Las comunidades se generaron con diferentes m\'etricas de de matrices de adyacencia y con la aplicaci\'on de diferentes t\'ecnicas de inter\'es. Se obtuvieron alrededor de 20 comunidades en promedio. Pr\'acticamente, s\'olo se reconoci\'o como fuertemente conectados, aquellos sectores que presentaban enlaces covalentes. 
+
+Debido al gran n\'umero de comunidades encontradas, no fueron sometidas a las fases de exploraci\'on y evaluaci\'on de distribuci\'on de medidas de desempe\~no.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.5]{imagenes/results/grafos/r1.png}
+	\caption{Grafo obtenido por matriz de adyacencia mediante energ\'ias de interacci\'on.}
+	\label{com1}
+\end{figure}
+
+\newpage
+\section{Divisiones inducidas por recursividad de cl\'uster}
+
+Las divisiones inducidas por recursividad de cl\'uster implic\'o el dise\~no y la implementaci\'on de un algoritmo de divisi\'on recursiva con evaluaci\'on estad\'istica y m\'etricas de separaci\'on aplicadas a las particiones. 
+
+El proces\'o general se puede describir mediante lo que expone la Figura \ref{ind1}. En ella se observa que existen 7 nodos hojas, los cuales son las divisiones resultantes del proceso, la cantidad de elementos para cada divisi\'on es lo que expresa el valor del nodo, es decir, por ejemplo, existen particiones con 82, 33 y 62 elementos. 
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.5]{imagenes/results/clusterInducido/r1.png}
+	\caption{Esquema resumen del proceso de generaci\'on de particiones mediante recursividad de cl\'uster.}
+	\label{ind1}
+\end{figure}
+
+\newpage
+Cada una de las particiones generadas, fue sometida a los procesos de exploraci\'on de modelos y posterior selecci\'on de estos en base a las m\'etricas de inter\'es. Adem\'as, para los mejores modelos, se obtuvieron los res\'umenes expuestos en resultados anteriores y se evalu\'o que los modelos fuesen significativos, es decir, el o los modelos seleccionados para el grupo A, fueron utilizados para predecir los valores del resto de los grupos. Esto permiti\'o evaluar la independencia de los grupos y que cada uno fuese tratado como un set de datos independiente.

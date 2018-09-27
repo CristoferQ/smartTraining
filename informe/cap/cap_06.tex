@@ -1,0 +1,68 @@
+\chapter{Discusiones}
+
+Se han generado diversos modelos, con respecto a los set de datos que se trabajaron, las particiones inducidas y el efecto de agregar informaci\'on topol\'ogica. Cada uno de los puntos se exponen a continuaci\'on.
+
+\section{Modelos en Set de Datos Completo.}
+
+El set de datos completo, presentaba un total de 256 ejemplos, los cuales se encontraban proporcionalmente distirbuidos en cuanto a sus valores de clases, lo que implica que no existe un desbalance de clases, adem\'as se descartaron problemas de maldiciones de dimensionalidad y redundancia de elementos, debido a que la cantidad de ejemplos era proporcional a la cantidad de atributos que \'este pose\'ia.
+
+En cuanto al an\'alisis estad\'istico, los atributos con distribuci\'on continua, presentaban un gran n\'umero de dispersiones y puntos outliers. No obstante, no fueron removidos debido a la poca cantidad de informaci\'on existente en el set de datos, es decir, el n\'umero de ejemplos no era lo suficientemente significativo para efectuar pruebas de inter\'es.
+
+Al evaluar las matrices de correlaci\'on, existen atributos que se encuentran fuertemente correlacionados, tanto positiva como negativamente, esto implica que se presenta una dependencia entre ellos, la cual puede afectar en el entrenamiento de modelos y los valores de medidas de desempen\~o que se obtienen a partir de estos. 
+
+Las distribuciones de los atributos con car\'acter continuo, no presentaron rangos caracter\'isticos de tendencia normal. Lo cual era esperable al visualizar los histogramas, adem\'as de las dispersiones existentes visualizadas en el box plot.
+
+La fase exploratoria de entrenamiento de modelos de clasificaci\'on implic\'o la ejecuci\'on de un n\'umero significativo de algoritmos y una variaci\'on de par\'ametros de los cuales estos se componen. Sin embargo, tal como se pudo apreciar en la Figura \ref{res5}. La gran mayor\'ia de ejecuciones presentaban medidas de desempen\~o muy deficientes. 
+
+En base a dicho histograma, mediante t\'ecnicas de evaluaciones de distribuciones, se obtuvieron los mejores modelos, tal como se expuso previamente, acci\'on que se llev\'o a cabo por cada medida de desempen\~o evaluada: Accuracy, Recall, Precision, Tasas de Verdaderos Positivos y Negativos. 
+
+
+Cada medida de desempen\~o presentaba modelos en particular, con diferentes par\'ametros, algunos ten\'ian relaci\'on en cuanto al algoritmo, una intersecci\'on de dichos modelos seg\'un sus m\'etricas, se expone en la Figura \ref{dis1}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[scale=.4]{imagenes/results/fullDataSet/r14.png}
+	\caption{Diagrama de interacci\'on entre modelos.}
+	\label{dis1}
+\end{figure}
+
+Tal como se aprecia en la Figura \ref{dis1}, Multi Layer Perceptron est\'a en la interacci\'on de diferentes medidas de desempen\~o, mientras que Bernoulli, GradientBoosting, NuSVC y Random Forest, aparecen s\'olo en alguna de las medidas de inter\'es. Multi Layer Perceptron aparece como mejor algoritmo, dado a que se mantiene dentro de los mejores modelos para diferentes m\'etricas de inter\'es. No obstante, redes neuronales, al trabajar en forma de caja negra, no entrega una explicaci\'on plausible a la hora de evaluar la elecci\'on del clasificador, adem\'as, presenta problemas de sobre ajuste debido a que la cantidad de capaz implica m\'as y  m\'as complejidad en el problema, lo que al final de cuentas, a pesar de que se haya implementado una validaci\'on mediante \textit{Cross Validation} puede que existan problemas de sobre ajuste, lo cual, a la hora de probar el modelo se vi\'o reflejado dicho inconveniente. Adem\'as dicha evaluaci\'on se hace m\'as notoria cuando se eval\'ua la generalizaci\'on mediante \textit{Leave One Out}.
+
+Teniendo en consideraci\'on los puntos expuestos anteriormente, los modelos basados en ensamble o utilizaci\'on de transformaci\'on en base a kernel, implicar\'ian mejores estrategias de modelos, adem\'as de permitir explicar de una manera visual, las clasificaciones que se generan. No obstante, Bernoulli aparece como un modelo con precisi\'on de 0.65, lo cual implica que existe un 35\% de probabilidades de cometer un error, a pesar de ello, es el modelo con mejor precisi\'on de los que se ejecutaron, por lo que, teniendo en cuenta esta consideraci\'on se propone en una primera instancia a Bernoulli como modelo de clasificaci\'on, continuando con m\'etodos de ensamble como Random Forest y GradientSVC.
+
+
+En base a esto, es posible comentar, que utilizar t\'ecnicas de Meta Learning para la implementaci\'on de modelos con caracter\'isticas deseables (altas tasas de verdaderos positivos y negativos, un gran eficiencia global y un valor de precisi\'on que implique altas probabilidades de acertar el resultado), aparecen como soluci\'on al problema presente en este set de datos.
+
+La implementaci\'on de Meta Learning, se podr\'ia aplicar en el siguiente orden, en base a lo expuesto en los resultados.
+
+\begin{enumerate}
+	
+	\item Bernoulli.
+	\item Random Forest.
+	\item NuSVC.
+	
+\end{enumerate}
+
+Se espera que la aplicaci\'on de dichos algoritmos en conjunto, mediante una iteraci\'on secuencial de elementos, pueda aumentar el valor de las medidas de desempen\~o, sin dejar de lado la generalizaci\'on del modelo y las caracter\'isticas que esto conlleva.
+
+Otro de los puntos importantes a discutir, es el an\'alisis de las caracter\'isticas,  los cuales se realizaron en base a metodolog\'ias que implican una deformaci\'on de espacios, as\'i como tambi\'en transformaciones ortogonales de datos en base a cambios de base seg\'un t\'ecnica de PCA, los cuales, por un lado, arrojaron cu\'ales caracter\'isticas eran de relevancia para generar un clasificador basado en random forest, mientras que la segunda implica la cantidad de componentes que resultan ser relevantes a la hora de considerar una reducci\'on de la dimensionalidad. Ambas t\'ecnicas resultan ser efectivas, pero son influenciables por el modelo de clasificaci\'on o porque no entrega un valor espec\'ifico de corte para determinar cu\'antas componentes son relevantes.
+
+Dado a lo anterior, es posible utilizar otras t\'ecnicas que han sido implementadas y estudiadas para el an\'alisis de features y su selecci\'on, tales como: t\'ecnicas basadas en correlaci\'on de datos, Mutual Information, Evaluaciones Probabil\'isticas y teor\'ias de conjuntos, etc.
+
+Se espera que una disminuci\'on de la cantidad de atributos, asociados a t\'ecnicas de Meta Leraning, entreguen resultados m\'as aceptables que los que se han encontrado. Es importante mencionar que, el trabajo relacionado con el set de datos completo, no est\'a asociado a adici\'on de informaci\'on topol\'ogica, generar particiones, etc. Lo cual tiene relaci\'on con las hip\'otesis planteadas en el desarrollo de este proyecto.
+
+\section{Modelos en base a Set de Datos con particiones inducidas por Interacci\'on Prote\'ina-Prote\'ina}
+
+\section{Modelos en base a Set de Datos con particiones inducidas por Clustering}
+
+\section{Modelos en base a Set de Datos con particiones inducidas por Recursividad de Clustering}
+
+\section{Evaluaci\'on de comunidades.}
+
+La adici\'on de informaci\'on topol\'ogica, asociada a la evaluaci\'on de sectores que se encuentran fuertemente inter conectados mediante energ\'ias electrost\'aticas, implica trabajar en una primera instancia con la estructura 3D de la prote\'ina y a partir de la informaci\'on de coordenadas, lograr estimar energ\'ias de interacci\'on que aporten a la estabilidad de la prote\'ina y as\'i disponer dicha informaci\'on en estructuras de grafo.
+
+La disposici\'on de la informaci\'on electrost\'atica de una prote\'ina en estructuras de grafos, permite aprovechar sus propiedades para encontrar sectores de interacci\'on que se encuentren fuertemente conectados. Siendo una de las estrateg\'ias m\'as relevantes para esta tarea, la b\'usqueda de comunidades.
+
+Tal como se expuso en los resultados, las comunidades encontradas fueron del orden de alrededor de 20, lo cual, denota que es un n\'umero bastante elevado a la hora entrenar modelos de clasificaci\'on para dichas comunidades, adem\'as, los elementos insertos en cada comunidad, estructuralmente hablando, hac\'ian alusi\'on que eran elementos que se encontraban asociadas covalentemente, lo que hace pensar, que, a pesar de que las matrices son normalizadas, la escalabilidad de energ\'ias entre electrost\'aticas y covalentes, hace referencia a que no fueron suficientes, por lo que falta una manera m\'as inteligente de poder hacer dicha escalabilidad y poder disminuir el n\'umero de comunidades.
+
+Debido a que la cantidad de comunidades fue muy elevada con respecto a lo que se esperaba, no se tom\'o en consideraci\'on para generar modelos de clasificaci\'on seg\'un estas particiones, debido a que, por un lado, la cantidad de miembros era muy pequen\~o y el n\'umero de comunidades era muy elevado.
