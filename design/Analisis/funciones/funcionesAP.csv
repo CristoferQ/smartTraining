@@ -1,0 +1,6 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,AP,Almacenamiento Persistente,Responder solicitudes de muestra de datos,El sistema deberá permitir responder  a las solicitudes de consulta de datos desde el sistema de almacenamiento persistente
+2,,,Registrar nuevos elementos,El sistema deberá permitir registrar nuevos elementos en el sistema de almacenamiento persistente
+3,,,Modificar elementos en el sistema,El sistema deberá permitir editar registros y mantener la concordancia de las relaciones asociadas al sistema de almacenamiento persistente
+4,,,Eliminar elementos en el sistema,El sistema deberá permitir eliminar registros en el sistema de almacenamiento persistente

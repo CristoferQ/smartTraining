@@ -1,0 +1,63 @@
+Caso de Uso: CU03;
+Nombre;Crear área de trabajo de usuario registrado
+Actores;U
+Funciones Asociadas;
+Objetivo;Crear área de trabajo a usuario registrado
+Pre Condiciones;No existe área de trabajo ni habilitación de recursos
+Post Condiciones;Se habilita recursos para usuario y se crea área de trabajo
+Acciones del Actor;Acciones del Sistema
+Usuario solicita la creación de nueva área de trabajo;
+;Sistema habilita el usuario y crea espacio de trabajo
+;Sistema habilita los recursos para el nuevo usuario
+;Sistema habilita al usuario en el proceso de colas
+;Sistema habilita al usuario en el registro de correos
+;Sistema notifica el correcto término del proceso
+Referencias Cruzadas;--
+Cursos alternativos;--
+;
+Caso de Uso: CU10;
+Nombre;Eliminar área de trabajo de usuario registrado
+Actores;U
+Funciones Asociadas;
+Objetivo;Eliminar área de trabajo a usuario registrado
+Pre Condiciones;Si existe área de trabajo ni habilitación de recursos
+Post Condiciones;Se elimina área de trabajo y deshabilitan los recursos asociados
+Acciones del Actor;Acciones del Sistema
+Usuario solicita la eliminación de área de trabajo;
+;Sistema deshabilita el usuario y elimina espacio de trabajo
+;Sistema elimina los recursos para el usuario
+;Sistema deshabilita al usuario en el proceso de colas
+;Sistema deshabilita al usuario en el registro de correos
+;Sistema notifica el correcto término del proceso
+Referencias Cruzadas;--
+Cursos alternativos;--
+;
+Caso de Uso: CU40;
+Nombre;Eliminar archivo en área de trabajo
+Actores;U
+Funciones Asociadas;
+Objetivo;Eliminar archivo en área de trabajo
+Pre Condiciones;Archivo existe en el área de trabajo
+Post Condiciones;Archivo eliminado del área de trabajo
+Acciones del Actor;Acciones del Sistema
+Usuario sube un archivo al área de trabajo;
+;Sistema detecta fallas en el archivo
+;Sistema elimina el archivo ingresado
+;Sistema notifica el correcto término del proceso
+Referencias Cruzadas;--
+Cursos alternativos;--
+;
+Caso de Uso: CU41;
+Nombre;Agregar archivo en área de trabajo
+Actores;U
+Funciones Asociadas;
+Objetivo;Agregar archivo en área de trabajo
+Pre Condiciones;Archivo existe en el área de trabajo parcial
+Post Condiciones;Archivo agregado al área de trabajo
+Acciones del Actor;Acciones del Sistema
+Usuario sube un archivo al área de trabajo;
+;Sistema revisa el archivo
+;Sistema determina correcto archivo ingresado
+;Sistema aloja en el área de trabajo el set de datos revisado
+Referencias Cruzadas;--
+Cursos alternativos;--

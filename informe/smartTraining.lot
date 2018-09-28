@@ -11,5 +11,23 @@
 \contentsline {table}{\numberline {2.7}{\ignorespaces Funciones asociadas a los m\'odulos de clustering\relax }}{33}
 \contentsline {table}{\numberline {2.8}{\ignorespaces Funciones asociadas al m\'odulo de clasificaci\'on.\relax }}{40}
 \contentsline {table}{\numberline {2.9}{\ignorespaces Funciones asociadas al m\'odulo de an\'alisis de caracter\IeC {\'\i }sticas\relax }}{43}
+\contentsline {table}{\numberline {2.10}{\ignorespaces Funciones asociadas al Sistema de Colas\relax }}{46}
+\contentsline {table}{\numberline {2.11}{\ignorespaces Funciones asociadas al Sistema de Notificaciones\relax }}{47}
+\contentsline {table}{\numberline {2.12}{\ignorespaces Funciones asociadas al Sistema de Almacenamiento Persistente\relax }}{49}
+\contentsline {table}{\numberline {2.13}{\ignorespaces Atributos presentes en el sistema\relax }}{50}
+\contentsline {table}{\numberline {2.14}{\ignorespaces Tabla resumen de Atributos por Funci\'on\relax }}{58}
+\contentsline {table}{\numberline {2.15}{\ignorespaces Actores que interact\'uan con el sistema\relax }}{60}
+\contentsline {table}{\numberline {2.16}{\ignorespaces Perfiles de usuario identificados\relax }}{61}
+\contentsline {table}{\numberline {2.17}{\ignorespaces Casos de uso asociados a los usuarios administrativo y root\relax }}{84}
+\contentsline {table}{\numberline {2.18}{\ignorespaces Casos de uso asociados al uso de recursos.\relax }}{93}
+\contentsline {table}{\numberline {2.19}{\ignorespaces Casos de uso relacionados al sistema de almacenamiento persistente.\relax }}{108}
+\contentsline {table}{\numberline {2.20}{\ignorespaces Casos de uso relacionados al sistema de notificaciones\relax }}{111}
+\contentsline {table}{\numberline {2.21}{\ignorespaces Casos de uso asociados al manejo de sesiones en el sistema\relax }}{127}
+\contentsline {table}{\numberline {2.22}{\ignorespaces Casos de uso asociados al m\'odulo estad\IeC {\'\i }stico\relax }}{140}
+\contentsline {table}{\numberline {2.23}{\ignorespaces Casos de uso asociados a reportes\relax }}{144}
+\contentsline {table}{\numberline {2.24}{\ignorespaces Casos de uso relacionados al m\'odulo de an\'alisis estad\IeC {\'\i }stico\relax }}{165}
+\contentsline {table}{\numberline {2.25}{\ignorespaces Casos de uso relacionados a la revisi\'on del set de datos\relax }}{168}
+\contentsline {table}{\numberline {2.26}{\ignorespaces Casos de uso relacionados a los m\'odulos de clustering\relax }}{196}
+\contentsline {table}{\numberline {2.27}{\ignorespaces Casos de uso asociados al lanzamiento de Jobs\relax }}{211}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

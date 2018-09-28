@@ -27,20 +27,34 @@
 \contentsline {subsection}{\numberline {2.1.6}Funciones asociadas al m\'odulo de algoritmos de aprendizaje no supervisado}{28}
 \contentsline {subsection}{\numberline {2.1.7}Funciones asociadas al m\'odulo de clasificaciones}{33}
 \contentsline {subsection}{\numberline {2.1.8}Funciones asociadas al m\'odulo de an\'alisis de caracter\IeC {\'\i }sticas}{40}
-\contentsline {section}{\numberline {2.2}Atributos del Sistema}{43}
-\contentsline {section}{\numberline {2.3}Actores y Usuarios}{43}
-\contentsline {section}{\numberline {2.4}Casos de Uso}{43}
-\contentsline {subsection}{\numberline {2.4.1}Diagramas de casos de uso}{43}
-\contentsline {section}{\numberline {2.5}Diagramas de secuencia o colaboraci\'on}{43}
-\contentsline {section}{\numberline {2.6}Conceptos}{43}
-\contentsline {subsection}{\numberline {2.6.1}Modelo Conceptual}{43}
-\contentsline {section}{\numberline {2.7}Entidades}{43}
-\contentsline {subsection}{\numberline {2.7.1}Modelo de Entidades}{43}
-\contentsline {chapter}{\numberline {3}Dise\~no}{44}
-\contentsline {section}{\numberline {3.1}Arquitectura de Software}{44}
-\contentsline {section}{\numberline {3.2}Diagramas de Interacci\'on}{44}
-\contentsline {section}{\numberline {3.3}Diagrama de Clases}{44}
-\contentsline {section}{\numberline {3.4}Diagramas de Estado}{44}
-\contentsline {chapter}{\numberline {4}Planificaci\'on}{45}
-\contentsline {section}{\numberline {4.1}Etapas del Proyecto}{45}
-\contentsline {chapter}{Bibliograf\'{\i }a}{46}
+\contentsline {subsection}{\numberline {2.1.9}Funciones asociada al Sistema de Colas}{43}
+\contentsline {subsection}{\numberline {2.1.10}Funciones asociadas al Sistema de Notificaci\'on}{46}
+\contentsline {subsection}{\numberline {2.1.11}Funciones asociadas al Sistema de Almacenamiento Persistente}{47}
+\contentsline {section}{\numberline {2.2}Atributos del Sistema}{49}
+\contentsline {section}{\numberline {2.3}Actores y Usuarios}{58}
+\contentsline {section}{\numberline {2.4}Casos de Uso}{60}
+\contentsline {subsection}{\numberline {2.4.1}Casos de uso asociados a las acciones del Usuario administrador}{62}
+\contentsline {subsection}{\numberline {2.4.2}Casos de uso asociados al uso de recursos}{84}
+\contentsline {subsection}{\numberline {2.4.3}Casos de uso asociados al sistema de almacenamiento persistente}{93}
+\contentsline {subsection}{\numberline {2.4.4}Casos de uso asociados al sistema de notificaci\'on}{108}
+\contentsline {subsection}{\numberline {2.4.5}Casos de uso asociados al manejo de sesiones}{111}
+\contentsline {subsection}{\numberline {2.4.6}Casos de uso asociados al m\'odulo estad\IeC {\'\i }sticas de uso}{127}
+\contentsline {subsection}{\numberline {2.4.7}Casos de uso asociados a la generaci\'on de reportes}{140}
+\contentsline {subsection}{\numberline {2.4.8}Casos de uso relacionados al m\'odulo de an\'alisis estad\IeC {\'\i }stico}{144}
+\contentsline {subsection}{\numberline {2.4.9}Casos de uso asociados al m\'odulo de revisi\'on de los datos de entrada}{165}
+\contentsline {subsection}{\numberline {2.4.10}Casos de uso asociados al m\'odulo de clustering}{168}
+\contentsline {subsection}{\numberline {2.4.11}Casos de uso relacionados al lanzamiento de Jobs}{196}
+\contentsline {subsection}{\numberline {2.4.12}Diagramas de casos de uso}{212}
+\contentsline {section}{\numberline {2.5}Diagramas de secuencia o colaboraci\'on}{212}
+\contentsline {section}{\numberline {2.6}Conceptos}{212}
+\contentsline {subsection}{\numberline {2.6.1}Modelo Conceptual}{212}
+\contentsline {section}{\numberline {2.7}Entidades}{212}
+\contentsline {subsection}{\numberline {2.7.1}Modelo de Entidades}{212}
+\contentsline {chapter}{\numberline {3}Dise\~no}{213}
+\contentsline {section}{\numberline {3.1}Arquitectura de Software}{213}
+\contentsline {section}{\numberline {3.2}Diagramas de Interacci\'on}{213}
+\contentsline {section}{\numberline {3.3}Diagrama de Clases}{213}
+\contentsline {section}{\numberline {3.4}Diagramas de Estado}{213}
+\contentsline {chapter}{\numberline {4}Planificaci\'on}{214}
+\contentsline {section}{\numberline {4.1}Etapas del Proyecto}{214}
+\contentsline {chapter}{Bibliograf\'{\i }a}{215}

@@ -1,0 +1,9 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,SC,Sistema de Colas,Registrar procesos en sistema de colas,El sistema deberá permitir el registro de nuevos procesos en sistema de colas y establecer las configuraciones sobre el mismo
+2,,,Editar proceso en sistema de cola,"El sistema deberá permitir modificar los procesos encolados, cambiarles estados, modificar prioridades, etc."
+3,,,Eliminar proceso de sistema de cola,El sistema deberá permitir remover procesos en sistemas de colas e identificar las consecuencias del hecho.
+4,,,Mostrar estado de cola,El sistema deberá permitir consultar los procesos en sistema de colas y exponer las características de ellos.
+5,,,Notificar estados de procesos,El sistema deberá permitir notificar a los usuarios los estados de los procesos 
+6,,,Notificar finalización de trabajos,El sistema deberá permitir la notificación a los usuarios cuando un job finalice
+7,,,Revisar procesos en cola,El sistema deberá permitir la revisión constante de los procesos encolados

@@ -1,0 +1,11 @@
+Atributos del Sistema,,
+ID,Item,Descripción medición
+D,Disponibilidad,99% Up Time
+P,Persistencia,99% en base a configuración servidores
+TE,Tiempo de Espera,Menor a 1 minuto por acción
+U,Usabilidad,Menos de 5 clicks por acción
+TF,Tolerancia a Fallos,1 Fallo cada 1000 ejecuciones
+R,Respaldos,Data dispuesta en distintos servidores según configuración
+CM,Conexiones Múltiples,Hasta 1000 conexiones múltiples
+SM,Solicitudes Múltiples,Hasta 100 ejecuciones en sistema de colas
+S,Seguridad,99.9% tolerable a ingresos corrompidos

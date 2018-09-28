@@ -1,0 +1,31 @@
+Caso de Uso: CU25;
+Nombre;Generar tabla resumen de estadísticos
+Actores;AP
+Funciones Asociadas;
+Objetivo;Generar tabla resumen responsive y con opciones de descarga
+Pre Condiciones;Tabla resumen sin datos disponibles
+Post Condiciones;Tabla resumen generada correcta
+Acciones del Actor;Acciones del Sistema
+AP responde la solicitud de estadísticas resumen;
+;Sistema recibe la respuesta y procesa el formato JSON
+;Sistema carga la data en estructura dataTable
+;Sistema habilita los botones de acción en el datatable
+;Sistema carga la tabla en el div correspondiente
+Referencias Cruzadas;--
+Cursos alternativos;--
+;
+Caso de Uso: CU26;
+Nombre;Generar gráfico resumen de estadísticos
+Actores;AP
+Funciones Asociadas;
+Objetivo;Generar gráfico resumen responsive y con opciones de descarga
+Pre Condiciones;Gráfico resumen sin datos disponibles
+Post Condiciones;Gráfico resumen generado correctamente
+Acciones del Actor;Acciones del Sistema
+AP responde la solicitud de estadísticas resumen;
+;Sistema recibe la respuesta y procesa el formato JSON
+;Sistema carga la data en estructura JSON
+;Sistema habilita los botones de acción en el Higcharts plugin
+;Sistema carga el gráfico en el div correspondiente
+Referencias Cruzadas;--
+Cursos alternativos;--

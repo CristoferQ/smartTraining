@@ -1,0 +1,5 @@
+Perfiles del Sistema,,
+Rol,ID,Descripción
+Administrador,A,"Encargado de administrar las cuentas de usuario, los sistemas de acceso, estadísticas de uso, etc"
+Usuario Común,UC,Tiene acceso a los módulos y a la utilización de recursos que el sistema dispone
+Root,R,Usuario con todos los privilegios de acceso

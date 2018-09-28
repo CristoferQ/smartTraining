@@ -1,0 +1,102 @@
+Caso de Uso: CU02;
+Nombre;Insertar registro en Sistema de Almacenamiento persistente
+Actores;AP
+Funciones Asociadas;
+Objetivo;Crear un nuevo registro en el sistema de almacenamiento persistente
+Pre Condiciones;Sistema de almacenamiento persistente sin registro
+Post Condiciones;Sistema de almacenamiento persistente con registro agregado
+Acciones del Actor;Acciones del Sistema
+AP recibe una solicitud de registro de datos en formato JSON;
+AP procesa conexión a la base de datos (CU04);
+;Sistema recibe los datos mediante proceso JSON
+;Sistema decodifica los datos
+AP inserta los datos en el entorno correspondiente;
+;Sistema notifica el correcto término del proceso
+AP establece desconexión del sistema BD (CU05);
+Referencias Cruzadas;CU04, CU05
+Cursos alternativos;No se puede iniciar sesión en BD, se notifica y el proceso se encola
+;
+Caso de Uso: CU04;
+Nombre;Iniciar sesión en base de datos
+Actores;AP
+Funciones Asociadas;
+Objetivo;Iniciar nueva sesión en base de datos
+Pre Condiciones;Sesión no iniciada en BD
+Post Condiciones;Sesión creada e iniciada en BD
+Acciones del Actor;Acciones del Sistema
+AP solicita iniciar sesión en BD;
+;Sistema recibe solicitud
+;Sistema procesa las credenciales
+;Sistema establece conexión
+;Sistema notifica inicio de sesión correcto
+Referencias Cruzadas;--
+Cursos alternativos;Credenciales de acceso incorrectas, se notifica mediante el sistema
+;Sistema BD no disponible por múltiples conexiones activas, sistema notifica el evento
+;
+Caso de Uso: CU05;
+Nombre;Cerrar sesión en BD
+Actores;AP
+Funciones Asociadas;
+Objetivo;Cerrar sesión iniciada en base de datos
+Pre Condiciones;Sesión en estado iniciada
+Post Condiciones;Sesión en estado cerrada
+Acciones del Actor;Acciones del Sistema
+AP solicita cerrar sesión;
+;Sistema BD recibe solicitud
+;Sistema cierra la sesión
+;Sistema elimina los datos de memoria caché y registros activos
+;Sistema notifica el correcto término del proceso
+Referencias Cruzadas;--
+Cursos alternativos;--
+;
+Caso de Uso: CU07;
+Nombre;Editar registro en Sistema de Almacenamiento persistente
+Actores;AP
+Funciones Asociadas;
+Objetivo;Editar un registro en el sistema de almacenamiento persistente
+Pre Condiciones;Sistema de almacenamiento persistente sin registro editado
+Post Condiciones;Sistema de almacenamiento persistente con registro editado
+Acciones del Actor;Acciones del Sistema
+AP recibe una solicitud de edición de datos en formato JSON;
+AP procesa conexión a la base de datos (CU04);
+;Sistema recibe los datos mediante proceso JSON
+;Sistema decodifica los datos
+AP edita los datos en el entorno correspondiente;
+;Sistema notifica el correcto término del proceso
+AP establece desconexión del sistema BD (CU05);
+Referencias Cruzadas;CU04, CU05
+Cursos alternativos;No se puede iniciar sesión en BD, se notifica y el proceso se encola
+;
+Caso de Uso: CU09;
+Nombre;Eliminar registro en Sistema de Almacenamiento persistente
+Actores;AP
+Funciones Asociadas;
+Objetivo;Eliminar un registro en el sistema de almacenamiento persistente
+Pre Condiciones;Sistema de almacenamiento persistente sin registro eliminado
+Post Condiciones;Sistema de almacenamiento persistente con registro eliminado
+Acciones del Actor;Acciones del Sistema
+AP recibe una solicitud de eliminación de datos en formato JSON;
+AP procesa conexión a la base de datos (CU04);
+;Sistema recibe los datos mediante proceso JSON
+;Sistema decodifica los datos
+AP elimina los datos en el entorno correspondiente;
+;Sistema notifica el correcto término del proceso
+AP establece desconexión del sistema BD (CU05);
+Referencias Cruzadas;CU04, CU05
+Cursos alternativos;No se puede iniciar sesión en BD, se notifica y el proceso se encola
+;
+Caso de Uso: CU12;
+Nombre;Mostrar registro en Sistema de Almacenamiento persistente
+Actores;AP
+Funciones Asociadas;
+Objetivo;Mostrar un conjunto de registros en el sistema de almacenamiento persistente
+Pre Condiciones;Solicitud de búsqueda de información en estado espera
+Post Condiciones;Solicitud de búsqueda de información en estado finalizada
+Acciones del Actor;Acciones del Sistema
+AP recibe la solicitud de búsqueda de datos;
+AP procesa conexión a la base de datos (CU04);
+;Sistema recibe los datos mediante proceso JSON
+;Sistema responde la solicitud con el correspondiente resultado obtenido
+AP establece desconexión del sistema BD (CU05);
+Referencias Cruzadas;CU04, CU05
+Cursos alternativos;No se puede iniciar sesión en BD, se notifica y el proceso se encola

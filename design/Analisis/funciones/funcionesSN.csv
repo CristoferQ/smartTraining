@@ -1,0 +1,5 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,SN,Sistema de notificaciones,Enviar mensajes de notificaciones a usuarios,El sistema deberá permitir la notificación de nuevos mensajes a usuarios vía email o notificación push
+2,,,Configurar mensajes de notificaciones,El sistema deberá permitir configurar y condicionar las notificaciones que se emiten
+3,,,Generar notificaciones globales,El sistema deberá permitir generar notificaciones generales a todos los usuarios existentes

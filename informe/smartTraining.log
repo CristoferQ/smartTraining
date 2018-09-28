@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.11)  27 SEP 2018 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.9.28)  28 SEP 2018 18:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,17 +1048,781 @@ LaTeX Info: Redefining \% on input line 254.
  [41]
 LaTeX Info: Redefining \. on input line 254.
 LaTeX Info: Redefining \% on input line 254.
- [42]) (./cap/cap_03.tex
+ [42]
+Overfull \hbox (70.34657pt too wide) in alignment at lines 262--265
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.34657pt too wide) in alignment at lines 265--267
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.34657pt too wide) in alignment at lines 267--279
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
+[43]
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
+ [44]
+LaTeX Info: Redefining \. on input line 279.
+LaTeX Info: Redefining \% on input line 279.
+ [45]
+Overfull \hbox (50.4718pt too wide) in alignment at lines 289--292
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (50.4718pt too wide) in alignment at lines 292--294
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (50.4718pt too wide) in alignment at lines 294--302
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 302.
+LaTeX Info: Redefining \% on input line 302.
+[46]
+Overfull \hbox (61.92169pt too wide) in alignment at lines 311--314
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (61.92169pt too wide) in alignment at lines 314--316
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (61.92169pt too wide) in alignment at lines 316--325
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 325.
+LaTeX Info: Redefining \% on input line 325.
+[47]
+LaTeX Info: Redefining \. on input line 325.
+LaTeX Info: Redefining \% on input line 325.
+ [48]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
+[49]
+Overfull \hbox (31.55371pt too wide) in alignment at lines 362--365
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (31.55371pt too wide) in alignment at lines 365--367
+ [] [] [] [] 
+ []
+
+
+Overfull \hbox (31.55371pt too wide) in alignment at lines 367--388
+ [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 388.
+LaTeX Info: Redefining \% on input line 388.
+[50]
+Overfull \hbox (31.55371pt too wide) in alignment at lines 388--408
+ [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 408.
+LaTeX Info: Redefining \% on input line 408.
+[51]
+Overfull \hbox (31.55371pt too wide) in alignment at lines 408--428
+ [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 428.
+LaTeX Info: Redefining \% on input line 428.
+[52]
+LaTeX Info: Redefining \. on input line 428.
+LaTeX Info: Redefining \% on input line 428.
+ [53]
+Overfull \hbox (31.55371pt too wide) in alignment at lines 428--448
+ [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
+[54]
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
+ [55]
+Overfull \hbox (31.55371pt too wide) in alignment at lines 448--455
+ [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 455.
+LaTeX Info: Redefining \% on input line 455.
+[56]
+LaTeX Info: Redefining \. on input line 455.
+LaTeX Info: Redefining \% on input line 455.
+ [57]
+LaTeX Info: Redefining \. on input line 480.
+LaTeX Info: Redefining \% on input line 480.
+ [58]
+LaTeX Info: Redefining \. on input line 480.
+LaTeX Info: Redefining \% on input line 480.
+ [59]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Info: Redefining \. on input line 505.
+LaTeX Info: Redefining \% on input line 505.
+[60]
+LaTeX Info: Redefining \. on input line 541.
+LaTeX Info: Redefining \% on input line 541.
+ [61]
+LaTeX Info: Redefining \. on input line 561.
+LaTeX Info: Redefining \% on input line 561.
+ [62]
+LaTeX Info: Redefining \. on input line 561.
+LaTeX Info: Redefining \% on input line 561.
+ [63]
+LaTeX Info: Redefining \. on input line 561.
+LaTeX Info: Redefining \% on input line 561.
+ [64]
+LaTeX Info: Redefining \. on input line 581.
+LaTeX Info: Redefining \% on input line 581.
+ [65]
+LaTeX Info: Redefining \. on input line 581.
+LaTeX Info: Redefining \% on input line 581.
+ [66]
+LaTeX Info: Redefining \. on input line 581.
+LaTeX Info: Redefining \% on input line 581.
+ [67]
+LaTeX Info: Redefining \. on input line 601.
+LaTeX Info: Redefining \% on input line 601.
+ [68]
+LaTeX Info: Redefining \. on input line 601.
+LaTeX Info: Redefining \% on input line 601.
+ [69]
+LaTeX Info: Redefining \. on input line 601.
+LaTeX Info: Redefining \% on input line 601.
+ [70]
+LaTeX Info: Redefining \. on input line 621.
+LaTeX Info: Redefining \% on input line 621.
+ [71]
+LaTeX Info: Redefining \. on input line 621.
+LaTeX Info: Redefining \% on input line 621.
+ [72]
+LaTeX Info: Redefining \. on input line 621.
+LaTeX Info: Redefining \% on input line 621.
+ [73]
+LaTeX Info: Redefining \. on input line 641.
+LaTeX Info: Redefining \% on input line 641.
+ [74]
+LaTeX Info: Redefining \. on input line 641.
+LaTeX Info: Redefining \% on input line 641.
+
+[75]
+LaTeX Info: Redefining \. on input line 641.
+LaTeX Info: Redefining \% on input line 641.
+ [76]
+LaTeX Info: Redefining \. on input line 641.
+LaTeX Info: Redefining \% on input line 641.
+ [77]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [78]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [79]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [80]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [81]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [82]
+LaTeX Info: Redefining \. on input line 662.
+LaTeX Info: Redefining \% on input line 662.
+ [83]
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+ [84]
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+ [85]
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+ [86]
+LaTeX Info: Redefining \. on input line 737.
+LaTeX Info: Redefining \% on input line 737.
+ [87]
+LaTeX Info: Redefining \. on input line 737.
+LaTeX Info: Redefining \% on input line 737.
+ [88]
+LaTeX Info: Redefining \. on input line 737.
+LaTeX Info: Redefining \% on input line 737.
+ [89]
+LaTeX Info: Redefining \. on input line 742.
+LaTeX Info: Redefining \% on input line 742.
+
+[90]
+LaTeX Info: Redefining \. on input line 742.
+LaTeX Info: Redefining \% on input line 742.
+ [91]
+LaTeX Info: Redefining \. on input line 742.
+LaTeX Info: Redefining \% on input line 742.
+ [92]
+LaTeX Info: Redefining \. on input line 778.
+LaTeX Info: Redefining \% on input line 778.
+ [93]
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+ [94]
+LaTeX Info: Redefining \. on input line 798.
+LaTeX Info: Redefining \% on input line 798.
+ [95]
+LaTeX Info: Redefining \. on input line 818.
+LaTeX Info: Redefining \% on input line 818.
+ [96]
+LaTeX Info: Redefining \. on input line 818.
+LaTeX Info: Redefining \% on input line 818.
+ [97]
+LaTeX Info: Redefining \. on input line 818.
+LaTeX Info: Redefining \% on input line 818.
+ [98]
+LaTeX Info: Redefining \. on input line 838.
+LaTeX Info: Redefining \% on input line 838.
+ [99]
+LaTeX Info: Redefining \. on input line 838.
+LaTeX Info: Redefining \% on input line 838.
+ [100]
+LaTeX Info: Redefining \. on input line 858.
+LaTeX Info: Redefining \% on input line 858.
+ [101]
+LaTeX Info: Redefining \. on input line 858.
+LaTeX Info: Redefining \% on input line 858.
+ [102]
+LaTeX Info: Redefining \. on input line 858.
+LaTeX Info: Redefining \% on input line 858.
+ [103]
+LaTeX Info: Redefining \. on input line 862.
+LaTeX Info: Redefining \% on input line 862.
+
+[104]
+LaTeX Info: Redefining \. on input line 862.
+LaTeX Info: Redefining \% on input line 862.
+ [105]
+LaTeX Info: Redefining \. on input line 862.
+LaTeX Info: Redefining \% on input line 862.
+ [106]
+LaTeX Info: Redefining \. on input line 862.
+LaTeX Info: Redefining \% on input line 862.
+ [107]
+LaTeX Info: Redefining \. on input line 899.
+LaTeX Info: Redefining \% on input line 899.
+ [108]
+LaTeX Info: Redefining \. on input line 899.
+LaTeX Info: Redefining \% on input line 899.
+ [109]
+LaTeX Info: Redefining \. on input line 899.
+LaTeX Info: Redefining \% on input line 899.
+ [110]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 909--912
+ [] [] 
+ []
+
+
+Overfull \hbox (48.57072pt too wide) in alignment at lines 912--914
+ [] [] 
+ []
+
+
+Overfull \hbox (48.57072pt too wide) in alignment at lines 914--935
+ [] [] 
+ []
+
+
+Overfull \hbox (48.57072pt too wide) in alignment at lines 935--955
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 955.
+LaTeX Info: Redefining \% on input line 955.
+[111]
+LaTeX Info: Redefining \. on input line 955.
+LaTeX Info: Redefining \% on input line 955.
+ [112]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 955--975
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 975.
+LaTeX Info: Redefining \% on input line 975.
+[113]
+LaTeX Info: Redefining \. on input line 975.
+LaTeX Info: Redefining \% on input line 975.
+ [114]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 975--995
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 995.
+LaTeX Info: Redefining \% on input line 995.
+[115]
+LaTeX Info: Redefining \. on input line 995.
+LaTeX Info: Redefining \% on input line 995.
+ [116]
+LaTeX Info: Redefining \. on input line 995.
+LaTeX Info: Redefining \% on input line 995.
+ [117]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 995--1015
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1015.
+LaTeX Info: Redefining \% on input line 1015.
+[118]
+LaTeX Info: Redefining \. on input line 1015.
+LaTeX Info: Redefining \% on input line 1015.
+ [119]
+LaTeX Info: Redefining \. on input line 1015.
+LaTeX Info: Redefining \% on input line 1015.
+ [120]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 1015--1035
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+[121]
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+ [122]
+LaTeX Info: Redefining \. on input line 1035.
+LaTeX Info: Redefining \% on input line 1035.
+ [123]
+Overfull \hbox (48.57072pt too wide) in alignment at lines 1035--1044
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1044.
+LaTeX Info: Redefining \% on input line 1044.
+[124]
+LaTeX Info: Redefining \. on input line 1044.
+LaTeX Info: Redefining \% on input line 1044.
+ [125]
+LaTeX Info: Redefining \. on input line 1044.
+LaTeX Info: Redefining \% on input line 1044.
+ [126]
+LaTeX Info: Redefining \. on input line 1099.
+LaTeX Info: Redefining \% on input line 1099.
+ [127]
+LaTeX Info: Redefining \. on input line 1099.
+LaTeX Info: Redefining \% on input line 1099.
+ [128]
+LaTeX Info: Redefining \. on input line 1099.
+LaTeX Info: Redefining \% on input line 1099.
+ [129]
+LaTeX Info: Redefining \. on input line 1119.
+LaTeX Info: Redefining \% on input line 1119.
+ [130]
+LaTeX Info: Redefining \. on input line 1119.
+LaTeX Info: Redefining \% on input line 1119.
+ [131]
+LaTeX Info: Redefining \. on input line 1139.
+LaTeX Info: Redefining \% on input line 1139.
+ [132]
+LaTeX Info: Redefining \. on input line 1139.
+LaTeX Info: Redefining \% on input line 1139.
+ [133]
+LaTeX Info: Redefining \. on input line 1139.
+LaTeX Info: Redefining \% on input line 1139.
+ [134]
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+ [135]
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+
+[136]
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+ [137]
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+ [138]
+LaTeX Info: Redefining \. on input line 1160.
+LaTeX Info: Redefining \% on input line 1160.
+ [139]
+LaTeX Info: Redefining \. on input line 1208.
+LaTeX Info: Redefining \% on input line 1208.
+ [140]
+LaTeX Info: Redefining \. on input line 1208.
+LaTeX Info: Redefining \% on input line 1208.
+ [141]
+LaTeX Info: Redefining \. on input line 1208.
+LaTeX Info: Redefining \% on input line 1208.
+ [142]
+LaTeX Info: Redefining \. on input line 1208.
+LaTeX Info: Redefining \% on input line 1208.
+ [143]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1217--1220
+ [] [] 
+ []
+
+
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1220--1222
+ [] [] 
+ []
+
+
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1222--1243
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1243.
+LaTeX Info: Redefining \% on input line 1243.
+[144]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1243--1263
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1263.
+LaTeX Info: Redefining \% on input line 1263.
+[145]
+LaTeX Info: Redefining \. on input line 1263.
+LaTeX Info: Redefining \% on input line 1263.
+ [146]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1263--1283
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1283.
+LaTeX Info: Redefining \% on input line 1283.
+[147]
+LaTeX Info: Redefining \. on input line 1283.
+LaTeX Info: Redefining \% on input line 1283.
+ [148]
+LaTeX Info: Redefining \. on input line 1283.
+LaTeX Info: Redefining \% on input line 1283.
+ [149]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1283--1303
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1303.
+LaTeX Info: Redefining \% on input line 1303.
+[150]
+LaTeX Info: Redefining \. on input line 1303.
+LaTeX Info: Redefining \% on input line 1303.
+ [151]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1303--1323
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1323.
+LaTeX Info: Redefining \% on input line 1323.
+[152]
+LaTeX Info: Redefining \. on input line 1323.
+LaTeX Info: Redefining \% on input line 1323.
+ [153]
+LaTeX Info: Redefining \. on input line 1323.
+LaTeX Info: Redefining \% on input line 1323.
+ [154]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1323--1343
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1343.
+LaTeX Info: Redefining \% on input line 1343.
+[155]
+LaTeX Info: Redefining \. on input line 1343.
+LaTeX Info: Redefining \% on input line 1343.
+ [156]
+LaTeX Info: Redefining \. on input line 1343.
+LaTeX Info: Redefining \% on input line 1343.
+ [157]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1343--1363
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1363.
+LaTeX Info: Redefining \% on input line 1363.
+[158]
+LaTeX Info: Redefining \. on input line 1363.
+LaTeX Info: Redefining \% on input line 1363.
+ [159]
+Overfull \hbox (58.99283pt too wide) in alignment at lines 1363--1384
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+[160]
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+ [161]
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+ [162]
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+ [163]
+LaTeX Info: Redefining \. on input line 1384.
+LaTeX Info: Redefining \% on input line 1384.
+ [164]
+LaTeX Info: Redefining \. on input line 1421.
+LaTeX Info: Redefining \% on input line 1421.
+ [165]
+LaTeX Info: Redefining \. on input line 1421.
+LaTeX Info: Redefining \% on input line 1421.
+ [166]
+LaTeX Info: Redefining \. on input line 1421.
+LaTeX Info: Redefining \% on input line 1421.
+ [167]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1431--1434
+ [] [] 
+ []
+
+
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1434--1436
+ [] [] 
+ []
+
+
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1436--1457
+ [] [] 
+ []
+
+
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1457--1477
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1477.
+LaTeX Info: Redefining \% on input line 1477.
+[168]
+LaTeX Info: Redefining \. on input line 1477.
+LaTeX Info: Redefining \% on input line 1477.
+ [169]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1477--1497
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1497.
+LaTeX Info: Redefining \% on input line 1497.
+[170]
+LaTeX Info: Redefining \. on input line 1497.
+LaTeX Info: Redefining \% on input line 1497.
+ [171]
+LaTeX Info: Redefining \. on input line 1497.
+LaTeX Info: Redefining \% on input line 1497.
+ [172]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1497--1517
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1517.
+LaTeX Info: Redefining \% on input line 1517.
+[173]
+LaTeX Info: Redefining \. on input line 1517.
+LaTeX Info: Redefining \% on input line 1517.
+ [174]
+LaTeX Info: Redefining \. on input line 1517.
+LaTeX Info: Redefining \% on input line 1517.
+ [175]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1517--1537
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1537.
+LaTeX Info: Redefining \% on input line 1537.
+[176]
+LaTeX Info: Redefining \. on input line 1537.
+LaTeX Info: Redefining \% on input line 1537.
+ [177]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1537--1557
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1557.
+LaTeX Info: Redefining \% on input line 1557.
+[178]
+LaTeX Info: Redefining \. on input line 1557.
+LaTeX Info: Redefining \% on input line 1557.
+ [179]
+LaTeX Info: Redefining \. on input line 1557.
+LaTeX Info: Redefining \% on input line 1557.
+ [180]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1557--1577
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1577.
+LaTeX Info: Redefining \% on input line 1577.
+[181]
+LaTeX Info: Redefining \. on input line 1577.
+LaTeX Info: Redefining \% on input line 1577.
+ [182]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1577--1597
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1597.
+LaTeX Info: Redefining \% on input line 1597.
+[183]
+LaTeX Info: Redefining \. on input line 1597.
+LaTeX Info: Redefining \% on input line 1597.
+ [184]
+LaTeX Info: Redefining \. on input line 1597.
+LaTeX Info: Redefining \% on input line 1597.
+ [185]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1597--1617
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1617.
+LaTeX Info: Redefining \% on input line 1617.
+[186]
+LaTeX Info: Redefining \. on input line 1617.
+LaTeX Info: Redefining \% on input line 1617.
+ [187]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1617--1637
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1637.
+LaTeX Info: Redefining \% on input line 1637.
+[188]
+LaTeX Info: Redefining \. on input line 1637.
+LaTeX Info: Redefining \% on input line 1637.
+ [189]
+LaTeX Info: Redefining \. on input line 1637.
+LaTeX Info: Redefining \% on input line 1637.
+ [190]
+Overfull \hbox (41.29857pt too wide) in alignment at lines 1637--1654
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+[191]
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+ [192]
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+ [193]
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+ [194]
+LaTeX Info: Redefining \. on input line 1654.
+LaTeX Info: Redefining \% on input line 1654.
+ [195]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1663--1666
+ [] [] 
+ []
+
+
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1666--1668
+ [] [] 
+ []
+
+
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1668--1689
+ [] [] 
+ []
+
+
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1689--1709
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1709.
+LaTeX Info: Redefining \% on input line 1709.
+[196]
+LaTeX Info: Redefining \. on input line 1709.
+LaTeX Info: Redefining \% on input line 1709.
+ [197]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1709--1729
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1729.
+LaTeX Info: Redefining \% on input line 1729.
+[198]
+LaTeX Info: Redefining \. on input line 1729.
+LaTeX Info: Redefining \% on input line 1729.
+ [199]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1729--1749
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1749.
+LaTeX Info: Redefining \% on input line 1749.
+[200]
+LaTeX Info: Redefining \. on input line 1749.
+LaTeX Info: Redefining \% on input line 1749.
+ [201]
+LaTeX Info: Redefining \. on input line 1749.
+LaTeX Info: Redefining \% on input line 1749.
+ [202]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1749--1769
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
+[203]
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
+ [204]
+LaTeX Info: Redefining \. on input line 1769.
+LaTeX Info: Redefining \% on input line 1769.
+ [205]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1769--1789
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1789.
+LaTeX Info: Redefining \% on input line 1789.
+[206]
+LaTeX Info: Redefining \. on input line 1789.
+LaTeX Info: Redefining \% on input line 1789.
+ [207]
+Overfull \hbox (40.52357pt too wide) in alignment at lines 1789--1800
+ [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 1800.
+LaTeX Info: Redefining \% on input line 1800.
+[208]
+LaTeX Info: Redefining \. on input line 1800.
+LaTeX Info: Redefining \% on input line 1800.
+ [209]
+LaTeX Info: Redefining \. on input line 1800.
+LaTeX Info: Redefining \% on input line 1800.
+ [210]) (./cap/cap_03.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [43]
+ [211]
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [212]
 Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 3.
  []
 
-) (./cap/cap_04.tex [44
+) (./cap/cap_04.tex [213
 
 ]
 Cap\'{\i }tulo 4.
@@ -1067,9 +1831,9 @@ Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 4.
  []
 
-) (./cap/bib.tex [45
+) (./cap/bib.tex [214
 
-]) [46] (./smartTraining.aux
+]) [215] (./smartTraining.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 LaTeX Info: Redefining \. on input line 12.
@@ -1080,13 +1844,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15406 strings out of 493029
- 279539 string characters out of 6136234
- 382554 words of memory out of 5000000
- 18712 multiletter control sequences out of 15000+600000
+ 15440 strings out of 493029
+ 279808 string characters out of 6136234
+ 383546 words of memory out of 5000000
+ 18746 multiletter control sequences out of 15000+600000
  11201 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,84p,10376b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,16n,84p,10376b,463s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
@@ -1095,10 +1859,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on smartTraining.pdf (48 pages, 1267533 bytes).
+Output written on smartTraining.pdf (217 pages, 1432735 bytes).
 PDF statistics:
- 194 PDF objects out of 1000 (max. 8388607)
- 132 compressed objects within 2 object streams
+ 741 PDF objects out of 1000 (max. 8388607)
+ 506 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

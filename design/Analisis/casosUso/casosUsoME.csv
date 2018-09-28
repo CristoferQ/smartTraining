@@ -1,0 +1,159 @@
+Caso de Uso: CU31;
+Nombre;Estimar estadísticos en relación a la muestra
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar estadísticos en relación a la muestra
+Pre Condiciones;Solicitud de estadísticos para set de datos de interés generada
+Post Condiciones;Solicitud de estadísticos para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita las estadísticas resúmenes;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima promedio, varianza, desviación, máximos y mínimos en la muestra 
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera tabla resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega cuadro resumen con los estadísticos generados
+Referencias Cruzadas;CU12, CU25
+Cursos alternativos;--
+;
+Caso de Uso: CU32;
+Nombre;Estimar box plot
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar box plot en relación a la muestra
+Pre Condiciones;Solicitud de box plot para set de datos de interés generada
+Post Condiciones;Solicitud de box plot para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita el box plot de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima el box plot para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega gráfico resumen con el box plot generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--
+;
+Caso de Uso: CU33;
+Nombre;Estimar Histograma
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar histogramas en relación a la muestra
+Pre Condiciones;Solicitud de histogramas para set de datos de interés generada
+Post Condiciones;Solicitud de histogramas para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita histogramas de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los histogramas para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega gráfico resumen con el histograma generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--
+;
+Caso de Uso: CU34;
+Nombre;Estimar Barcharts
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar barcharts en relación a la muestra
+Pre Condiciones;Solicitud de barcharts para set de datos de interés generada
+Post Condiciones;Solicitud de barcharts para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita barcharts de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los barcharts para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega gráfico resumen con el barcharts generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--
+;
+Caso de Uso: CU35;
+Nombre;Estimar Piecharts
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar piecharts en relación a la muestra
+Pre Condiciones;Solicitud de piecharts para set de datos de interés generada
+Post Condiciones;Solicitud de piecharts para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita piecharts de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los piecharts para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega gráfico resumen con el piecharts generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--
+;
+Caso de Uso: CU36;
+Nombre;Estimar Matriz de correlación de los atributos
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar matriz de correlación en relación a la muestra
+Pre Condiciones;Solicitud de matriz de correlación para set de datos de interés generada
+Post Condiciones;Solicitud de matriz de correlación para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita matriz de correlación de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los matriz de correlación para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega tabla resumen con el matriz de correlación generado
+Referencias Cruzadas;CU12, CU25
+Cursos alternativos;--
+;
+Caso de Uso: CU37;
+Nombre;Estimar Matriz de correlación de los atributos en forma de heat map
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar matriz de correlación en relación a la muestra visualizando heat map
+Pre Condiciones;Solicitud de heat map para set de datos de interés generada
+Post Condiciones;Solicitud de heat map para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita visualizar matriz de correlación de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los matriz de correlación para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega tabla resumen con el matriz de correlación generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--
+;
+Caso de Uso: CU38;
+Nombre;Estimar scatter plot de los atributos
+Actores;AP, U
+Funciones Asociadas;
+Objetivo;Estimar scatter plot de los atributos
+Pre Condiciones;Solicitud de scatter plot para set de datos de interés generada
+Post Condiciones;Solicitud de scatter plot para set de datos de interés respondida
+Acciones del Actor;Acciones del Sistema
+Usuario accede a la sección estadísticas en set de datos;
+Usuario solicita scatter plot de la muestra;
+;Sistema recibe solicitud
+;Sistema procesa la matriz de información
+;Sistema estima los scatter plot para todos los atributos en el set de datos
+;Sistema genera respuesta en formato JSON
+;Sistema recibe respuesta y genera gráfico resumen
+;Sistema notifica proceso generado de manera correcta
+;Sistema despliega tabla resumen con el matriz de correlación generado
+Referencias Cruzadas;CU12, CU26
+Cursos alternativos;--

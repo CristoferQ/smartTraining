@@ -1,0 +1,127 @@
+Caso de Uso: CU17;
+Nombre;Iniciar sesión
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Ingresar al sistema de información mediante la validación de las credenciales de usuario
+Pre Condiciones;Solicitud de inicio de sesión
+Post Condiciones;Inicio de sesión creado
+Acciones del Actor;Acciones del Sistema
+Usuario accede al formulario login;
+Usuario completa formulario;
+;Sistema recupera la data del formulario
+;Sistema consulta la data al sistema de almacenamiento persistente
+;Sistema verifica la respuesta
+;Sistema inicia la sesión y entrega token de acceso
+Usuario validado correctamente ingresa al sistema;
+Referencias Cruzadas;CU12
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;
+Caso de Uso: CU18;
+Nombre;Autenticar usuario
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Autenticar usuario en sistema
+Pre Condiciones;Usuario registrado en sistema pero sin acceso
+Post Condiciones;Usuario registrado en sistema y habilitado para acceder
+Acciones del Actor;Acciones del Sistema
+Administrador registra un nuevo usuario;
+;Sistema responde solicitud
+;Sistema inicia proceso de autenticación
+;Sistema genera token de registro 
+;Sistema almacena registro en BD
+;Sistema codifica credenciales de usuario
+;Sistema habilita las credenciales para usuario registrado
+Referencias Cruzadas;CU12
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;
+Caso de Uso: CU19;
+Nombre;Cerrar sesión
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Salir del sistema de información mediante la validación de las credenciales de usuario
+Pre Condiciones;Solicitud de cierre de sesión
+Post Condiciones;Cierre de sesión procesado de manera correcta
+Acciones del Actor;Acciones del Sistema
+Usuario solicita cerrar sesión;
+;Sistema recibe la solicitud
+;Sistema registra la hora de acceso
+;Sistema almacena en sus log el registro de finalizar sesión
+;Sistema borra la data caché
+;Sistema elimina token generado
+;Sistema cierra sesión redireccionando a la interfaz principal
+Referencias Cruzadas;CU12
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;
+Caso de Uso: CU20;
+Nombre;Recuperar cuenta de usuario
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Recuperar acceso al sistema
+Pre Condiciones;Solicitud realizada de recuperación de cuenta
+Post Condiciones;Solicitud de recuperación de cuentas finalizada
+Acciones del Actor;Acciones del Sistema
+Usuario accede al formulario de recuperación de cuenta;
+Usuario completa formulario de recuperación;
+;Sistema recibe la solicitud
+;Sistema valida que la data ingresada sea correcta
+;Sistema notifica vía correo electrónico link de recuperación
+;Sistema habilita link de recuperación por un tiempo máximo de 30 minutos
+Usuario recibe correo electrónico y accede a link;
+Usuario completa formulario;
+;Sistema recibe la solicitud
+;Sistema actualiza la data
+;Sistema autentica al usuario
+;Sistema notifica vía correo electrónico la recuperación de cuenta
+Referencias Cruzadas;CU12, CU21
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;Sistema de correos no se encuentra disponible, se notifica al usuario la acción
+;
+Caso de Uso: CU22;
+Nombre;Reestablecer cuenta de usuario
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Reestablecer cuenta de usuario
+Pre Condiciones;Solicitud realizada de reestablecer cuenta de usuario
+Post Condiciones;Solicitud de reestablecer cuenta finalizada
+Acciones del Actor;Acciones del Sistema
+Usuario accede al formulario de recuperación de cuenta;
+Usuario completa formulario de recuperación;
+;Sistema recibe la solicitud
+;Sistema valida que la data ingresada sea correcta
+;Sistema notifica vía correo electrónico link de recuperación
+;Sistema habilita link de recuperación por un tiempo máximo de 30 minutos
+Usuario recibe correo electrónico y accede a link;
+Usuario completa formulario;
+;Sistema recibe la solicitud
+;Sistema actualiza la data
+;Sistema autentica al usuario
+;Sistema notifica vía correo electrónico la recuperación de cuenta
+Referencias Cruzadas;CU12, CU21
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;Sistema de correos no se encuentra disponible, se notifica al usuario la acción
+;
+Caso de Uso: CU23;
+Nombre;Modificar datos de acceso
+Actores;U, AP
+Funciones Asociadas;
+Objetivo;Modificar los valores de las credenciales para un usuario
+Pre Condiciones;Credenciales de usuario no modificadas
+Post Condiciones;Credenciales de usuario modificadas
+Acciones del Actor;Acciones del Sistema
+Usuario accede al formulario de cambio de contraseña;
+Usuario completa formulario de cambio;
+;Sistema recibe la solicitud
+;Sistema valida que la data ingresada sea correcta
+;Sistema notifica vía correo electrónico el cambio generado 
+;Sistema actualiza la data
+;Sistema autentica al usuario
+;Sistema notifica vía correo electrónico la recuperación de cuenta
+Referencias Cruzadas;CU12, CU21
+Cursos alternativos;No se puede acceder al AP, se notifica al usuario
+;Credenciales incorrectas, se notifica al usuario
+;Sistema de correos no se encuentra disponible, se notifica al usuario la acción
