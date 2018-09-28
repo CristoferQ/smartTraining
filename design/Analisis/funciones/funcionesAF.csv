@@ -1,0 +1,7 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,AF,Análisis de Características,Implementar PCA,El sistema deberá permitir la implementación del algoritmo PCA y exponer los resultados generados
+2,,,Implementar Deformaciones de Espacio,El sistema deberá permitir la implementación de la evaluación de características mediante Importancia en Random Forest
+3,,,Implementar algoritmos de Mutual Information,El sistema deberá permitir la implementación de los algoritmos referentes a mutual information
+4,,,Implementar algoritmo de correlaciones,El sistema deberá permitir implementar y analizar los resultados de análisis de correlaciones
+5,,,Implementar algoritmos basados en distribuciones bayesianas,El sistema deberá permitir la implementación de métodos bayesianos para análisis de características

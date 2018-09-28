@@ -91,6 +91,167 @@ A continuación, se lista y describen cada funciones, según la categoría a la que
 	\caption{Funciones asociadas a la sección de Acceso al sistema}
 	\label{analisisTab3}\\
 \end{longtable}
+
+\subsection{Funciones asociadas a las estadísticas de uso}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|l|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textbf{Funciones del Sistema}}                                                                                                                                                                                                                                                                                     \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textbf{\#}} & \textbf{ID Categoría}        & \multicolumn{1}{c|}{\textbf{Categoría}} & \multicolumn{1}{c|}{\textbf{Función}}                                             & \multicolumn{1}{c|}{\textbf{Descripción}}                                                                                               \\ \hline
+	1                                 & \multirow{5}{*}{\textbf{ES}} & \multirow{5}{*}{\textbf{Estadísticas}}  & \begin{tabular}[c]{@{}l@{}}Visualizar estadísticas\\ de uso\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ entregar estadísticas de uso\\ por usuario y por módulo\end{tabular}            \\ \cline{1-1} \cline{4-5} 
+	2                                 &                              &                                         & \begin{tabular}[c]{@{}l@{}}Visualizar carga de\\ servidores\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar la carga actual\\ de los servidores\end{tabular}                     \\ \cline{1-1} \cline{4-5} 
+	3                                 &                              &                                         & \begin{tabular}[c]{@{}l@{}}Visualizar carga de\\ sistema de colas\end{tabular}    & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar la carga del sistema\\ de colas\end{tabular}                         \\ \cline{1-1} \cline{4-5} 
+	4                                 &                              &                                         & \begin{tabular}[c]{@{}l@{}}Visualizar estados\\ de trabajos\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar los estados de\\ trabajo\end{tabular}                                \\ \cline{1-1} \cline{4-5} 
+	5                                 &                              &                                         & \begin{tabular}[c]{@{}l@{}}Visualizar estadísticas \\ \\ de trabajos\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar estadísticas\\ relacionadas a los trabajos\\ procesados\end{tabular} \\ \hline
+	\caption{Funciones asociadas a las estadísticas de uso}
+	\label{analisisTab4}\\
+\end{longtable}
+
+\subsection{Funciones asociadas al módulo de estadísticas en el set de datos}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|c|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                                                                                                         \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \textit{\textbf{Categoría}}                                                               & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                                            & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                              \\ \hline
+	1                                          & \multirow{14}{*}{\textbf{AE}}  & \multirow{14}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Análisis\\ estadístico\end{tabular}}} & \begin{tabular}[c]{@{}l@{}}Estimar estadísticos\\ en relación a la\\ muestra\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ calcular estadísticos sobre\\ la data entregada\end{tabular}                            \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                                                                           & \begin{tabular}[c]{@{}l@{}}Visualizar\\ estadísticos de\\ datos\end{tabular}              & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar estadísticos\\ sobre la data entregada\end{tabular}                          \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                                                                           & Estimar box plot                                                                          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar el box plot para un\\ set de datos dado\end{tabular}                            \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                                                                           & Visualizar box plot                                                                       & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el box plot \\ \\ generado\end{tabular}                                      \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                &                                                                                           & Estimar histograma                                                                        & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar histogramas por\\ atributos en set de datos dado\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	6                                          &                                &                                                                                           & \begin{tabular}[c]{@{}l@{}}Visualizar\\ histograma\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el histograma\\ generado\end{tabular}                                        \\ \cline{1-1} \cline{4-5} 
+	7                                          &                                &                                                                                           & Estimar bar charts                                                                        & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar bar charts para\\ atributos con distribución\\ discreta\end{tabular}            \\ \cline{1-1} \cline{4-5} 
+	8                                          &                                &                                                                                           & \begin{tabular}[c]{@{}l@{}}Visualizar bar\\ chart\end{tabular}                            & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el bar chart\\ generado\end{tabular}                                         \\ \cline{1-1} \cline{4-5} 
+	9                                          &                                &                                                                                           & Estimar pie charts                                                                        & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar pie charts para\\ atributos con distribución\\ discreta\end{tabular}            \\ \cline{1-1} \cline{4-5} 
+	10                                         &                                &                                                                                           & Visualizar pie charts                                                                     & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el pie charts\\ generado\end{tabular}                                        \\ \cline{1-1} \cline{4-5} 
+	11                                         &                                &                                                                                           & \begin{tabular}[c]{@{}l@{}}Estimar matrices de\\ correlación\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar matrices de correlación\\ para un set de datos de interés\end{tabular}          \\ \cline{1-1} \cline{4-5} 
+	12                                         &                                &                                                                                           & Visualizar heat map                                                                       & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el heat map\\ generado relacionado a la\\ matriz de correlación\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	13                                         &                                &                                                                                           & Estimar scatter plot                                                                      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar scatter plot para\\ un set de datos de interés\end{tabular}                     \\ \cline{1-1} \cline{4-5} 
+	14                                         &                                &                                                                                           & \begin{tabular}[c]{@{}l@{}}Visualizar scatter\\ plot\end{tabular}                         & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ visualizar el scatter plot\\ generado\end{tabular}                                      \\ \hline
+	\caption{Funciones asociadas al módulo estadístico.}
+	\label{analisisTab5}\\
+\end{longtable}
+
+\subsection{Funciones asociadas al set de datos}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|l|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \multicolumn{1}{c|}{\textit{\textbf{Categoría}}}                                            & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                                          & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                                                     \\ \hline
+	1                                          & \multirow{4}{*}{\textbf{ESD}}  & \multirow{4}{*}{\textbf{\begin{tabular}[c]{@{}l@{}}Evaluación set\\ de datos\end{tabular}}} & \begin{tabular}[c]{@{}l@{}}Revisar correcto\\ estado set de datos\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ revisar el correcto estado\\ del set de datos\end{tabular}                                                     \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                                                                             & \begin{tabular}[c]{@{}l@{}}Revisar variables\\ discretas en set\\ de datos\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ revisar si el set de datos\\ presenta variables discretas\\ en sus atributos\end{tabular}                      \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                                                                             & \begin{tabular}[c]{@{}l@{}}Revisar formato\\ de set de datos\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ revisar el formato del set de\\ datos y chequear si viene\\ según las características\\ impuestas\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                                                                             & \begin{tabular}[c]{@{}l@{}}Alojar set de\\ datos en área\\ de trabajo\end{tabular}      & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ alojar el set de datos en el\\ área de trabajo del usuario\end{tabular}                                        \\ \hline
+	\caption{Funciones asociadas al set de datos.}
+	\label{analisisTab6}\\
+	\end{longtable}
+
+\subsection{Funciones asociadas al módulo de algoritmos de aprendizaje no supervisado}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|c|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                                                                                                                                     \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \textit{\textbf{Categoría}}                                                                        & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                                       & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                                                      \\ \hline
+	1                                          & \multirow{9}{*}{MANS}          & \multirow{9}{*}{\begin{tabular}[c]{@{}c@{}}Modelos de\\ Aprendizaje No\\ Supervisado\end{tabular}} & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ K-Means\end{tabular}              & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ K-Means para entorno de\\ aprendizaje no supervisado\end{tabular}                    \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Mean Shift\end{tabular}           & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Mean Shift para entorno\\ de aprendizaje no supervisado\end{tabular}                 \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Affinity Propagation\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo \\ \\ Affinity Propagation para\\ entorno de aprendizaje no\\ supervisado\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ DBScan\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ DBScan para entorno de\\ aprendizaje no supervisado\end{tabular}                     \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Aglomerativos\end{tabular}        & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Aglomerativos para entorno\\ de aprendizaje no supervisado\end{tabular}              \\ \cline{1-1} \cline{4-5} 
+	6                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ jerarquizado\end{tabular}         & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Jerarquizado para entorno\\ de aprendizaje no supervisado\end{tabular}               \\ \cline{1-1} \cline{4-5} 
+	7                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ SOM\end{tabular}                  & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Self Organization Map para\\ entorno de aprendizaje no\\ supervisado\end{tabular}    \\ \cline{1-1} \cline{4-5} 
+	8                                          &                                &                                                                                                    & \begin{tabular}[c]{@{}l@{}}Evaluar las particiones\\ generadas\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la evaluación de las particiones\\ generadas mediante Coeficientes\\ determinados\end{tabular}                  \\ \cline{1-1} \cline{4-5} 
+	9                                          &                                &                                                                                                    & Reportar resultados                                                                  & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir \\ \\ reportar los resultados\\ obtenidos para su posterior\\ análisis\end{tabular}                               \\ \hline
+	\caption{Funciones asociadas a los módulos de clustering}
+	\label{analisisTab7}\\
+	\end{longtable}
+	
+	
+\subsection{Funciones asociadas al módulo de clasificaciones}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|c|l|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                                                                                                                                                \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \textit{\textbf{ID Categoría}} & \multicolumn{1}{c|}{\textit{\textbf{Categoría}}}                                                                       & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                                      & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                                              \\ \hline
+	1                                          & \multirow{15}{*}{\textbf{MAS}} & \multirow{15}{*}{\textit{\textbf{\begin{tabular}[c]{@{}l@{}}Modelos de\\ Aprendizaje \\ \\ Supervisado\end{tabular}}}} & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Naive Bayes\end{tabular}         & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Naive Bayes para entorno\\ de aprendizaje supervisado\end{tabular}           \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ KNN\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ KNN para entorno de \\ \\ aprendizaje supervisado\end{tabular}               \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Random Forest\end{tabular}       & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Random Forest para\\ entorno de aprendizaje\\ supervisado\end{tabular}       \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ AdaBoost\end{tabular}            & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ AdaBoost para entorno\\ de aprendizaje supervisado\end{tabular}              \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ SVM\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ SVM para entorno de\\ aprendizaje supervisado\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	6                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ NuSVC\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ NuSVC para entorno de\\ aprendizaje supervisado\end{tabular}                 \\ \cline{1-1} \cline{4-5} 
+	7                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ MLP\end{tabular}                 & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ MLP para entorno de\\ aprendizaje supervisado\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	8                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar algoritmo\\ Árboles de Decisión\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar el algoritmo\\ Árboles de decisión para\\ entorno de aprendizaje\\ supervisado\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	9                                          &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar validación\\ cruzada\end{tabular}            & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar los algoritmos\\ de validación cruzada para\\ cada algoritmo\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	10                                         &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar validación\\ LOU\end{tabular}                & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar los algoritmos\\ de validación LOU para cada\\ algoritmo\end{tabular}                       \\ \cline{1-1} \cline{4-5} 
+	11                                         &                                &                                                                                                                        & Estimar Curva ROC                                                                   & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar la curva roc para el\\ modelo resultante\end{tabular}                                           \\ \cline{1-1} \cline{4-5} 
+	12                                         &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Estimar curva de\\ validación\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar la curva de validación\\ para el modelo resultante\end{tabular}                                 \\ \cline{1-1} \cline{4-5} 
+	13                                         &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Estimar matriz de\\ confusión\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar la matriz de \\ \\ confusión para el modelo\\ resultante\end{tabular}                           \\ \cline{1-1} \cline{4-5} 
+	14                                         &                                &                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Estimar las medidas de\\ desempeño\end{tabular}          & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ estimar las medidas de\\ desempeño obtenidas para\\ el modelo resultante\end{tabular}                   \\ \cline{1-1} \cline{4-5} 
+	15                                         &                                &                                                                                                                        & Alojar resultados en job                                                            & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ alojar los resultados\\ obtenidos en el job relacionado\\ al área de trabajo\end{tabular}               \\ \hline
+	\caption{Funciones asociadas al módulo de clasificación.}
+	\label{analisisTab8}\\
+\end{longtable}
+
+\subsection{Funciones asociadas al módulo de análisis de características}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}{|l|l|l|l|l|}
+	\hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Funciones del Sistema}}}                                                                                                                                                                                                                                                                                                                                                                                                                  \\ \hline
+	\endfirsthead
+	%
+	\endhead
+	%
+	\multicolumn{1}{|c|}{\textit{\textbf{\#}}} & \multicolumn{1}{c|}{\textit{\textbf{ID Categoría}}} & \multicolumn{1}{c|}{\textit{\textbf{Categoría}}}                                       & \multicolumn{1}{c|}{\textit{\textbf{Función}}}                                                            & \multicolumn{1}{c|}{\textit{\textbf{Descripción}}}                                                                                                                     \\ \hline
+	1                                          & \multirow{5}{*}{AF}                                 & \multirow{5}{*}{\begin{tabular}[c]{@{}l@{}}Análisis de\\ Características\end{tabular}} & Implementar PCA                                                                                           & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la implementación del algoritmo\\ PCA y exponer los resultados\\ generados\end{tabular}                        \\ \cline{1-1} \cline{4-5} 
+	2                                          &                                                     &                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar\\ \\ Deformaciones\\ de Espacio\end{tabular}                       & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la implementación de la\\ evaluación de características\\ mediante Importancia en\\ Random Forest\end{tabular} \\ \cline{1-1} \cline{4-5} 
+	3                                          &                                                     &                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar\\ \\ algoritmos de\\ Mutual Information\end{tabular}               & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la implementación de los\\ algoritmos referentes a\\ mutual information\end{tabular}                           \\ \cline{1-1} \cline{4-5} 
+	4                                          &                                                     &                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar\\ algoritmode correlaciones\end{tabular}                           & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ implementar y analizar los\\ resultados de análisis de\\ correlaciones\end{tabular}                            \\ \cline{1-1} \cline{4-5} 
+	5                                          &                                                     &                                                                                        & \begin{tabular}[c]{@{}l@{}}Implementar\\ algoritmos basados\\ en distribuciones\\ bayesianas\end{tabular} & \begin{tabular}[c]{@{}l@{}}El sistema deberá permitir\\ la implementación de métodos\\ bayesianos para análisis de\\ características\end{tabular}                      \\ \hline
+	\caption{Funciones asociadas al módulo de análisis de características}
+	\label{analisisTab9}\\
+	\end{longtable}
 \section{Atributos del Sistema}
 
 \section{Actores y Usuarios}

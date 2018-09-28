@@ -1,0 +1,16 @@
+Funciones del Sistema,,,,
+#,ID Categoría,Categoría,Función,Descripción
+1,AE,Análisis estadístico,Estimar estadísticos en relación a la muestra,El sistema deberá permitir calcular estadísticos sobre la data entregada
+2,,,Visualizar estadísticos de datos,El sistema deberá permitir visualizar estadísticos sobre la data entregada
+3,,,Estimar box plot,El sistema deberá permitir estimar el box plot para un set de datos dado
+4,,,Visualizar box plot,El sistema deberá permitir visualizar el box plot generado
+5,,,Estimar histograma,El sistema deberá permitir estimar histogramas por atributos en set de datos dado
+6,,,Visualizar histograma,El sistema deberá permitir visualizar el histograma generado
+7,,,Estimar bar charts,El sistema deberá permitir estimar bar charts para atributos con distribución discreta
+8,,,Visualizar bar chart,El sistema deberá permitir visualizar el bar chart generado
+9,,,Estimar pie charts,El sistema deberá permitir estimar pie charts para atributos con distribución discreta
+10,,,Visualizar pie charts,El sistema deberá permitir visualizar el pie charts generado
+11,,,Estimar matrices de correlación,El sistema deberá permitir estimar matrices de correlación para un set de datos de interés
+12,,,Visualizar heat map,El sistema deberá permitir visualizar el heat map generado relacionado a la matriz de correlación
+13,,,Estimar scatter plot,El sistema deberá permitir estimar scatter plot para un set de datos de interés
+14,,,Visualizar scatter plot,El sistema deberá permitir visualizar el scatter plot generado

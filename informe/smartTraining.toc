@@ -21,20 +21,26 @@
 \contentsline {section}{\numberline {2.1}Funciones del Sistema}{12}
 \contentsline {subsection}{\numberline {2.1.1}Funciones asociadas al Usuario}{13}
 \contentsline {subsection}{\numberline {2.1.2}Funciones asociadas a las acciones en el Acceso al Sistema}{17}
-\contentsline {section}{\numberline {2.2}Atributos del Sistema}{20}
-\contentsline {section}{\numberline {2.3}Actores y Usuarios}{20}
-\contentsline {section}{\numberline {2.4}Casos de Uso}{20}
-\contentsline {subsection}{\numberline {2.4.1}Diagramas de casos de uso}{20}
-\contentsline {section}{\numberline {2.5}Diagramas de secuencia o colaboraci\'on}{20}
-\contentsline {section}{\numberline {2.6}Conceptos}{20}
-\contentsline {subsection}{\numberline {2.6.1}Modelo Conceptual}{20}
-\contentsline {section}{\numberline {2.7}Entidades}{20}
-\contentsline {subsection}{\numberline {2.7.1}Modelo de Entidades}{20}
-\contentsline {chapter}{\numberline {3}Dise\~no}{21}
-\contentsline {section}{\numberline {3.1}Arquitectura de Software}{21}
-\contentsline {section}{\numberline {3.2}Diagramas de Interacci\'on}{21}
-\contentsline {section}{\numberline {3.3}Diagrama de Clases}{21}
-\contentsline {section}{\numberline {3.4}Diagramas de Estado}{21}
-\contentsline {chapter}{\numberline {4}Planificaci\'on}{22}
-\contentsline {section}{\numberline {4.1}Etapas del Proyecto}{22}
-\contentsline {chapter}{Bibliograf\'{\i }a}{23}
+\contentsline {subsection}{\numberline {2.1.3}Funciones asociadas a las estad\IeC {\'\i }sticas de uso}{20}
+\contentsline {subsection}{\numberline {2.1.4}Funciones asociadas al m\'odulo de estad\IeC {\'\i }sticas en el set de datos}{21}
+\contentsline {subsection}{\numberline {2.1.5}Funciones asociadas al set de datos}{26}
+\contentsline {subsection}{\numberline {2.1.6}Funciones asociadas al m\'odulo de algoritmos de aprendizaje no supervisado}{28}
+\contentsline {subsection}{\numberline {2.1.7}Funciones asociadas al m\'odulo de clasificaciones}{33}
+\contentsline {subsection}{\numberline {2.1.8}Funciones asociadas al m\'odulo de an\'alisis de caracter\IeC {\'\i }sticas}{40}
+\contentsline {section}{\numberline {2.2}Atributos del Sistema}{43}
+\contentsline {section}{\numberline {2.3}Actores y Usuarios}{43}
+\contentsline {section}{\numberline {2.4}Casos de Uso}{43}
+\contentsline {subsection}{\numberline {2.4.1}Diagramas de casos de uso}{43}
+\contentsline {section}{\numberline {2.5}Diagramas de secuencia o colaboraci\'on}{43}
+\contentsline {section}{\numberline {2.6}Conceptos}{43}
+\contentsline {subsection}{\numberline {2.6.1}Modelo Conceptual}{43}
+\contentsline {section}{\numberline {2.7}Entidades}{43}
+\contentsline {subsection}{\numberline {2.7.1}Modelo de Entidades}{43}
+\contentsline {chapter}{\numberline {3}Dise\~no}{44}
+\contentsline {section}{\numberline {3.1}Arquitectura de Software}{44}
+\contentsline {section}{\numberline {3.2}Diagramas de Interacci\'on}{44}
+\contentsline {section}{\numberline {3.3}Diagrama de Clases}{44}
+\contentsline {section}{\numberline {3.4}Diagramas de Estado}{44}
+\contentsline {chapter}{\numberline {4}Planificaci\'on}{45}
+\contentsline {section}{\numberline {4.1}Etapas del Proyecto}{45}
+\contentsline {chapter}{Bibliograf\'{\i }a}{46}

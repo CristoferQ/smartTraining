@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.11)  27 SEP 2018 00:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.8.11)  27 SEP 2018 23:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -889,17 +889,176 @@ LaTeX Info: Redefining \% on input line 93.
  [18]
 LaTeX Info: Redefining \. on input line 93.
 LaTeX Info: Redefining \% on input line 93.
- [19]) (./cap/cap_03.tex
+ [19]
+Overfull \hbox (29.66608pt too wide) in alignment at lines 101--104
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (29.66608pt too wide) in alignment at lines 104--106
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (29.66608pt too wide) in alignment at lines 106--116
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 116.
+LaTeX Info: Redefining \% on input line 116.
+[20]
+Overfull \hbox (24.0963pt too wide) in alignment at lines 124--127
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (24.0963pt too wide) in alignment at lines 127--129
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (24.0963pt too wide) in alignment at lines 129--148
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+[21]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [22]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [23]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [24]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [25]
+Overfull \hbox (23.88963pt too wide) in alignment at lines 156--159
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (23.88963pt too wide) in alignment at lines 159--161
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (23.88963pt too wide) in alignment at lines 161--170
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
+[26]
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
+ [27]
+Underfull \hbox (badness 1024) in paragraph at lines 172--172
+[]\OT1/cmr/bx/sc/12 Funciones asociadas al m^^Sodulo de algoritmos de aprendiza
+je no
+ []
+
+
+Overfull \hbox (61.55638pt too wide) in alignment at lines 178--181
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (61.55638pt too wide) in alignment at lines 181--183
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (61.55638pt too wide) in alignment at lines 183--197
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+[28]
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+ [29]
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+ [30]
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+ [31]
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+ [32]
+Overfull \hbox (52.0063pt too wide) in alignment at lines 206--209
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (52.0063pt too wide) in alignment at lines 209--211
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (52.0063pt too wide) in alignment at lines 211--231
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+[33]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [34]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [35]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [36]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [37]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [38]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+ [39]
+Overfull \hbox (68.81467pt too wide) in alignment at lines 239--242
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (68.81467pt too wide) in alignment at lines 242--244
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (68.81467pt too wide) in alignment at lines 244--254
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+[40]
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [41]
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [42]) (./cap/cap_03.tex
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [20]
+ [43]
 Cap\'{\i }tulo 3.
 
 Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 3.
  []
 
-) (./cap/cap_04.tex [21
+) (./cap/cap_04.tex [44
 
 ]
 Cap\'{\i }tulo 4.
@@ -908,9 +1067,9 @@ Underfull \hbox (badness 10000) detected at line 1
 \OT1/cmr/bx/n/24.88 4.
  []
 
-) (./cap/bib.tex [22
+) (./cap/bib.tex [45
 
-]) [23] (./smartTraining.aux
+]) [46] (./smartTraining.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 LaTeX Info: Redefining \. on input line 12.
@@ -921,13 +1080,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15394 strings out of 493029
- 279422 string characters out of 6136234
- 374993 words of memory out of 5000000
- 18700 multiletter control sequences out of 15000+600000
+ 15406 strings out of 493029
+ 279539 string characters out of 6136234
+ 382554 words of memory out of 5000000
+ 18712 multiletter control sequences out of 15000+600000
  11201 words of font info for 39 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,84p,10376b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,84p,10376b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/tex
@@ -936,10 +1095,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on smartTraining.pdf (25 pages, 1244023 bytes).
+Output written on smartTraining.pdf (48 pages, 1267533 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 194 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
