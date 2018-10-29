@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo Histogram</title>
+    <!--jQuery [ REQUIRED ]-->
+    <script src="js/jquery.min.js"></script>
+    <!--BootstrapJS [ RECOMMENDED ]-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--NiftyJS [ RECOMMENDED ]-->
+    <script src="js/nifty.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  </head>
+  <body>
+    <div id="myDiv"></div>
+        <script>
+
+        $.ajax({
+          method:"POST",
+          url: "php/loadDataHistogram.php",
+          }).done( function( info ){
+            var json_info = JSON.parse( info );
+            var x2 = json_info.response;
+
+            var trace2 = {
+              x: x2,
+              autobinx: true,
+              marker: {
+                    color: "rgba(100, 200, 102, 0.7)",
+                     line: {
+                      color:  "rgba(100, 200, 102, 1)",
+                      width: 1
+                    }
+              },
+              name: "experimental",
+              opacity: 0.75,
+              type: "histogram",
+              
+            };
+
+            var data = [trace2];
+            var layout = {
+              bargap: 0.05,
+              bargroupgap: 0.2,
+              barmode: "overlay",
+              title: "Sampled Results",
+              xaxis: {title: "Value"},
+              yaxis: {title: "Count"}
+            };
+            Plotly.newPlot('myDiv', data, layout);
+
+          });
+
+        </script>
+  </body>
+</html>
