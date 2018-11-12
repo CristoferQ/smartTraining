@@ -14,8 +14,10 @@ user = sys.argv[2]
 job = sys.argv[3]
 pathResponse = sys.argv[4]
 algorithm = int(sys.argv[5])
-params = sys.argv[6].split("-")
-
+if algorithm <4:
+    params = sys.argv[6].split("-")
+else:
+    params = sys.argv[6]
 #hacemos la instancia del obeto...
 execProcess = execAlgorithm.execAlgorithm(dataSet, user, job, pathResponse, algorithm, params)
 execProcess.execAlgorithmByOptions()#hacemos la ejecucion del algoritmo con respecto a la data que se entrego

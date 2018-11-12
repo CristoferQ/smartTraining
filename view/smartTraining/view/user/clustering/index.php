@@ -72,7 +72,7 @@
 
     <!-- script para la carga de datos -->
     <script src="../js/clustering/createJob.js"></script>
-    
+
 </head>
 
 <!--TIPS-->
@@ -202,14 +202,14 @@
                         <form id="initNewJob" method="post" class="form-horizontal form-label-left">
 
                           <div class="form-group">
-                             <label class="col-sm-3 control-label">Name Job</label>
+                             <label class="col-sm-3 control-label">Name Job*</label>
                               <div class="col-sm-5">
                                   <input type="text" class="form-control" id="nameJob" name="nameJob" />
                               </div>
                           </div>
 
                           <div class="form-group">
-                             <label class="col-sm-3 control-label">Description Job</label>
+                             <label class="col-sm-3 control-label">Description Job*</label>
                               <div class="col-sm-5">
                                   <input type="text" class="form-control" id="descJob" name="descJob" />
                               </div>
@@ -219,20 +219,65 @@
               							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="algorithm">Algorithm <span class="required">*</span>
               							</label>
 
-                            <div class="col-md-9 col-sm-9 col-xs-12">
+                            <div class="col-md-5 col-sm-5 col-xs-12">
                               <select id="algorithm" class="form-control">
-                              <option value="1">K-Means</option>
-                              <option value="2">Mini Batch K-Means</option>
-                              <option value="3">Birch</option>
-                              <option value="4">Agglomerative</option>
-                              <option value="5">Affinity Propagation</option>
-                              <option value="6">Mean Shift</option>
-                              <option value="7">DBScan</option>
-                              <option value="8">All Algorithm</option>
+                                <option value="1">All Algorithm</option>
+                                <option value="2">K-Means</option>
+                                <option value="3">Birch</option>
+                                <option value="4">Agglomerative</option>
+                                <option value="5">Affinity Propagation</option>
+                                <option value="6">Mean Shift</option>
+                                <option value="7">DBScan</option>
 
                               </select>
                             </div>
                           </div>
+
+                          <div class="form-group" id="kData" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="kValues">Number Groups <span class="required">*</span>
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="kValues" class="form-control">
+                                <?php
+                                  for ($i=2; $i<=100;$i++){
+                                    echo "<option>$i</option>";
+                                  }
+                                ?>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="linkageValues" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="linkage">Linkage Option <span class="required">*</span>
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="linkage" class="form-control">
+                                <option>ward</option>
+                                <option>complete</option>
+                                <option>average</option>
+                                <option>single</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="affinityValues" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="affinity">Affinity Option <span class="required">*</span>
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="affinity" class="form-control">
+                                <option>euclidean</option>
+                                <option>l1</option>
+                                <option>l2</option>
+                                <option>manhattan</option>
+                                <option>cosine</option>
+                                <option>precomputed</option>
+                              </select>
+                            </div>
+                          </div>
+
                           <div class="ln_solid"></div>
 
                           <div class="form-group">

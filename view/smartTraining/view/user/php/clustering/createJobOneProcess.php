@@ -10,6 +10,11 @@
   $descJob = $_REQUEST['descJob'];
   $algorithm = $_REQUEST['algorithm'];
 
+  //parametros asociados al algoritmo...
+  $kValues = $_REQUEST['kValues'];
+  $linkageValues = $_REQUEST['linkageValues'];
+  $affinityValues = $_REQUEST['affinityValues'];
+
   #obtenemos los datos desde la sesion...
   $idUSer = 1;
   $idJob = time();#sera el id del job...
@@ -48,13 +53,58 @@
       $responseValue['response'] = "BIEN";
 
       #ejecutamos el algoritmo...
-      $command = "python /var/www/html/smartTraining/model/launcherClusteringService.py $pathMove$nameDocument $idJob $idUSer /var/www/html/smartTraining/dataStorage/";
+      $command = "python /var/www/html/smartTraining/model/launcherClusteringService.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/";
       exec($command);
       $responseValue['command'] = $command;
       $responseValue['job'] = $idJob;
 
     }else{
-      $responseValue['response'] = "CHOOSE";
+
+      $responseValue['response'] = "BIEN";
+
+      //trabajamos con el tipo de algoritmo segun corresponda y hacemos la ejecucion correspondiente
+      if ($algorithm == 2){#K-Means
+
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 1 $kValues";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
+
+      if ($algorithm == 3){#Birch
+
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 2 $kValues";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
+
+      if ($algorithm == 4){#Agglomerative
+
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 3 $linkageValues-$affinityValues-$kValues";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
+
+      if ($algorithm == 5){#affinity
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 6 -";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
+      if ($algorithm == 6){#meanShift
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 5 -";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
+      if ($algorithm == 7){#DBScan
+        $command = "python /var/www/html/smartTraining/model/launcherClusteringWeb.py $pathMove$nameDocument $idUSer $idJob /var/www/html/smartTraining/dataStorage/ 4 -";
+        exec($command);
+        $responseValue['command'] = $command;
+        $responseValue['job'] = $idJob;
+      }
     }
   }else{
     $responseValue['response'] = "ERROR";
