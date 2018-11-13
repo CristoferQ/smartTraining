@@ -95,8 +95,8 @@ $(document).ready(function() {
 				});
 			}else{//seleccion de un algoritmo con sus respectivos parametros
 				kValues = $("#initNewJob #kValues").val();
-				linkageValues = $("#initNewJob #linkageValues").val();
-				affinityValues = $("#initNewJob #affinityValues").val();
+				linkageValues = $("#initNewJob #linkage").val();
+				affinityValues = $("#initNewJob #affinity").val();
 
 				$.ajax({
 					method: "POST",
