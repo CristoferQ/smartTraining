@@ -1,9 +1,0 @@
-Funciones del Sistema,,,,
-#,ID Categoría,Categoría,Función,Descripción
-1,AC,Acceso,Iniciar sesión de usuario,El sistema deberá permitir iniciar sesión en el sistema
-2,,,Autenticar usuario,El sistema deberá permitir comprobar las credenciales del usuario para el inicio de sesión
-3,,,Cerrar sesión,El sistema deberá permitir cerrar la sesión actual del usuario
-4,,,Recuperar cuenta de usuario,El sistema deberá permitir recuperar la cuenta de usuario en caso de olvidar la contraseña
-5,,,Reestablecer cuenta de usuario,El sistema deberá permitir reestablecer la cuenta de usuario si se solicita una recuperación
-6,,,Modificar datos de acceso,El sistema deberá permitir modificar los datos de acceso asociados al inicio de sesión
-7,,,Notificación de cambios,El sistema deberá permitir notificar el cambio de datos en las credenciales generado

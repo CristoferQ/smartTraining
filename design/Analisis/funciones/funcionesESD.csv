@@ -1,6 +1,0 @@
-Funciones del Sistema,,,,
-#,ID Categoría,Categoría,Función,Descripción
-1,ESD,Evaluación set de datos,Revisar correcto estado set de datos,El sistema deberá permitir revisar el correcto estado del set de datos
-2,,,Revisar variables discretas en set de datos,El sistema deberá permitir revisar si el set de datos presenta variables discretas en sus atributos
-3,,,Revisar formato de set de datos,El sistema deberá permitir revisar el formato del set de datos y chequear si viene según las características impuestas
-4,,,Alojar set de datos en área de trabajo,El sistema deberá permitir alojar el set de datos en el área de trabajo del usuario

@@ -1,6 +1,0 @@
-Actores del Sistema,,
-Actor,ID,Descripción
-Usuarios,U,Entidad externa que hará uso de los servicios y módulos que disponga el sistema
-Almacenamiento Persistente,AP,Entidad que representa el entorno de almacenamiento persistente del sistema
-Sistema de Colas,SC,Entidad externa que facilita el manejo de los procesos a ejecutarse de manera remota en forma de jobs
-Scikit-learn,SCL,Entidad externa que facilita la implementación de los modelos de clasificación y clustering

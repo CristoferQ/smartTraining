@@ -1,7 +1,0 @@
-Funciones del Sistema,,,,
-#,ID Categoría,Categoría,Función,Descripción
-1,ES,Estadísticas,Visualizar estadísticas de uso,El sistema deberá permitir entregar estadísticas de uso por usuario y por módulo
-2,,,Visualizar carga de servidores,El sistema deberá permitir visualizar la carga actual de los servidores
-3,,,Visualizar carga de sistema de colas,El sistema deberá permitir visualizar la carga del sistema de colas
-4,,,Visualizar estados de trabajos,El sistema deberá permitir visualizar los estados de trabajo
-5,,,Visualizar estadísticas de trabajos,El sistema deberá permitir visualizar estadísticas relacionadas a los trabajos procesados
