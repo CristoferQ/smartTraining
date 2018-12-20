@@ -22,7 +22,7 @@ class histograme(object):
     #funcion que permite crear un histograma...
     def generateHistogram(self, key, exportName, title):
 
-        plt.figure()
+        #plt.figure()
         sns.set(color_codes=True)
         sns.set(style="ticks")
         sns_plot = sns.distplot(self.dataSet[key] , color="olive", label=key, kde=False, rug=True)

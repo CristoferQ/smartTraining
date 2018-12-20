@@ -227,7 +227,8 @@
                                       <th class="min-tablet">Params</th>
                                       <th class="min-tablet">Groups</th>
                                       <th class="min-tablet">Calinski-Harabaz index</th>
-                                      <th class="min-tablet">Silhouette Coefficient score</th>                                      
+                                      <th class="min-tablet">Silhouette Coefficient score</th>
+                                      <th class="min-tablet">Detail</th>
                                     </tr>
                             </thead>
                         </table>
@@ -331,7 +332,15 @@
                                   <li>
           						                <a href="../training">
           						                    <i class="fa fa fa-graduation-cap"></i>
-          						                    <span class="menu-title">Supervised Learning</span><i class="arrow"></i>
+          						                    <span class="menu-title">Supervised Learning: Classification</span><i class="arrow"></i>
+          						                </a>
+
+          						            </li>
+
+                                  <li>
+          						                <a href="../prediction">
+          						                    <i class="fa fa fa-line-chart"></i>
+          						                    <span class="menu-title">Supervised Learning: Prediction</span><i class="arrow"></i>
           						                </a>
 
           						            </li>

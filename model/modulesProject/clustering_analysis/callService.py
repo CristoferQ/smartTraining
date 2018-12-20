@@ -153,6 +153,6 @@ class serviceClustering(object):
 
 
         #generamos histogramas asociados al proceso y los resultados obtenidos...
-        createHistogramObject = createHistogram.histograme(dataFrame)
-        createHistogramObject.generateHistogram('calinski_harabaz_score', self.pathResponse+self.user+"/"+self.job+"/calinski_harabaz_score.svg", "Histogram for calinski harabaz score")
-        createHistogramObject.generateHistogram('silhouette_score', self.pathResponse+self.user+"/"+self.job+"/silhouette_score.svg", "Histogram for silhouette score")
+        #createHistogramObject = createHistogram.histograme(dataFrame)
+        #createHistogramObject.generateHistogram('calinski_harabaz_score', self.pathResponse+self.user+"/"+self.job+"/calinski_harabaz_score.svg", "Histogram for calinski harabaz score")
+        #createHistogramObject.generateHistogram('silhouette_score', self.pathResponse+self.user+"/"+self.job+"/silhouette_score.svg", "Histogram for silhouette score")

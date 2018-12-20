@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>VHL-Hunter | STATISTICS</title>
+        <meta name="description" content="VHL-Hunter is a web service for classification clinical relevance in mutatios associated a pVHL. It works with MLSMPc methodology for training and splitter by topologic information associated to protein-protein interaction sector">
+        <meta name="keywords" content="VHL-Hunter, PESB2, Alvaro Olivera, David Medina, Universidad de Chile, MLSMPc, von Hippel-Lindau, preventive diagnostic">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="../css/flexslider.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/line-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/elegant-icons.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/lightbox.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/theme-aquatica.css" rel="stylesheet" type="text/css" media="all"/>
+        <link href="../css/custom.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+        <!--[if gte IE 9]>
+        	<link rel="stylesheet" type="text/css" href="css/ie9.css" />
+		<![endif]-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,700%7CRaleway:700' rel='stylesheet' type='text/css'>
+        <script src="../js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+    	<div class="loader">
+    		<div class="spinner">
+			  <div class="double-bounce1"></div>
+			  <div class="double-bounce2"></div>
+			</div>
+    	</div>
+
+		<div class="nav-container">
+			<nav class="top-bar">
+				<div class="container">
+				</div><!--end of container-->
+			</nav>
+		</div>
+    <div class="main-container">
+			<header class="page-header">
+				<div class="background-image-holder parallax-background">
+					<img class="background-image" alt="Background Image" src="../resource/statistics/1.jpg">
+				</div>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12 text-center">
+							<span class="text-white alt-font">Statistics</span>
+							<h1 class="text-white">Statistics for attributes</h1>
+							<p class="lead text-white">Evaluated dispersion and distribution in data set</p>
+						</div>
+					</div><!--end of row-->
+				</div><!--end of container-->
+			</header>
+
+			<section class="duplicatable-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="feature">
+								<h5>Histograms</h5>
+								<p>
+                  For each attribute with continuous distribution in the data set, histograms were developed to evaluate possible distributions of elements. The data associated with each histogram are normalized.
+								</p>
+							</div>
+						</div><!--end 4 col-->
+
+						<div class="col-sm-4">
+							<div class="feature">
+                <h5>Box Plots</h5>
+								<p>
+                  Box Plots were developed to evaluate the existing dispersions in the data set, only the atirbutos with continuous distribution present in the worked sample were considered for it.
+								</p>
+							</div>
+						</div><!--end 4 col-->
+
+						<div class="col-sm-4">
+							<div class="feature">
+                <h5>Statistics Report</h5>
+								<p>
+                  Statistics summaries were generated from the existing attributes in the data set, calculating means, standard deviations and variances. Cake pie charts were generated for the attributes with discrete distribution.
+								</p>
+							</div>
+						</div><!--end 4 col-->
+					</div><!--end of row-->
+				</div>
+			</section>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+              <h1>Histogram for continuous attributes</h1>
+            </div>
+          </div><!--end of row-->
+
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+
+              <div id="SaccW">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="SaccM">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="yDDG">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="ProteinPropens">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="Positionaccept">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="mosst">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="functional">
+              </div>
+            </div>
+
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </section>
+
+      <section class="side-image clearfix">
+        <div class="image-container col-md-4 col-sm-4 pull-left">
+          <div class="background-image-holder">
+            <img class="background-image" alt="Background Image" src="../resource/statistics/2.jpg">
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 content clearfix">
+              <h1>Box Plot for attributs</h1>
+
+              <p class="lead">
+                Box Plot allowed to evaluate the existing dispersions in the attributes of the data set, denoting significant differences between them.
+              </p>
+
+              <div class="row">
+
+                <div id="boxPlot">
+                </div>
+
+              </div><!--end of row-->
+            </div>
+          </div><!--end of row-->
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+              <h1>Attributes with discrete distribution</h1>
+            </div>
+          </div><!--end of row-->
+
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="Sstruct">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="shbondsW">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="shbondsM">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="sector">
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="result">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="Positiontype">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="clinical">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="graphicAAMt">
+
+              </div>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <div id="graphicAAWt">
+
+              </div>
+            </div>
+
+          </div><!--end of row-->
+        </div><!--end of container-->
+      </section>
+
+      <section class="side-image clearfix">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-sm-7 content clearfix">
+              <h1>Summary Statistics</h1>
+              <p class="lead">
+
+              </p>
+
+              <div class="row">
+
+                <div>
+                  <table id="example" class="display" width="100%"></table>
+                </div>
+              </div><!--end of row-->
+            </div>
+          </div><!--end of row-->
+        </div>
+
+        <div class="image-container col-md-5 col-sm-5 pull-right">
+          <div class="background-image-holder">
+            <img class="background-image" alt="Background Image" src="../resource/statistics/2.jpg">
+          </div>
+        </div>
+      </section>
+
+		</div>
+    <div class="footer-container">
+			<footer class="bg-primary short-2">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+              <span class="text-white">aolivera (at) ing (dot) uchile (dot) cl</span>
+							<span class="text-white"> +56 2 2978 4189</span>
+							<span class="text-white">Beauchef #851, 7th floor, West Building</span>
+
+						</div>
+					</div><!--end for row-->
+				</div><!--end of container-->
+
+				<div class="contact-action">
+					<div class="align-vertical">
+						<i class="icon text-white icon_house"></i>
+						<a href="../" class="text-white"><span class="text-white">Go Home Page <i class="icon arrow_left"></i></span></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+  		<script src="../js/jquery.min.js"></script>
+      <script src="../js/jquery.plugin.min.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/jquery.flexslider-min.js"></script>
+      <script src="../js/smooth-scroll.min.js"></script>
+      <script src="../js/skrollr.min.js"></script>
+      <script src="../js/spectragram.min.js"></script>
+      <script src="../js/scrollReveal.min.js"></script>
+      <script src="../js/isotope.min.js"></script>
+      <script src="../js/twitterFetcher_v10_min.js"></script>
+      <script src="../js/lightbox.min.js"></script>
+      <script src="../js/jquery.countdown.min.js"></script>
+      <script src="../js/scripts.js"></script>
+
+      <!-- script asociado a la generacion de los graficos de torta -->
+      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+      <script src="../js/barchart/fullData.js"></script>
+      <script src="../js/boxPlot/fullDataSet.js"></script>
+      <script src="../js/histogram/loadHistograms.js"></script>
+      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+      <script src="../js/barchart/loadDataTable.js"></script>
+
+    </body>
+</html>

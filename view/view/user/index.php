@@ -378,7 +378,15 @@
                                   <li>
           						                <a href="training">
           						                    <i class="fa fa fa-graduation-cap"></i>
-          						                    <span class="menu-title">Supervised Learning</span><i class="arrow"></i>
+          						                    <span class="menu-title">Supervised Learning: Classification</span><i class="arrow"></i>
+          						                </a>
+
+          						            </li>
+
+                                  <li>
+          						                <a href="prediction">
+          						                    <i class="fa fa fa-line-chart"></i>
+          						                    <span class="menu-title">Supervised Learning: Prediction</span><i class="arrow"></i>
           						                </a>
 
           						            </li>
