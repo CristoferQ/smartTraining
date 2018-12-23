@@ -1,6 +1,10 @@
 import sys
 import pandas as pd
-import SVM
+import AdaBoost
+import createRocCurve
+import createPrecisionRecallCurve
+import createLearningCurve
+import createConfusionMatrix
 
 def main():
 
@@ -12,8 +16,25 @@ def main():
     y=columnas[0:len(columnas)-1]
     dataset=data[y]
 
-    #AdaBoostObject = AdaBoost.AdaBoost(dataset, target, 3, 'SAMME', 10)
-    #AdaBoostObject.trainingMethod()
+    AdaBoostObject = AdaBoost.AdaBoost(dataset, target, 3, 'SAMME', 10)
+    AdaBoostObject.trainingMethod()
+
+    #curva roc
+    #curveRocObject = createRocCurve.curveRoc(dataset, target, AdaBoostObject.model, 10, 'user', 'job', 'path')
+    #curveRocObject.createCurveROC()
+
+    #precision-recall curve
+    #precisionCurve = createPrecisionRecallCurve.curvePrecision(dataset, target, AdaBoostObject.model, 10, 'user', 'job', 'path')
+    #precisionCurve.plot_precision_and_recall_curve()
+
+    #learning curve
+    #learningCurveDemo = createLearningCurve.curveLearning(dataset, target, AdaBoostObject.model, 10, 'user', 'job', 'path')
+    #learningCurveDemo.createLearningCurve()
+
+    #confusion matrix data
+    confusionMatrixDemo = createConfusionMatrix.confusionMatrix(dataset, target, AdaBoostObject.model, 10, 'user', 'job', 'path', ["Clinical", "No Clinical"])
+    confusionMatrixDemo.createConfusionMatrix()
+
     #bagginObject = Baggin.Baggin(dataset,target,3,10)
     #bagginObject.trainingMethod()
     #bernoulliNB = BernoulliNB.Bernoulli(dataset, target, 10)

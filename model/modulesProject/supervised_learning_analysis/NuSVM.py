@@ -14,19 +14,22 @@ import responseTraining
 class NuSVM(object):
 
     #building
-    def __init__ (self,dataset,target,kernel,validation):
+    def __init__ (self,dataset,target,kernel, nu, degree, gamma, validation):
 
         self.dataset=dataset
         self.target=target
         self.kernel=kernel
         self.validation=validation
+        self.nu = nu
+        self.degree = degree
+        self.gamma = gamma
 
     def trainingMethod(self):
 
-        self.NuSVMAlgorithm=NuSVC(kernel=self.kernel, degree=3, gamma=10, probability=True)
-        self.NuSVMAlgorithm=self.NuSVMAlgorithm.fit(self.dataset,self.target)
+        self.model=NuSVC(kernel=self.kernel, degree=self.degree, gamma=self.gamma, nu=self.nu, probability=True)
+        self.NuSVMAlgorithm=self.model.fit(self.dataset,self.target)
 
-        params = "%s" % (self.kernel)
+        params = "kernel:%s-degree:%f-gamma:%f-nu:%f-probability:True" % (self.kernel, self.degree, self.gamma, self.nu)
         performanceData = responseTraining.responseTraining(self.NuSVMAlgorithm, 'NuSVM', params, self.validation)
         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
 
