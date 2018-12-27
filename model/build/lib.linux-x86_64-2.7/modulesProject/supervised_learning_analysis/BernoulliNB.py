@@ -18,10 +18,10 @@ class Bernoulli (object):
         self.validation=validation
 
     def trainingMethod(self):
-        self.BernoulliNBAlgorithm=BernoulliNB()
-        self.BernoulliNBAlgorithm=self.BernoulliNBAlgorithm.fit(self.dataset,self.target)
+        self.model=BernoulliNB()
+        self.BernoulliNBAlgorithm=self.model.fit(self.dataset,self.target)
 
-        params = "default"
+        params = "Param:Default"
         performanceData = responseTraining.responseTraining(self.BernoulliNBAlgorithm, 'BernoulliNB', params, self.validation)
         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
 

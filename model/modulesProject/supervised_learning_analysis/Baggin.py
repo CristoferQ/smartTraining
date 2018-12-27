@@ -24,7 +24,5 @@ class Baggin(object):
         self.BagginAlgorithm= self.model.fit(self.dataset,self.target)
 
         params = "n_estimators:%d-bootstrap:%s" % (self.n_estimators, self.bootstrap)
-        performanceData = responseTraining.responseTraining(self.BagginAlgorithm, 'Baggin', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.BagginAlgorithm, 'Baggin', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

@@ -19,10 +19,10 @@ class Gaussian(object):
 
     def trainingMethod(self):
 
-        self.GaussianNBAlgorithm=GaussianNB()
-        self.GaussianNBAlgorithm=self.GaussianNBAlgorithm.fit(self.dataset,self.target)
+        self.model=GaussianNB()
+        self.GaussianNBAlgorithm=self.model.fit(self.dataset,self.target)
 
-        params = '-'
+        params = 'Params:default'
         performanceData = responseTraining.responseTraining(self.GaussianNBAlgorithm, 'GaussianNB', params, self.validation)
         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
 

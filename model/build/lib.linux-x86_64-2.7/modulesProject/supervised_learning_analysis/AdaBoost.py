@@ -20,11 +20,10 @@ class AdaBoost(object):
         self.validation=validation
 
     def trainingMethod(self):
-         self.AdaBoostAlgorithm= AdaBoostClassifier(n_estimators=self.n_estimators,algorithm=self.algorithm)
-         self.AdaBoostAlgorithm= self.AdaBoostAlgorithm.fit(self.dataset,self.target)
+         self.model= AdaBoostClassifier(n_estimators=self.n_estimators,algorithm=self.algorithm)
 
-         params = "%s-%d" % (self.algorithm, self.n_estimators)
-         performanceData = responseTraining.responseTraining(self.AdaBoostAlgorithm, 'AdaBoost', params, self.validation)
-         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
+         self.AdaBoostAlgorithm= self.model.fit(self.dataset,self.target)
 
-         print performanceData.scoreData
+         params = "algorithm:%s-n_estimators:%d" % (self.algorithm, self.n_estimators)
+         self.performanceData = responseTraining.responseTraining(self.AdaBoostAlgorithm, 'AdaBoost', params, self.validation)
+         self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

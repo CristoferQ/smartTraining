@@ -14,21 +14,24 @@ import responseTraining
 class SVM(object):
 
     #building
-    def __init__(self,dataset, target, kernel, validation):
+    def __init__(self,dataset, target, kernel, C_value, degree, gamma, validation):
 
         #init attributes values...
         self.dataset=dataset
         self.target=target
         self.kernel=kernel
         self.validation=validation
+        self.C_value = C_value
+        self.degree = degree
+        self.gamma = gamma
 
     #instance training...
     def trainingMethod(self):
 
-        self.SVMAlgorithm=svm.SVC(kernel=self.kernel, degree=3, gamma=10, probability=True)
-        self.SVMAlgorithm =self.SVMAlgorithm.fit(self.dataset,self.target)
+        self.model=svm.SVC(kernel=self.kernel, degree=self.degree, gamma=self.gamma, C=self.C_value, probability=True)
+        self.SVMAlgorithm =self.model.fit(self.dataset,self.target)
 
-        params = "%s" % self.kernel
+        params = "kernel:%s-C:%f-degree:%f-gamma:%f" % (self.kernel, self.C_value, self.degree, self.gamma)
         performanceData = responseTraining.responseTraining(self.SVMAlgorithm, 'SVM', params, self.validation)
         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
 

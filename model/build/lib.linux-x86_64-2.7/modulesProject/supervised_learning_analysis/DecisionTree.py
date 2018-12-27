@@ -20,10 +20,10 @@ class DecisionTree(object):
         self.validation=validation
 
     def trainingMethod(self):
-        self.DecisionTreeAlgorithm=tree.DecisionTreeClassifier(criterion=self.criterion,splitter=self.splitter)
-        self.DecisionTreeAlgorithm=self.DecisionTreeAlgorithm.fit(self.dataset,self.target)
+        self.model=tree.DecisionTreeClassifier(criterion=self.criterion,splitter=self.splitter)
+        self.DecisionTreeAlgorithm=self.model.fit(self.dataset,self.target)
 
-        params = "%s-%s" % (self.criterion,self.splitter)
+        params = "criterion:%s-splitter:%s" % (self.criterion,self.splitter)
         performanceData = responseTraining.responseTraining(self.DecisionTreeAlgorithm, 'DecisionTree', params, self.validation)
         performanceData.estimatedMetricsPerformance(self.dataset, self.target)
 
