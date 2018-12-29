@@ -26,7 +26,5 @@ class RandomForest(object):
         self.RandomForestAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = "criterion:%s-n_estimators:%d-min_samples_leaf:%d-min_samples_split:%d-bootstrap:%s" % (self.criterion ,self.n_estimators, self.min_samples_leaf, self.min_samples_split, self.bootstrap)
-        performanceData = responseTraining.responseTraining(self.RandomForestAlgorithm, 'RandomForest', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.RandomForestAlgorithm, 'RandomForest', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

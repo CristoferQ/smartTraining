@@ -23,7 +23,5 @@ class Gaussian(object):
         self.GaussianNBAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = 'Params:default'
-        performanceData = responseTraining.responseTraining(self.GaussianNBAlgorithm, 'GaussianNB', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.GaussianNBAlgorithm, 'GaussianNB', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

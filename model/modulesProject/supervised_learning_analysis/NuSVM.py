@@ -30,7 +30,5 @@ class NuSVM(object):
         self.NuSVMAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = "kernel:%s-degree:%f-gamma:%f-nu:%f-probability:True" % (self.kernel, self.degree, self.gamma, self.nu)
-        performanceData = responseTraining.responseTraining(self.NuSVMAlgorithm, 'NuSVM', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.NuSVMAlgorithm, 'NuSVM', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)        

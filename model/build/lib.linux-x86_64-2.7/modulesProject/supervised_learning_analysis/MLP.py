@@ -30,7 +30,5 @@ class MLP(object):
         self.MLPAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = "activation:%s-learning_rate:%s-solver:%s-hidden_layer_sizes_a:%d-hidden_layer_sizes_b:%d-hidden_layer_sizes_c:%d-alpha:%f-max_iter:%d-shuffle:%s" % (self.activation, self.learning_rate, self.solver,self.hidden_layer_sizes[0], self.hidden_layer_sizes[1], self.hidden_layer_sizes[2], self.alpha, self.max_iter, self.shuffle)
-        performanceData = responseTraining.responseTraining(self.MLPAlgorithm, 'MLP', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.MLPAlgorithm, 'MLP', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

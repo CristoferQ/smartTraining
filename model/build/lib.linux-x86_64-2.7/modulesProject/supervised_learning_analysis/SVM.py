@@ -32,7 +32,5 @@ class SVM(object):
         self.SVMAlgorithm =self.model.fit(self.dataset,self.target)
 
         params = "kernel:%s-C:%f-degree:%f-gamma:%f" % (self.kernel, self.C_value, self.degree, self.gamma)
-        performanceData = responseTraining.responseTraining(self.SVMAlgorithm, 'SVM', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.SVMAlgorithm, 'SVM', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)        

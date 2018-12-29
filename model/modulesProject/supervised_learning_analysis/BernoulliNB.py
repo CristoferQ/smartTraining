@@ -22,7 +22,5 @@ class Bernoulli (object):
         self.BernoulliNBAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = "Param:Default"
-        performanceData = responseTraining.responseTraining(self.BernoulliNBAlgorithm, 'BernoulliNB', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.BernoulliNBAlgorithm, 'BernoulliNB', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

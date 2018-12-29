@@ -33,7 +33,5 @@ class knn(object):
 
         #training...
         params = "algorithm:%s-metric:%s-neighbors:%d-weights:%s" % (self.algorithm, self.metric, self.n_neighbors, self.weights)
-        performanceData = responseTraining.responseTraining(self.knnAlgorithm, 'KNN', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.response)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.knnAlgorithm, 'KNN', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.response)

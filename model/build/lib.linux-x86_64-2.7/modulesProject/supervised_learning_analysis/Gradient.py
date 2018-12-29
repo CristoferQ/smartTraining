@@ -26,8 +26,6 @@ class Gradient(object):
         self.model= GradientBoostingClassifier(n_estimators=self.n_estimators)
         self.GradientAlgorithm= self.model.fit(self.dataset,self.target)
 
-        params = "n_estimators:%d-loss:%f-min_samples_leaf:%d-min_samples_split:%d" % (self.n_estimators, self.loss, self.min_samples_leaf, self.min_samples_split)
-        performanceData = responseTraining.responseTraining(self.GradientAlgorithm, 'Gradient', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        params = "n_estimators:%d-loss:%s-min_samples_leaf:%d-min_samples_split:%d" % (self.n_estimators, self.loss, self.min_samples_leaf, self.min_samples_split)
+        self.performanceData = responseTraining.responseTraining(self.GradientAlgorithm, 'Gradient', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)

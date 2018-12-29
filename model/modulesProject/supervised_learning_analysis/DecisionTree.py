@@ -24,7 +24,5 @@ class DecisionTree(object):
         self.DecisionTreeAlgorithm=self.model.fit(self.dataset,self.target)
 
         params = "criterion:%s-splitter:%s" % (self.criterion,self.splitter)
-        performanceData = responseTraining.responseTraining(self.DecisionTreeAlgorithm, 'DecisionTree', params, self.validation)
-        performanceData.estimatedMetricsPerformance(self.dataset, self.target)
-
-        print performanceData.scoreData
+        self.performanceData = responseTraining.responseTraining(self.DecisionTreeAlgorithm, 'DecisionTree', params, self.validation)
+        self.performanceData.estimatedMetricsPerformance(self.dataset, self.target)
