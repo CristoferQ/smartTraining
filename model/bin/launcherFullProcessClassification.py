@@ -274,7 +274,7 @@ connectDB = ConnectDataBase.ConnectDataBase()
 handler = HandlerQuery.HandlerQuery()
 
 #hacemos la consulta
-query = "update job set job.statusJob = 'FINISH' where job.idjob=%s" % job
+query = "update job set job.statusJob = 'FINISH', job.modifiedJob= NOW() where job.idjob=%s" % job
 
 connectDB.initConnectionDB()
 handler.insertToTable(query, connectDB)
