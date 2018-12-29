@@ -22,4 +22,3 @@ class DecisionTree(object):
         self.DecisionTreeAlgorithm=self.model.fit(self.dataset,self.response)
         self.predicctions = self.DecisionTreeAlgorithm.predict(self.dataset)
         self.r_score = self.DecisionTreeAlgorithm.score(self.dataset, self.response)
-        print self.r_score

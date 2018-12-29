@@ -2,9 +2,9 @@
 script que permite el testeo de las clases de aprendizaje supervisado para prediccion de elementos
 '''
 
-import Gradient
 import sys
 import pandas as pd
+import MLP
 
 def main():
 
@@ -16,8 +16,8 @@ def main():
     y=columnas[0:len(columnas)-1]
     dataset=data[y]
 
-    gradient = Gradient.Gradient(dataset,response,100, 'ls', 'friedman_mse', 2, 1)
-    gradient.trainingMethod()
+    mlpModel = MLP.MLP(dataset,response, 'relu', 'adam', 'constant', 1,1,1, 0.001, 200, True)
+    mlpModel.trainingMethod()
     return 0
 
 if __name__ == '__main__':

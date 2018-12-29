@@ -34,5 +34,4 @@ class SVRModel(object):
         self.SVRAlgorithm =self.model.fit(self.dataset,self.response)
         self.predicctions = self.SVRAlgorithm.predict(self.dataset)
         self.r_score = self.SVRAlgorithm.score(self.dataset, self.response)
-        print self.r_score
         

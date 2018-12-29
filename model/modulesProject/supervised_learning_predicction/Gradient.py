@@ -26,4 +26,3 @@ class Gradient(object):
         self.GradientAlgorithm= self.model.fit(self.dataset,self.response)
         self.predicctions = self.GradientAlgorithm.predict(self.dataset)
         self.r_score = self.GradientAlgorithm.score(self.dataset, self.response)
-        print self.r_score

@@ -30,4 +30,3 @@ class KNN_Model(object):
         self.KNN_model =self.model.fit(self.dataset,self.response)
         self.predicctions = self.KNN_model.predict(self.dataset)
         self.r_score = self.KNN_model.score(self.dataset, self.response)
-        print self.r_score
