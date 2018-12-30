@@ -59,7 +59,7 @@ header = ["Algorithm", "Params", "Validation", "Accuracy", "Recall", "Precision"
 matrixResponse = []
 
 #comenzamos con las ejecuciones...
-'''
+
 #AdaBoost
 for algorithm in ['SAMME', 'SAMME.R']:
     for n_estimators in range (10,1501,10):
@@ -102,7 +102,7 @@ try:
 except:
     iteracionesIncorrectas+=1
     pass
-'''
+
 #DecisionTree
 for criterion in ['gini', 'entropy']:
     for splitter in ['best', 'random']:
@@ -117,7 +117,7 @@ for criterion in ['gini', 'entropy']:
         except:
             iteracionesIncorrectas+=1
             pass
-'''
+
 try:
     #GaussianNB
     gaussianObject = GaussianNB.Gaussian(data, target, 10)
@@ -241,8 +241,6 @@ for n_estimators in range (10, 1501, 10):
                     except:
                         iteracionesIncorrectas+=1
                         pass
-
-'''
 
 #generamos el export de la matriz convirtiendo a data frame
 dataFrame = pd.DataFrame(matrixResponse, columns=header)
