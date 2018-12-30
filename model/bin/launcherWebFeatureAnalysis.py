@@ -6,6 +6,8 @@ import sys
 import json
 
 from modulesProject.feature_analysis import execFeatureAnalysis
+from modulesProject.dataBase_module import ConnectDataBase
+from modulesProject.dataBase_module import HandlerQuery
 
 #recibimos los atributos
 user = sys.argv[1]
@@ -55,3 +57,14 @@ else:#Factor Analysis
 
 #show response
 print json.dumps(dictResponse)
+
+#cambiamos el estado al job
+connectDB = ConnectDataBase.ConnectDataBase()
+handler = HandlerQuery.HandlerQuery()
+
+#hacemos la consulta
+query = "update job set job.statusJob = 'FINISH', job.modifiedJob= NOW() where job.idjob=%s" % job
+
+connectDB.initConnectionDB()
+handler.insertToTable(query, connectDB)
+connectDB.closeConnectionDB()

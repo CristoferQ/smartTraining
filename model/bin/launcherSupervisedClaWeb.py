@@ -10,6 +10,9 @@ summary process con los resultados de las performance obtenidas
 '''
 
 from modulesProject.supervised_learning_analysis import execAlgorithm
+from modulesProject.dataBase_module import ConnectDataBase
+from modulesProject.dataBase_module import HandlerQuery
+
 import pandas as pd
 import sys
 
@@ -26,3 +29,14 @@ print params
 #hacemos la instancia del obeto...
 execProcess = execAlgorithm.execAlgorithm(dataSet, user, job, pathResponse, algorithm, params, validation, ["Clinical", "No-Clinical"])
 execProcess.execAlgorithmByOptions()#hacemos la ejecucion del algoritmo con respecto a la data que se entrego
+
+#cambiamos el estado al job
+connectDB = ConnectDataBase.ConnectDataBase()
+handler = HandlerQuery.HandlerQuery()
+
+#hacemos la consulta
+query = "update job set job.statusJob = 'FINISH', job.modifiedJob= NOW() where job.idjob=%s" % job
+
+connectDB.initConnectionDB()
+handler.insertToTable(query, connectDB)
+connectDB.closeConnectionDB()
