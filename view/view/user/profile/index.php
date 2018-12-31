@@ -79,6 +79,13 @@
     <link href="../premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
 
 		<script src="../js/profile/loadJobsStageByDate.js"></script>
+		<script src="../js/profile/loadJobsClassify.js"></script>
+		<script src="../js/profile/loadJobsPrediction.js"></script>
+		<script src="../js/profile/loadJobsCluster.js"></script>
+		<script src="../js/profile/loadJobsStatistic.js"></script>
+		<script src="../js/profile/loadJobsCharact.js"></script>
+		<script src="../js/profile/loadJobsQueue.js"></script>
+
 		<script src="../js/profile/loadUser.js"></script>
 
 
@@ -198,7 +205,7 @@
 																					<img src="../img/profile-photos/11.png" class="img-lg img-circle" alt="Profile Picture">
 																			</div>
 																			<h4 class="text-lg text-overflow mar-no">
-																				<div class="nameUser">																					
+																				<div class="nameUser">
 																				</div>
 																			</h4>
 																			<br>
@@ -258,7 +265,7 @@
 	                        Process by Classification Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServiceClassifi"></div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -271,7 +278,7 @@
 	                        Process by Prediction Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServicePrediction"></div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -284,7 +291,7 @@
 	                        Process by Clustering Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServiceClustering"></div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -297,7 +304,7 @@
 	                        Process by Statistic Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServiceStatistic"></div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -310,7 +317,7 @@
 	                        Process by Characteristic Analysis Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServiceCharacteristic"></div>
 	                      </div>
 	                    </div>
 	                  </div>
@@ -323,7 +330,7 @@
 	                        Process by Queue System Service
 	                      </div>
 	                      <div class="panel-body">
-
+													<div id="useServiceQueue"></div>
 	                      </div>
 	                    </div>
 	                  </div>
