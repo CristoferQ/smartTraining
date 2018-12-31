@@ -24,9 +24,13 @@
     <!--Nifty Premium Icon [ DEMONSTRATION ]-->
     <link href="../css/demo/nifty-demo-icons.min.css" rel="stylesheet">
 
-    <!--Demo [ DEMONSTRATION ]-->
-    <link href="../css/demo/nifty-demo.min.css" rel="stylesheet">
 
+    <!--DataTables [ OPTIONAL ]-->
+    <link href="../plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../plugins/datatables/extensions/Responsive/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!--Bootstrap Validator [ OPTIONAL ]-->
+    <link href="../plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
     <!--JAVASCRIPT-->
     <!--=================================================-->
 
@@ -46,11 +50,12 @@
     <!--NiftyJS [ RECOMMENDED ]-->
     <script src="../js/nifty.min.js"></script>
 
+    <!--Dropzone [ OPTIONAL ]-->
+    <script src="../plugins/dropzone/dropzone.min.js"></script>
+    <link href="../plugins/dropzone/dropzone.min.css" rel="stylesheet">
+    <script src="../js/formatDropzone.js"></script>
 
     <!--=================================================-->
-
-    <!--Demo script [ DEMONSTRATION ]-->
-    <script src="../js/demo/nifty-demo.min.js"></script>
 
     <!--Font Awesome [ OPTIONAL ]-->
     <link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -62,13 +67,9 @@
     <link href="../plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
     <!--Premium Line Icons [ OPTIONAL ]-->
     <link href="../premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
-    <link href="../plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
-
-    <!--Dropzone [ OPTIONAL ]-->
-    <script src="../plugins/dropzone/dropzone.min.js"></script>
-    <link href="../plugins/dropzone/dropzone.min.css" rel="stylesheet">
-    <script src="../js/formatDropzone.js"></script>
+    <link href="../plugins/spinkit/css/spinkit.min.css" rel="stylesheet">
     <script src="../plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+
 
     <!-- script para la carga de datos -->
     <script src="../js/clustering/createJob.js"></script>

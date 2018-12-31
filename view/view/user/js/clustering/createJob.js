@@ -71,8 +71,7 @@ $(document).ready(function() {
 				}
 		}).on('success.form.bv', function(e) {
 			e.preventDefault();
-			div = document.getElementById('loading');
-			div.style.display = '';
+			$('#loading').show();
 			var nameJob = $("#initNewJob #nameJob").val();
 			var descJob = $("#initNewJob #descJob").val();
       var algorithm = $("#initNewJob #algorithm").val();

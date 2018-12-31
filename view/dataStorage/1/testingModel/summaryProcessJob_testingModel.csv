@@ -1,0 +1,2 @@
+Algorithm,Params,Validation,Accuracy,Recall,Precision,Neg_log_loss,F1,FBeta
+GaussianNB,Default,CV-10,0.464894586895,0.219230769231,0.382261904762,-1.44257570212,0.233077706607,0.220892661955

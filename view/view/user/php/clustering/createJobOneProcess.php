@@ -24,8 +24,10 @@
   $nameDocument = readDocument($pathData);
 
   #hacemos la insercion a la base de datos...
-  $query = "insert into job values ($idJob, '$nameJob', '$descJob', NOW(), NOW(), $idUSer, '$nameDocument', 'START')";
+  $query = "insert into job values ($idJob, '$nameJob', '$descJob', NOW(), NOW(), $idUSer, '$nameDocument', 'START', 'CLUSTERING')";
+  $query2 = "insert into dataSet values ($idJob, '$nameDocument', NOW(), NOW(), $idUSer, 'CLUSTERING', $idJob)";
   $resultado = mysqli_query($conexion, $query);
+  $resultado2 = mysqli_query($conexion, $query2);
   $response = verificar_resultado($resultado);
 
   $responseValue['response'] = "";

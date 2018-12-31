@@ -3,6 +3,8 @@ script que recibe un modelo y permite crear la curva roc del modelo con respecto
 generado
 '''
 
+import matplotlib
+matplotlib.use('Agg')
 import numpy as np
 from scipy import interp
 import matplotlib.pyplot as plt

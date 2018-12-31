@@ -2,6 +2,8 @@
 script que permite crear una matriz de confusion dado un modelo
 '''
 
+import matplotlib
+matplotlib.use('Agg')
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import cross_val_predict

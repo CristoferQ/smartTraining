@@ -1,0 +1,1 @@
+{"errorExec": {"confusionMatrix": "error", "exec_algorithm": "ERROR", "precisionCurve": "error", "curveLearning": "error", "curveRoc": "error"}, "Validation": "Cross Validation: 10", "Params": {"n_estimators": "", "algorithm": "Default"}, "algorithm": "AdaBoostClassifier"}

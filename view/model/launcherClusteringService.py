@@ -13,6 +13,9 @@ response:
 '''
 
 from modulesProject.clustering_analysis import callService
+from modulesProject.dataBase_module import ConnectDataBase
+from modulesProject.dataBase_module import HandlerQuery
+
 import sys
 import pandas as pd
 
@@ -23,6 +26,16 @@ user = sys.argv[3]
 pathResponse = sys.argv[4]
 
 #instancia al objeto
-
 callServiceObject = callService.serviceClustering(dataSet, job, user, pathResponse)
 callServiceObject.execProcess()
+
+#cambiamos el estado al job
+connectDB = ConnectDataBase.ConnectDataBase()
+handler = HandlerQuery.HandlerQuery()
+
+#hacemos la consulta
+query = "update job set job.statusJob = 'FINISH', job.modifiedJob= NOW() where job.idjob=%s" % job
+
+connectDB.initConnectionDB()
+handler.insertToTable(query, connectDB)
+connectDB.closeConnectionDB()

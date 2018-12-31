@@ -3,6 +3,9 @@ script que recibe un modelo y permite crear la curva roc del modelo con respecto
 generado
 '''
 
+import matplotlib
+matplotlib.use('Agg')
+
 import numpy as np
 from scipy import interp
 import matplotlib.pyplot as plt
@@ -36,7 +39,7 @@ class curveRoc(object):
         tprs = []
         aucs = []
         mean_fpr = np.linspace(0, 1, 100)
-        plt.figure(figsize=(20,10))
+        plt.figure()
         i = 0
         for train, test in cv.split(X, y):
             probas_ = classifier.fit(X[train], y[train]).predict_proba(X[test])

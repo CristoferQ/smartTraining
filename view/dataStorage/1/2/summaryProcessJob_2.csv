@@ -1,0 +1,7 @@
+Algorithm,Params,R_Score
+DecisionTree,criterion:mse-splitter:best,0.999994696331
+DecisionTree,criterion:mse-splitter:random,0.999996799876
+DecisionTree,criterion:friedman_mse-splitter:best,0.999994696331
+DecisionTree,criterion:friedman_mse-splitter:random,0.99999704941
+DecisionTree,criterion:mae-splitter:best,1.0
+DecisionTree,criterion:mae-splitter:random,1.0

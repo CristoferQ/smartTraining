@@ -8,7 +8,6 @@
 
     <!--STYLESHEET-->
     <!--=================================================-->
-
     <!--Open Sans Font [ OPTIONAL ]-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
@@ -24,9 +23,13 @@
     <!--Nifty Premium Icon [ DEMONSTRATION ]-->
     <link href="../css/demo/nifty-demo-icons.min.css" rel="stylesheet">
 
-    <!--Demo [ DEMONSTRATION ]-->
-    <link href="../css/demo/nifty-demo.min.css" rel="stylesheet">
 
+    <!--DataTables [ OPTIONAL ]-->
+    <link href="../plugins/datatables/media/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../plugins/datatables/extensions/Responsive/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <!--Bootstrap Validator [ OPTIONAL ]-->
+    <link href="../plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
     <!--JAVASCRIPT-->
     <!--=================================================-->
 
@@ -46,11 +49,12 @@
     <!--NiftyJS [ RECOMMENDED ]-->
     <script src="../js/nifty.min.js"></script>
 
+    <!--Dropzone [ OPTIONAL ]-->
+    <script src="../plugins/dropzone/dropzone.min.js"></script>
+    <link href="../plugins/dropzone/dropzone.min.css" rel="stylesheet">
+    <script src="../js/formatDropzone.js"></script>
 
     <!--=================================================-->
-
-    <!--Demo script [ DEMONSTRATION ]-->
-    <script src="../js/demo/nifty-demo.min.js"></script>
 
     <!--Font Awesome [ OPTIONAL ]-->
     <link href="../plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -62,13 +66,9 @@
     <link href="../plugins/themify-icons/themify-icons.min.css" rel="stylesheet">
     <!--Premium Line Icons [ OPTIONAL ]-->
     <link href="../premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
-    <link href="../plugins/bootstrap-validator/bootstrapValidator.min.css" rel="stylesheet">
-
-    <!--Dropzone [ OPTIONAL ]-->
-    <script src="../plugins/dropzone/dropzone.min.js"></script>
-    <link href="../plugins/dropzone/dropzone.min.css" rel="stylesheet">
-    <script src="../js/formatDropzone.js"></script>
+    <link href="../plugins/spinkit/css/spinkit.min.css" rel="stylesheet">
     <script src="../plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+
 
     <!-- script para la carga de datos -->
     <script src="../js/classifier/createJob.js"></script>
@@ -182,7 +182,7 @@
                         Complete the form
                       </div>
                       <div class="panel-body">
-                        <form id="frmAgregarFile" action="../php/uploadFileClustering.php" class="dropzone" >
+                        <form id="frmAgregarFile" action="../php/uploadFileClassification.php" class="dropzone" >
                           <div class="dz-default dz-message">
                             <div class="dz-icon">
                               <i class="demo-pli-upload-to-cloud icon-5x"></i>
@@ -221,7 +221,8 @@
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
                               <select id="algorithm" class="form-control">
-                                <option value="1">All Algorithm</option>
+
+                                <option>Select Algorithm</option>
                                 <option value="2">AdaBoostClassifier</option>
                                 <option value="3">BaggingClassifier</option>
                                 <option value="4">BernoulliNB</option>
@@ -238,101 +239,114 @@
                           </div>
 
                           <div class="form-group" id="SVC1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="penalty">Penalty Param
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="SVC_kernel">Kernel Option
               							</label>
 
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="penalty" name="penalty" placeholder="Penalty parameter C of the error term. Default 1.0" />
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="SVC_kernel" class="form-control">
+                                <option>Default</option>
+                                <option>rbf</option>
+                                <option>linear</option>
+                                <option>poly</option>
+                                <option>sigmoid</option>
+                                <option>precomputed</option>
+                              </select>
                             </div>
                           </div>
 
                           <div class="form-group" id="SVC2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="kernel">Kernel Option
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="SVC_degree">Degree Value
               							</label>
 
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="kernel" class="form-control">
-                                <option>Default</option>
-                                <option>rbf</option>
-                                <option>linear</option>
-                                <option>poly</option>
-                                <option>sigmoid</option>
-                                <option>precomputed</option>
-                              </select>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="SVC_degree" name="SVC_degree" placeholder="Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels. Default 3.0" />
                             </div>
+
                           </div>
 
                           <div class="form-group" id="SVC3" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="degree">Degree Value
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="SVC_gamma">Gamma Value
               							</label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels. Default 3.0" />
-                            </div>
-
-                          </div>
-
-                          <div class="form-group" id="NuSVC1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="penalty">Penalty Param
-              							</label>
-
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="penalty" name="penalty" placeholder="Penalty parameter C of the error term. Default 1.0" />
-                            </div>
-                          </div>
-
-                          <div class="form-group" id="NuSVC2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="kernel">Kernel Option
-              							</label>
-
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="kernel" class="form-control">
-                                <option>Default</option>
-                                <option>rbf</option>
-                                <option>linear</option>
-                                <option>poly</option>
-                                <option>sigmoid</option>
-                                <option>precomputed</option>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div class="form-group" id="NuSVC3" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="degree">Degree Value
-              							</label>
-
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control" id="degree" name="degree" placeholder="Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels. Default 3.0" />
+                                <input type="text" class="form-control" id="SVC_gamma" name="SVC_gamma" placeholder="Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Default: estimated value" />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="SVC4" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="gamma">Gamma Value
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="SVC_C_value">C Value
               							</label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="gamma" name="gamma" placeholder="Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’. Default: estimated value" />
+                                <input type="text" class="form-control" id="SVC_C_value" name="SVC_C_value" placeholder="C Value penalty data, default 1" />
+                            </div>
+
+                          </div>
+
+
+                          <div class="form-group" id="NuSVC1" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="NuSVC_kernel">Kernel Option
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="NuSVC_kernel" class="form-control">
+                                <option>Default</option>
+                                <option>rbf</option>
+                                <option>linear</option>
+                                <option>poly</option>
+                                <option>sigmoid</option>
+                                <option>precomputed</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="NuSVC2" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="NuSVC_nu">Nu Value
+              							</label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="NuSVC_nu" name="NuSVC_nu" placeholder="An upper bound on the fraction of training errors [0,1], Defaul 0.5" />
+                            </div>
+
+                          </div>
+
+                          <div class="form-group" id="NuSVC3" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="NuSVC_degree">Degree Value
+              							</label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="NuSVC_degree" name="NuSVC_degree" placeholder="Degree of the polynomial kernel function (‘poly’). Ignored by all other kernels. Default 3.0" />
+                            </div>
+
+                          </div>
+
+                          <div class="form-group" id="NuSVC4" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="NuSVC_gamma">Gamma Value
+                            </label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="NuSVC_gamma" name="NuSVC_gamma" placeholder="Kernel coefficient for ‘rbf’, ‘poly’ and ‘sigmoid’." />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="AdaBoostClassifier1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="n_estimators">N Estimators
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdaBoost_n_estimators">N Estimators
               							</label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="n_estimators" name="n_estimators" placeholder="The maximum number of estimators at which boosting is terminated. Default 50" />
+                                <input type="text" class="form-control" id="AdaBoost_n_estimators" name="AdaBoost_n_estimators" placeholder="The maximum number of estimators at which boosting is terminated. Default 50" />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="AdaBoostClassifier2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="algorithm">Algorithm
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdaBoost_algorithm">Algorithm
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="algorithm" class="form-control">
+                              <select id="AdaBoost_algorithm" class="form-control">
                                 <option>Default</option>
                                 <option>SAMME</option>
                                 <option>SAMME.R</option>
@@ -342,21 +356,21 @@
                           </div>
 
                           <div class="form-group" id="BaggingClassifier1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="n_estimators">N Estimators
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="bagging_n_estimators">N Estimators
               							</label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="n_estimators" name="n_estimators" placeholder="The number of base estimators in the ensemble. Default 10" />
+                                <input type="text" class="form-control" id="bagging_n_estimators" name="bagging_n_estimators" placeholder="The number of base estimators in the ensemble. Default 10" />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="BaggingClassifier2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="bootstrap">Bootstrap
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="bootstrap_bootstrap">Bootstrap
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="bootstrap" class="form-control">
+                              <select id="bootstrap_bootstrap" class="form-control">
                                 <option>Default</option>
                                 <option>True</option>
                                 <option>False</option>
@@ -366,11 +380,11 @@
                           </div>
 
                           <div class="form-group" id="DecisionTree1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="criterion">Criterion
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="DecisionTree_criterion">Criterion
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="criterion" class="form-control">
+                              <select id="DecisionTree_criterion" class="form-control">
                                 <option>Default</option>
                                 <option>Gini</option>
                                 <option>Entropy</option>
@@ -380,11 +394,11 @@
                           </div>
 
                           <div class="form-group" id="DecisionTree2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="splitter">Splitter
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="DecisionTree_splitter">Splitter
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="splitter" class="form-control">
+                              <select id="DecisionTree_splitter" class="form-control">
                                 <option>Default</option>
                                 <option>Best</option>
                                 <option>Random</option>
@@ -393,11 +407,11 @@
                           </div>
 
                           <div class="form-group" id="GradientBoostingClassifier1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="loss">Loss
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="gradient_loss">Loss
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="loss" class="form-control">
+                              <select id="gradient_loss" class="form-control">
                                 <option>Default</option>
                                 <option>deviance</option>
                                 <option>exponential</option>
@@ -406,35 +420,41 @@
                           </div>
 
                           <div class="form-group" id="GradientBoostingClassifier2" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="n_estimators">N Estimators
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gradient_n_estimators">N Estimators
                             </label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="n_estimators" name="n_estimators" placeholder="The number of boosting stages to perform. Default 100" />
+                                <input type="text" class="form-control" id="gradient_n_estimators" name="gradient_n_estimators" placeholder="The number of boosting stages to perform. Default 100" />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="GradientBoostingClassifier3" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="criterion">Criterion
-              							</label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gradient_min_samples_split">Min Samples Split
+                            </label>
 
-                            <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="criterion" class="form-control">
-                                <option>Default</option>
-                                <option>friedman_mse</option>
-                                <option>mse</option>
-                                <option>mae</option>
-                              </select>
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="gradient_min_samples_split" name="gradient_min_samples_split" placeholder="Min samples split, default 2" />
                             </div>
+
+                          </div>
+
+                          <div class="form-group" id="GradientBoostingClassifier4" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gradient_min_samples_leaf">Min Samples Leaf
+                            </label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="gradient_min_samples_leaf" name="gradient_min_samples_leaf" placeholder="Min samples leaf, default 1" />
+                            </div>
+
                           </div>
 
                           <div class="form-group" id="KNeighborsClassifier1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="neighbors">Neighbors
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="knn_neighbors">Neighbors
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="neighbors" class="form-control">
+                              <select id="knn_neighbors" class="form-control">
                                 <?php
                                   for ($i=2; $i<=50;$i++){
                                     echo "<option>$i</option>";
@@ -445,11 +465,11 @@
                           </div>
 
                           <div class="form-group" id="KNeighborsClassifier2" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="algorithm">Algorithm
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="knn_algorithm">Algorithm
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="algorithm" class="form-control">
+                              <select id="knn_algorithm" class="form-control">
                                 <option>Default</option>
                                 <option>auto</option>
                                 <option>ball_tree</option>
@@ -460,11 +480,11 @@
                           </div>
 
                           <div class="form-group" id="KNeighborsClassifier3" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="metric">Metric
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="knn_metric">Metric
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="metric" class="form-control">
+                              <select id="knn_metric" class="form-control">
                                 <option>Default</option>
                                 <option>minkowski</option>
                                 <option>euclidean</option>
@@ -472,12 +492,25 @@
                             </div>
                           </div>
 
+                          <div class="form-group" id="KNeighborsClassifier4" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="knn_weight">Weights
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="knn_weight" class="form-control">
+                                <option>Default</option>
+                                <option>uniform</option>
+                                <option>distance</option>
+                              </select>
+                            </div>
+                          </div>
+
                           <div class="form-group" id="MLPClassifier1" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="activation">Activation
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_activation">Activation
                             </label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="activation" class="form-control">
+                              <select id="MLP_activation" class="form-control">
                                 <option>Default</option>
                                 <option>identity</option>
                                 <option>logistic</option>
@@ -488,11 +521,11 @@
                           </div>
 
                           <div class="form-group" id="MLPClassifier2" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="solver">Solver
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_solver">Solver
                             </label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="solver" class="form-control">
+                              <select id="MLP_solver" class="form-control">
                                 <option>Default</option>
                                 <option>lbfgs</option>
                                 <option>sgd</option>
@@ -502,21 +535,21 @@
                           </div>
 
                           <div class="form-group" id="MLPClassifier3" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="alpha">L2 penalty
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_alpha">L2 penalty
                             </label>
 
                             <div class="col-sm-5">
-                                <input type="text" class="form-control" id="alpha" name="alpha" placeholder="L2 penalty (regularization term) parameter. Default 0.0001" />
+                                <input type="text" class="form-control" id="MLP_alpha" name="MLP_alpha" placeholder="L2 penalty (regularization term) parameter. Default 0.0001" />
                             </div>
 
                           </div>
 
                           <div class="form-group" id="MLPClassifier4" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="learning_rate">Learning rate
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_learning_rate">Learning rate
                             </label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="learning_rate" class="form-control">
+                              <select id="MLP_learning_rate" class="form-control">
                                 <option>Default</option>
                                 <option>constant</option>
                                 <option>invscaling</option>
@@ -526,13 +559,13 @@
                           </div>
 
                           <div class="form-group" id="MLPClassifier5" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="hidden_layer_sizes1">Hidden Layer A
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_hidden_layer_sizes1">Hidden Layer A
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="hidden_layer_sizes1" class="form-control">
+                              <select id="MLP_hidden_layer_sizes1" class="form-control">
                                 <?php
-                                  for ($i=0; $i<=50;$i++){
+                                  for ($i=1; $i<=50;$i++){
                                     echo "<option>$i</option>";
                                   }
                                 ?>
@@ -541,13 +574,13 @@
                           </div>
 
                           <div class="form-group" id="MLPClassifier6" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="hidden_layer_sizes2">Hidden Layer B
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_hidden_layer_sizes2">Hidden Layer B
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="hidden_layer_sizes2" class="form-control">
+                              <select id="MLP_hidden_layer_sizes2" class="form-control">
                                 <?php
-                                  for ($i=0; $i<=50;$i++){
+                                  for ($i=1; $i<=50;$i++){
                                     echo "<option>$i</option>";
                                   }
                                 ?>
@@ -556,13 +589,13 @@
                           </div>
 
                           <div class="form-group" id="MLPClassifier7" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="hidden_layer_sizes3">Hidden Layer C
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_hidden_layer_sizes3">Hidden Layer C
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="hidden_layer_sizes3" class="form-control">
+                              <select id="MLP_hidden_layer_sizes3" class="form-control">
                                 <?php
-                                  for ($i=0; $i<=50;$i++){
+                                  for ($i=1; $i<=50;$i++){
                                     echo "<option>$i</option>";
                                   }
                                 ?>
@@ -570,12 +603,40 @@
                             </div>
                           </div>
 
-                          <div class="form-group" id="RandomForestClassifier1" style="display:none;">
-              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="n_estimators">N Estimators
+                          <div class="form-group" id="MLPClassifier8" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_max_iter">Max Iterations
               							</label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="n_estimators" class="form-control">
+                              <select id="MLP_max_iter" class="form-control">
+                                <?php
+                                  for ($i=100; $i<=5000;$i+=50){
+                                    echo "<option>$i</option>";
+                                  }
+                                ?>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="MLPClassifier9" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="MLP_shuffle">Shuffle
+                            </label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="MLP_shuffle" class="form-control">
+                                <option>Default</option>
+                                <option>True</option>
+                                <option>False</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="RandomForestClassifier1" style="display:none;">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_n_estimators">N Estimators
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="rf_n_estimators" class="form-control">
                                 <?php
                                   for ($i=2; $i<=2000;$i++){
                                     echo "<option>$i</option>";
@@ -586,20 +647,52 @@
                           </div>
 
                           <div class="form-group" id="RandomForestClassifier2" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="criterion">Criterion
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_criterion">Criterion
                             </label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
-                              <select id="criterion" class="form-control">
+                              <select id="rf_criterion" class="form-control">
                                 <option>Default</option>
-                                <option>Gini</option>
-                                <option>Entropy</option>
+                                <option>gini</option>
+                                <option>entropy</option>
 
                               </select>
                             </div>
                           </div>
 
-                          
+                          <div class="form-group" id="RandomForestClassifier3" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_bootstrap">Criterion
+                            </label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="rf_bootstrap" class="form-control">
+                                <option>Default</option>
+                                <option>True</option>
+                                <option>False</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group" id="RandomForestClassifier4" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_min_samples_split">Min Samples Split
+                            </label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="rf_min_samples_split" name="rf_min_samples_split" placeholder="Min samples split, default 2" />
+                            </div>
+
+                          </div>
+
+                          <div class="form-group" id="RandomForestClassifier5" style="display:none;">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_min_samples_leaf">Min Samples Leaf
+                            </label>
+
+                            <div class="col-sm-5">
+                                <input type="text" class="form-control" id="rf_min_samples_leaf" name="rf_min_samples_leaf" placeholder="Min samples leaft, default 1" />
+                            </div>
+
+                          </div>
+
                           <div class="ln_solid"></div>
 
                           <div class="form-group">
