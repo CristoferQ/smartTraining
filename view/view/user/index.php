@@ -68,6 +68,12 @@
     <!--Premium Line Icons [ OPTIONAL ]-->
     <link href="premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
 
+    <!-- scripts para las estadisticas -->
+    <script src="js/index/loadDataPanel.js"></script>
+    <script src="js/index/loadJobsByStage.js"></script>
+    <script src="js/index/loadJobsByStageQueue.js"></script>
+    <script src="js/index/loadJobsStageByDate.js"></script>
+    <script src="js/index/loadJobsStageByDateQueue.js"></script>
 
 </head>
 
@@ -176,12 +182,12 @@
                       <div class="panel media middle pad-all">
     					            <div class="media-left">
     					                <span class="icon-wrap icon-wrap-sm icon-circle bg-success">
-    					                <i class="fa fa-smile-o fa-2x"></i>
+    					                <i class="fa fa-archive fa-2x"></i>
     					                </span>
     					            </div>
     					            <div class="media-body">
-    					                <p class="text-2x mar-no text-semibold text-main">-</p>
-    					                <p class="text-muted mar-no">Information 01</p>
+    					                <p class="text-2x mar-no text-semibold text-main panel1"></p>
+    					                <p class="text-muted mar-no">Jobs exec</p>
     					            </div>
     					        </div>
                     </div>
@@ -189,12 +195,12 @@
                       <div class="panel media middle pad-all">
     					            <div class="media-left">
     					                <span class="icon-wrap icon-wrap-sm icon-circle bg-success">
-    					                <i class="fa fa-calendar fa-2x"></i>
+    					                <i class="fa fa-graduation-cap fa-2x"></i>
     					                </span>
     					            </div>
     					            <div class="media-body">
-    					                <p class="text-2x mar-no text-semibold text-main">-</p>
-    					                <p class="text-muted mar-no">Information 02</p>
+    					                <p class="text-2x mar-no text-semibold text-main panel2"></p>
+    					                <p class="text-muted mar-no">Jobs in Queue</p>
     					            </div>
     					        </div>
                     </div>
@@ -202,12 +208,12 @@
                       <div class="panel media middle pad-all">
     					            <div class="media-left">
     					                <span class="icon-wrap icon-wrap-sm icon-circle bg-success">
-    					                <i class="fa fa-area-chart fa-2x"></i>
+    					                <i class="fa fa-users fa-2x"></i>
     					                </span>
     					            </div>
     					            <div class="media-body">
-    					                <p class="text-2x mar-no text-semibold text-main">-</p>
-    					                <p class="text-muted mar-no">Information 03</p>
+    					                <p class="text-2x mar-no text-semibold text-main panel3"></p>
+    					                <p class="text-muted mar-no">Users in System</p>
     					            </div>
     					        </div>
                     </div>
@@ -215,12 +221,12 @@
                       <div class="panel media middle pad-all">
     					            <div class="media-left">
     					                <span class="icon-wrap icon-wrap-sm icon-circle bg-success">
-    					                <i class="fa fa-meh-o fa-2x"></i>
+    					                <i class="fa fa-institution fa-2x"></i>
     					                </span>
     					            </div>
     					            <div class="media-body">
-    					                <p class="text-2x mar-no text-semibold text-main">-</p>
-    					                <p class="text-muted mar-no">Information 04</p>
+    					                <p class="text-2x mar-no text-semibold text-main panel4"></p>
+    					                <p class="text-muted mar-no">Institutions in System</p>
     					            </div>
     					        </div>
                     </div>
@@ -232,10 +238,10 @@
                       <div class="panel">
 
                         <div class="panel-title">
-                          Panel Value 01
+                          My jobs by kind
                         </div>
                         <div class="panel-body">
-                          <div id="licitacionesByUser"></div>
+                          <div id="jobsKind"></div>
                         </div>
                     </div>
                   </div>
@@ -245,10 +251,10 @@
                       <div class="panel">
 
                         <div class="panel-title">
-                          Panel Value 02
+                          Jobs in queue by status
                         </div>
                         <div class="panel-body">
-                          <div id="licitacionesByStage"></div>
+                          <div id="jobsQueue"></div>
                         </div>
                     </div>
                   </div>
@@ -259,10 +265,10 @@
                     <div class="panel">
 
                       <div class="panel-title">
-                        Panel Value 03
+                        Jobs by Date
                       </div>
                       <div class="panel-body">
-                        <div id="licitacionesStageUser"></div>
+                        <div id="jobsDate"></div>
                       </div>
                     </div>
                   </div>
@@ -273,10 +279,10 @@
                     <div class="panel">
 
                       <div class="panel-title">
-                        Panel Value 04
+                        Jobs in queue by Date
                       </div>
                       <div class="panel-body">
-                        <div id="licitacionesStageUser"></div>
+                        <div id="jobsQueueDate"></div>
                       </div>
                     </div>
                   </div>
