@@ -822,8 +822,8 @@ $(document).ready(function() {
 					MLP_activation = "relu";
 				}
 
-				if (knn_metric == "Default"){
-					knn_metric = "adam";
+				if (MLP_solver == "Default"){
+					MLP_solver = "adam";
 				}
 
 				if (MLP_learning_rate == "Default"){

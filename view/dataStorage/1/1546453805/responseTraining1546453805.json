@@ -1,0 +1,1 @@
+{"errorExec": {"Process": "ERROR"}, "Params": {"max_iter": "100", "shuffle": "True", "hidden_layer_sizes_a": "1", "hidden_layer_sizes_b": "1", "solver": "Default", "alpha": "0.001", "activation": "relu", "hidden_layer_sizes_c": "1", "learning_rate": "constant"}, "algorithm": "MLPRegressor"}

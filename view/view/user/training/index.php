@@ -661,7 +661,7 @@
                           </div>
 
                           <div class="form-group" id="RandomForestClassifier3" style="display:none;">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_bootstrap">Criterion
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="rf_bootstrap">Bootstrap
                             </label>
 
                             <div class="col-md-5 col-sm-5 col-xs-12">
