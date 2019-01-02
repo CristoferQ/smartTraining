@@ -55,8 +55,10 @@ elif option == 9:#truncated SVD
 else:#Factor Analysis
     dictResponse.update({'Exce': "Factor Analysis"})
 
-#show response
-print json.dumps(dictResponse)
+#create file with response...
+with open(pathResponse+user+"/"+job+"/responseCorrelation"+str(job)+".json", 'w') as fp:
+    json.dump(dictResponse, fp)
+
 
 #cambiamos el estado al job
 connectDB = ConnectDataBase.ConnectDataBase()

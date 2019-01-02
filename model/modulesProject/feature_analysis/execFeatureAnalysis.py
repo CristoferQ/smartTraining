@@ -20,23 +20,24 @@ class featureAnalysis(object):
         self.checkKindDataSet()#chequeamos el tipo de set de datos
 
     #metodo que permite evaluar el tipo de set de datos que se esta recibiendo
-    def checkKindDataSet(self):
+    def checkKindDataSet(self):#ojo!!! funcion para el diego!!!
 
         #hacemos la consulta a la base de datos, instanciamos a los objetos correspondientes
-        connectDB = ConnectDataBase.ConnectDataBase()
-        handler = HandlerQuery.HandlerQuery()
+        #connectDB = ConnectDataBase.ConnectDataBase()
+        #handler = HandlerQuery.HandlerQuery()
 
-        query = "select dataSet.tipoDataSet from dataSet where dataSet.job=%s" %self.job
-        connectDB.initConnectionDB()
-        response = handler.queryBasicDataBase(query, connectDB)
-        self.tipoDataSet = str(response[0][0])
-        connectDB.closeConnectionDB()
+        #query = "select dataSet.tipoDataSet from dataSet where dataSet.job=%s" %self.job
+        #connectDB.initConnectionDB()
+        #response = handler.queryBasicDataBase(query, connectDB)
+        self.tipoDataSet = 'CLASS'
+        #connectDB.closeConnectionDB()
 
     #metodo que permite la ejecucion de la correlacion de datos
     def execCorrelationData(self):
 
         corrObject = correlationValue.correlationMatrixData(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
         return corrObject.calculateCorrelationMatrix()
+
     #metodo que permite la ejecucion de la deformacion de espacio con random forest
     def excecSpatialDeformation(self):
         spatial = spatialDeformation.spatialDeformation(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)

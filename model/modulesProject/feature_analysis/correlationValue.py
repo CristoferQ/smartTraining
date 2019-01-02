@@ -3,7 +3,12 @@ clase con la responsabilidad de recibir un set de datos y generar la matriz de c
 a los elementos, si el set de datos es del tipo clase, no se trabaja con la ultima columna
 '''
 
+import matplotlib
+matplotlib.use('Agg')
+
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 class correlationMatrixData(object):
 
@@ -34,6 +39,17 @@ class correlationMatrixData(object):
             #exportamos el archivo...
             nameFile = "%s%s/%s/correlationMatrix_%s.csv" % (self.pathResponse, self.user, self.job, self.job)
             correlationMatrix.to_csv(nameFile)
+
+            #generamos la imagen
+            plt.figure()
+            heatmap = sns.heatmap(correlationMatrix)
+
+            loc, labels = plt.xticks()
+            heatmap.set_xticklabels(labels)
+            heatmap.set_yticklabels(labels[::-1])
+            nameFileImage = "%s%s/%s/correlationMatrix_%s.svg" % (self.pathResponse, self.user, self.job, self.job)
+            plt.savefig(nameFileImage)
+
             response = "OK"
         except:
             response = "ERROR"
