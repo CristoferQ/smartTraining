@@ -53,6 +53,31 @@ $(document).ready(function() {
 					});
 
 				});
+			}else if (processJob == 2) {
+				$.ajax({
+					method: "POST",
+					url: "../php/characteristic/execSpatial.php",
+					data: {
+						"nameJob"   : nameJob,
+						"descJob"   : descJob
+					}
+				}).done( function( info ){
+					var response = JSON.parse(info);
+					responseData = response.fileResponse;
+					console.log(response);
+					readTextFile(responseData, function(text){
+						var data = JSON.parse(text);
+						console.log(data);
+						//trabajamos con la respuesta...
+						if (data.Response == "OK"){
+							location.href="responseSpatial.php?job="+response.job;
+
+						}else{
+							console.log("Job Error");
+						}
+					});
+
+				});
 			}
     });
 });

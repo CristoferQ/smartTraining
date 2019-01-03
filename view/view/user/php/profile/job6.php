@@ -15,7 +15,7 @@ $responseFinal = [];
 $series = [];
 $series['name'] = "Jobs-User";
 
-$query = "select count(CAST(job.createdJob  as DATE)) as cantidad, CAST(job.createdJob  as DATE) as fecha from job where job.user = $idUser AND job.tipo_job like 'QUEUE' group by CAST(job.createdJob   as DATE)";
+$query = "select count(CAST(job.createdJob  as DATE)) as cantidad, CAST(job.createdJob  as DATE) as fecha from job where job.user = $idUser AND job.tipo_job like '%queue%' group by CAST(job.createdJob   as DATE)";
 $resultData = mysqli_query($conexion, $query);
 $dataValues = [];
 
