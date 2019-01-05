@@ -85,9 +85,9 @@
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
 
-    <script src="../js/dataSet/loadDataSetByStage.js"></script>
-    <script src="../js/dataSet/loadDataSetByStageQueue.js"></script>
-    <script src="../js/dataSet/loadTable.js"></script>
+    <script src="../js/jobs/loadJobsByStage.js"></script>
+    <script src="../js/jobs/loadJobsStageByDate.js"></script>
+    <script src="../js/jobs/loadTable.js"></script>
 
 </head>
 
@@ -178,7 +178,7 @@
                     <!--Page Title-->
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
                     <div id="page-title">
-                        <h1 class="page-header text-overflow">My Data Sets</h1>
+                        <h1 class="page-header text-overflow">My Jobs Exec</h1>
 
                     </div>
                     <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
@@ -193,10 +193,10 @@
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Data Sets by Kind in jobs</h3>
+                            <h3 class="panel-title">Jobs by Status</h3>
                         </div>
                         <div class="panel-body">
-                          <div id="dataSetKind"></div>
+                          <div id="jobsKind"></div>
                         </div>
                     </div>
                   </div>
@@ -204,10 +204,10 @@
                   <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Data Sets by Kind in Queue</h3>
+                            <h3 class="panel-title">User tool</h3>
                         </div>
                         <div class="panel-body">
-                          <div id="dataSetKindQueue"></div>
+                          <div id="jobsDate"></div>
                         </div>
                     </div>
                   </div>
@@ -217,17 +217,20 @@
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title">Details Data Set</h3>
+                            <h3 class="panel-title">Details Jobs</h3>
                         </div>
                         <div class="panel-body">
                           <p class="mensaje"></p>
-                          <table id="dataSets" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                          <table id="jobs" class="table table-striped table-bordered" cellspacing="0" width="100%">
                               <thead>
                                 <tr>
+                                  <th class="min-tablet">Job</th>
                                   <th class="min-tablet">Name</th>
-                                  <th class="min-tablet">Created</th>
+                                  <th class="min-tablet">Description</th>
                                   <th class="min-tablet">Kind</th>
-                                  <th class="min-tablet">Job Associated</th>
+                                  <th class="min-tablet">Status</th>
+                                  <th class="min-tablet">Created</th>
+                                  <th class="min-tablet">Modified</th>
                                   <th class="min-tablet">Options</th>
                                 </tr>
                               </thead>
@@ -308,7 +311,7 @@
           						                </a>
 
           						            </li>
-
+                                  
 																	<li class="list-header">Process Options</li>
 
                                   <li>
@@ -353,6 +356,7 @@
 
           						            </li>
 
+
                                   <li>
           						                <a href="../">
           						                    <i class="fa fa fa-home"></i>
@@ -360,7 +364,6 @@
           						                </a>
 
           						            </li>
-
 						            </ul>
 
                     <!--================================-->
@@ -420,18 +423,18 @@
 
    <div>
    	<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
-   		<input type="hidden" id="iddataSet" name="iddataSet" value="">
+   		<input type="hidden" id="idjob" name="idjob" value="">
    		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
    				<div class="modal-dialog">
    					<div class="modal-content">
    						<div class="modal-header">
    							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-   							<h4 class="modal-title" id="myModalLabelEdit">Drop Data Set</h4>
+   							<h4 class="modal-title" id="myModalLabelEdit">Drop job</h4>
    						</div>
    						<div class="modal-body">
 
                 <p>
-                   Are you sure you want to delete the selected data set?
+                   Are you sure you want to delete the selected job?
                 </p>
 
 

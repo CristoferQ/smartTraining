@@ -306,6 +306,14 @@
 
           						            </li>
 
+                                  <li>
+          						                <a href="../jobsQueue">
+          						                    <i class="fa fa fa-archive"></i>
+          						                    <span class="menu-title">My Jobs in Queue</span><i class="arrow"></i>
+          						                </a>
+
+          						            </li>
+
 																	<li class="list-header">Process Options</li>
 
                                   <li>
@@ -350,6 +358,13 @@
 
           						            </li>
 
+                                  <li>
+          						                <a href="../">
+          						                    <i class="fa fa fa-home"></i>
+          						                    <span class="menu-title">home</span><i class="arrow"></i>
+          						                </a>
+
+          						            </li>
 
 
 						            </ul>

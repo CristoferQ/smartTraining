@@ -20,8 +20,8 @@
   $response ['nameFile'] = $nameDocument;
 
   #hacemos la insercion a la base de datos...
-  $query = "insert into job values ($idJob, '$nameJob', '$descJob', NOW(), NOW(), $idUSer, '$nameDocument', 'START', 'CHARACTERISTICS')";
-  $query2 = "insert into dataSet values ($idJob, '$nameDocument', NOW(), NOW(), $idUSer, 'CHARACTERISTICS', $idJob)";
+  $query = "insert into job values ($idJob, '$nameJob', '$descJob', NOW(), NOW(), $idUSer, '$nameDocument', 'START', 'CORRELATION')";
+  $query2 = "insert into dataSet values ($idJob, '$nameDocument', NOW(), NOW(), $idUSer, 'CORRELATION', $idJob)";
   $resultado = mysqli_query($conexion, $query);
   $resultado2 = mysqli_query($conexion, $query2);
   $requestData = verificar_resultado($resultado);
