@@ -3,7 +3,7 @@
 	$server = "localhost";
 	$user = "root";
 	$password = "123ewq";//poner tu propia contraseña, si tienes una.
-	$bd = "dbMOSSTProyect";
+	$bd = "smartTrainingDB";
 
 	$conexion = mysqli_connect($server, $user, $password, $bd);
 	if (!$conexion){

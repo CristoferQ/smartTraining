@@ -25,8 +25,8 @@ if(isset($_POST['email'])) {
 	// $transport = Swift_MailTransport::newInstance();
 
 	$transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 25, 'tls' )
-	  ->setUsername('vhlhunterwebservice@gmail.com')
-	  ->setPassword('123ewqR4')
+	  ->setUsername('smarttrainingserviceteam@gmail.com')
+	  ->setPassword('smart123ewq')
 	  ;
 
 
@@ -42,9 +42,9 @@ if(isset($_POST['email'])) {
 
 
 	// You can change "A message from Pivot Template Form" to your own subject if you want.
-	$message = Swift_Message::newInstance('New Message from VHL Predictors page')
+	$message = Swift_Message::newInstance('New Message from Smart Training page')
 	  ->setFrom(array($_POST['email'] => $_POST['name']))
-	  ->setTo(array('aolivera@ing.uchile.cl' => 'Alvaro Olivera'))->setBody($messageText);
+	  ->setTo(array('david.medina@cebib.cl' => 'David Medina'))->setBody($messageText);
 //                           ^                    ^
 //       Your email address_/          Your name_/
 

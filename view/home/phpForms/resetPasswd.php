@@ -10,7 +10,7 @@
   $email = $_REQUEST['email'];
 
   #evaluamos si el usuario existe, si es asi enviamos el correo en caso contrario notificamos que los datos no son los correctos
-  $query = "select COUNT(*) as cantidad  from userMOSST where userMOSST.nameUser = '$username' AND userMOSST.email = '$email'";
+  $query = "select COUNT(*) as cantidad  from user where user.nameUser = '$username' AND user.emailUser = '$email'";
   $resultado = mysqli_query($conexion, $query);
 
   #chequeamos la cantidad de registros...
@@ -32,7 +32,7 @@
   }else{
 
     #obtenemos la clave...
-    $query = "select userMOSST.password from userMOSST where userMOSST.nameUser = '$username' AND userMOSST.email = '$email'";
+    $query = "select user.password from user where user.nameUser = '$username' AND user.emailUser = '$email'";
     $resultado = mysqli_query($conexion, $query);
 
     #chequeamos la cantidad de registros...
@@ -60,19 +60,19 @@
   function sendMessageEmail($email, $username, $password){
 
     $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 25, 'tls' )
-  	  ->setUsername('d.medina@imserltda.com')
-  	  ->setPassword('kurapika')
+  	  ->setUsername('smarttrainingserviceteam@gmail.com')
+  	  ->setPassword('smart123ewq')
   	  ;
   	$mailer = Swift_Mailer::newInstance($transport);
 
   	// Creating the message text using fields sent through POST
-    $messageText = "Dear $username, your password for MOSST Account is $password\n\n";
+    $messageText = "Dear $username, your password for SmartTraning Account is $password\n\n";
 
 
 
 
   	// You can change "A message from Pivot Template Form" to your own subject if you want
-  	$message = Swift_Message::newInstance('New Message from MOSST page')
+  	$message = Swift_Message::newInstance('New Message from SmartTraning page')
   	  ->setFrom(array($email => $username))
   	  ->setTo(array($email => $username))->setBody($messageText);
   //                           ^                    ^

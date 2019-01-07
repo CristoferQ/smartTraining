@@ -13,6 +13,8 @@
   $password = $_REQUEST['password'];
 
   $dataResponse = "-";
+  $iduser = time();
+
   #formamos la consulta para evaluar si el pais existe...
   $query = "select count(*) as cantidad from country where country.name = '$country'";
   $resultado = mysqli_query($conexion, $query);
@@ -61,7 +63,7 @@
       echo $query;
       echo "<br>";
       #hacemos la insercion del usuario...
-      $query = "insert into userMOSST values (null, '$fullname', '$email', '$username', '$password', 'WAITING', NOW(), NOW(), $idInstitution)";
+      $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idInstitution, '$fullname')";
       $resultado = mysqli_query($conexion, $query);
       echo $query;
       echo "<br>";
@@ -69,7 +71,7 @@
     }else{
 
       #chequeamos si el usuario existe...
-      $query = "select COUNT(*) as cantidad from userMOSST where userMOSST.nameUser = '$username'";
+      $query = "select COUNT(*) as cantidad from user where user.nameUser = '$username'";
       $resultado = mysqli_query($conexion, $query);
 
       $valueUser = 0;
@@ -101,7 +103,7 @@
       		}
       	}
         #hacemos la insercion del usuario...
-        $query = "insert into userMOSST values (null, '$fullname', '$email', '$username', '$password', 'WAITING', NOW(), NOW(), $idInstitutionValues)";
+        $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idInstitutionValues, '$fullname')";
         echo $query;
         echo "<br>";
         $resultado = mysqli_query($conexion, $query);
@@ -125,7 +127,7 @@
     echo "<br>";
     $resultado = mysqli_query($conexion, $query);
     #hacemos la insercion del usuario...
-    $query = "insert into userMOSST values (null, '$fullname', '$email', '$username', '$password', 'WAITING', NOW(), NOW(), $idCountry)";
+    $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idCountry, '$fullname')";
     echo $query;
     echo "<br>";
     $resultado = mysqli_query($conexion, $query);

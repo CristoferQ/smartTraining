@@ -5,6 +5,9 @@ manera mas sencilla
 '''
 
 from modulesProject.clustering_analysis import execAlgorithm
+from modulesProject.dataBase_module import ConnectDataBase
+from modulesProject.dataBase_module import HandlerQuery
+
 import pandas as pd
 import sys
 
@@ -52,3 +55,14 @@ if algorithm == "AffinityPropagation":
 #hacemos la instancia del obeto...
 execProcess = execAlgorithm.execAlgorithm(dataSet, user, job, pathResponse, algorithmValue, params)
 execProcess.execAlgorithmByOptions()#hacemos la ejecucion del algoritmo con respecto a la data que se entrego
+
+#cambiamos el estado al job
+connectDB = ConnectDataBase.ConnectDataBase()
+handler = HandlerQuery.HandlerQuery()
+
+#hacemos la consulta
+query = "update job set job.statusJob = 'FINISH', job.modifiedJob= NOW() where job.idjob=%s" % job
+
+connectDB.initConnectionDB()
+handler.insertToTable(query, connectDB)
+connectDB.closeConnectionDB()

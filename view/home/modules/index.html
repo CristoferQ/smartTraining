@@ -8,7 +8,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title> VHL-Hunter | RESULTS</title>
+        <title> SmartTraining | MODULES</title>
         <meta name="description" content="VHL-Hunter is a web service for classification clinical relevance in mutatios associated a pVHL. It works with MLSMPc methodology for training and splitter by topologic information associated to protein-protein interaction sector">
         <meta name="keywords" content="VHL-Hunter, PESB2, Alvaro Olivera, David Medina, Universidad de Chile, MLSMPc, von Hippel-Lindau, preventive diagnostic">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -43,15 +43,15 @@
     <div class="main-container">
       <header class="page-header">
         <div class="background-image-holder parallax-background">
-          <img class="background-image" alt="Background Image" src="../resource/results/1.jpg">
+          <img class="background-image" alt="Background Image" src="../resource/home/1.png">
         </div>
 
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <span class="text-white alt-font">Results</span>
-              <h1 class="text-white"> Results of process</h1>
-              <p class="text-white lead">Results obtained in the training of models.
+              <span class="text-white alt-font">Modules</span>
+              <h1 class="text-white"> Modules in SmartTraining</h1>
+              <p class="text-white lead">Differents modules to variate analysis.
               </p>
             </div>
           </div><!--end of row-->
@@ -63,25 +63,27 @@
           <div class="row">
             <div class="col-sm-4">
               <div class="feature">
-                <h5>Interaction protein-protein Sector</h5>
-                <p>The use of topological information of the protein associated with the protein-protein interaction sectors allowed the generation of 13 meta-classifiers using the MLSMPc methodology, divisions that increases the performance of the classifiers.
+                <h5>Statistic and Features Analysis</h5>
+                <p>
+                  Techniques such as PCA, correlations, spatial deformations, mutual information, etc., are implemented to evaluate the features in the data set. Additionally, statistical evaluations will be implemented to evaluate normality, outliers, dispersion, frequency, etc.
                 </p>
               </div>
             </div><!--end 4 col-->
 
             <div class="col-sm-4">
               <div class="feature">
-                <h5>Training step</h5>
-                <p>All the models were trained using the MLSMPc methodology, which includes training 1200 models for each interaction sector and selecting the most representative of the sample based on statistical techniques.
+                <h5>Clustering Data</h5>
+                <p>
+                  K-Means, Mean Shift, DBScan, Hierarchical and Agglomerative clustering, Affinity Propagation, are the main algorithms implemented to generate divisions in the data set, find patterns or associations of elements given the data that represents them. Being evaluated by different interest metrics.
                 </p>
               </div>
             </div><!--end 4 col-->
 
             <div class="col-sm-4">
               <div class="feature">
-                <h5>Algorithms in classifiers</h5>
+                <h5>Classifiers and Predictors</h5>
 								<p>
-								The algorithms associated with the models vary between Naive Bayes, SVM, KNN and Random Forest. All of them were trained through a training distribution associated with multiple validations with cross validation, selecting the most stable models.
+                  Training of classification and prediction models can be carried out through the implementation of different supervised learning algorithms. Different parameters are considered and responses are evaluated according to the type of model to be used. Considering overfitting and dimensionality problems.
                 </p>
               </div>
             </div><!--end 4 col-->
@@ -93,129 +95,13 @@
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center">
-              <h1>Meta classifiers and performance distribution training</h1>
+              <h1>Workflow in SmartTraining</h1>
             </div>
           </div><!--end of row-->
 
           <div class="row space-bottom-large">
 
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector A</h3>
-                <div id="histogramA"></div>
-                <h5>Models Selected: 7</h5>
-                <a href="detail.html?model=A">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector B</h3>
-                <div id="histogramB"></div>
-                <h5>Models Selected: 9</h5>
-                <a href="detail.html?model=B">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector C</h3>
-                <div id="histogramC"></div>
-                <h5>Models Selected: 7</h5>
-                <a href="detail.html?model=C">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector F</h3>
-                <div id="histogramF"></div>
-                <h5>Models Selected: 7</h5>
-                <a href="detail.html?model=F">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector H</h3>
-                <div id="histogramH"></div>
-                <h5>Models Selected: 7</h5>
-                <a href="detail.html?model=H">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector M</h3>
-                <div id="histogramM"></div>
-                <h5>Models Selected: 9</h5>
-                <a href="detail.html?model=M">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector N</h3>
-                <div id="histogramN"></div>
-                <h5>Models Selected: 9</h5>
-                <a href="detail.html?model=N">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector O</h3>
-                <div id="histogramO"></div>
-                <h5>Models Selected: 9</h5>
-                <a href="detail.html?model=O">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector P</h3>
-                <div id="histogramP"></div>
-                <h5>Models Selected: 12</h5>
-                <a href="detail.html?model=P">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector R</h3>
-                <div id="histogramR"></div>
-                <h5>Models Selected: 3</h5>
-                <a href="detail.html?model=R">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector T</h3>
-                <div id="histogramT"></div>
-                <h5>Models Selected: 7</h5>
-                <a href="detail.html?model=T">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector U</h3>
-                <div id="histogramU"></div>
-                <h5>Models Selected: 8</h5>
-                <a href="detail.html?model=U">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
-            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
-                <h3>Sector Z</h3>
-                <div id="histogramZ"></div>
-                <h5>Models Selected: 5</h5>
-                <a href="detail.html?model=Z">
-                  <h6>View Details</h6>
-                </a>
-            </div>
-
+            <img src="../resource/home/diagram.jpg" class="img-thumbnail">
           </div><!--end of row-->
 
           <!--end of row-->
@@ -257,7 +143,5 @@
       <script src="../js/lightbox.min.js"></script>
       <script src="../js/jquery.countdown.min.js"></script>
       <script src="../js/scripts.js"></script>
-      <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-      <script src="../js/histogram/loadHistogramsPerformance.js"></script>
     </body>
 </html>

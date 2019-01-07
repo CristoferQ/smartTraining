@@ -10,7 +10,7 @@
   $password = $_REQUEST['password'];
 
   #formamos la consulta para la base de datos...
-  $query = "select COUNT(*) as cantidad from userMOSST where userMOSST.nameUser = '$username' AND userMOSST.password = '$password'";
+  $query = "select COUNT(*) as cantidad from user where user.nameUser  = '$username' AND user.password  = '$password'";
 
   $resultado = mysqli_query($conexion, $query);
 
@@ -35,7 +35,7 @@
 
     #obtenemos el id del usuario...
     #formamos la consulta para la base de datos...
-    $query = "select userMOSST.iduserMOSST from userMOSST where userMOSST.nameUser = '$username' AND userMOSST.password = '$password'";
+    $query = "select user.iduser from user where user.nameUser = '$username' AND user.password = '$password'";
     $resultado = mysqli_query($conexion, $query);
 
     $idUser = 0;
@@ -45,17 +45,17 @@
 
   		while($data = mysqli_fetch_assoc($resultado)){
 
-  			$idUser = $data["iduserMOSST"];
+  			$idUser = $data["iduser"];
   		}
   	}
 
     #incializamos las variables de sesion...
-    session_start();
-    $_SESSION['username'] =$username;
-    $_SESSION['idUser'] =$idUser;
+    #session_start();
+    #$_SESSION['username'] =$username;
+    #$_SESSION['idUser'] =$idUser;
 
     header('Status: 301 Moved Permanently', false, 301);
-    header('Location: ../../dashboardMOSST/');
+    header('Location: ../maintence');
 
   }
 	mysqli_free_result($resultado);
