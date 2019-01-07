@@ -43,16 +43,18 @@ class serviceClustering(object):
         print "Process K-Means"
         #aplicamos k-means variando el numero de k
         for k in range (2, 10):
-            try:
-                self.applyClustering.aplicateKMeans(k)#se aplica el algoritmo...
-                result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
+            responseExec = self.applyClustering.aplicateKMeans(k)#se aplica el algoritmo...
+
+            if responseExec == 0:#ok!
                 params = "K = %d" % k
+                result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
                 numberGroups = len(list(set(self.applyClustering.labels)))
                 response = ["K-Means", params, numberGroups, result.calinski, result.siluetas]
                 responseProcess.append(response)
                 contIndex+=1
                 indexResponse.append(contIndex)
-            except:
+
+            else:
                 message = "Error exec K-Means with K %d" % k
                 logResponsesError.append(message)
                 contIndexError+=1
@@ -60,15 +62,16 @@ class serviceClustering(object):
 
         #aplicamos MeanShift...
         print "Process MeanShift"
-        try:
-            self.applyClustering.aplicateMeanShift()#se aplica el algoritmo...
+        responseExec = self.applyClustering.aplicateMeanShift()#se aplica el algoritmo...
+
+        if responseExec == 0:
             result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
             numberGroups = len(list(set(self.applyClustering.labels)))
             response = ["MeanShift", "Default", numberGroups, result.calinski, result.siluetas]
             responseProcess.append(response)
             contIndex+=1
             indexResponse.append(contIndex)
-        except:
+        else:
             message = "Error exec MeanShift"
             logResponsesError.append(message)
             contIndexError+=1
@@ -76,15 +79,16 @@ class serviceClustering(object):
 
         #aplicamos DBSCAN
         print "Process DBSCAN"
-        try:
-            self.applyClustering.aplicateDBSCAN()#se aplica el algoritmo...
+        responseExec = self.applyClustering.aplicateDBSCAN()#se aplica el algoritmo...
+
+        if responseExec == 0:
             result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
             numberGroups = len(list(set(self.applyClustering.labels)))
             response = ["DBSCAN", "Default", numberGroups, result.calinski, result.siluetas]
             responseProcess.append(response)
             contIndex+=1
             indexResponse.append(contIndex)
-        except:
+        else:
             message = "Error exec DBSCAN"
             logResponsesError.append(message)
             contIndexError+=1
@@ -92,15 +96,16 @@ class serviceClustering(object):
 
         #aplicamos aplicateAffinityPropagation
         print "Process AffinityPropagation"
-        try:
-            self.applyClustering.aplicateAffinityPropagation()#se aplica el algoritmo...
+        responseExec = responself.applyClustering.aplicateAffinityPropagation()#se aplica el algoritmo...
+
+        if responseExec == 0:
             result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
             numberGroups = len(list(set(self.applyClustering.labels)))
             response = ["AffinityPropagation", "Default", numberGroups, result.calinski, result.siluetas]
             responseProcess.append(response)
             contIndex+=1
             indexResponse.append(contIndex)
-        except:
+        else:
             message = "Error exec AffinityPropagation"
             logResponsesError.append(message)
             contIndexError+=1
@@ -109,8 +114,9 @@ class serviceClustering(object):
         #aplicamos Birch
         print "Process Birch"
         for k in range (2, 10):
-            try:
-                self.applyClustering.aplicateBirch(k)#se aplica el algoritmo...
+            responseExec = self.applyClustering.aplicateBirch(k)#se aplica el algoritmo...
+
+            if responseExec == 0:
                 result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
                 params = "K = %d" % k
                 numberGroups = len(list(set(self.applyClustering.labels)))
@@ -118,7 +124,7 @@ class serviceClustering(object):
                 responseProcess.append(response)
                 contIndex+=1
                 indexResponse.append(contIndex)
-            except:
+            else:
                 message = "Error exec Birch with K %d" % k
                 logResponsesError.append(message)
                 contIndexError+=1
@@ -129,8 +135,10 @@ class serviceClustering(object):
         for k in range (2, 10):
             for affinity in ['euclidean', 'l1', 'l2', 'manhattan', 'cosine', 'precomputed']:
                 for linkage in ['ward', 'complete', 'average', 'single']:
-                    try:
-                        self.applyClustering.aplicateAlgomerativeClustering(linkage, affinity, k)#se aplica el algoritmo...
+
+                    responseExec = self.applyClustering.aplicateAlgomerativeClustering(linkage, affinity, k)#se aplica el algoritmo...
+
+                    if responseExec == 0:
                         result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
                         params = "affinity = %s linkage = %s k = %d" % (affinity, linkage, k)
                         numberGroups = len(list(set(self.applyClustering.labels)))
@@ -138,8 +146,7 @@ class serviceClustering(object):
                         responseProcess.append(response)
                         contIndex+=1
                         indexResponse.append(contIndex)
-                    except:
-                        params = "affinity = %s linkage = %s k = %d" % (affinity, linkage, k)
+                    else:
                         message = "Error exec AgglomerativeClustering with params %s" % params
                         logResponsesError.append(message)
                         contIndexError+=1
@@ -150,9 +157,3 @@ class serviceClustering(object):
         dataFrameLog = pd.DataFrame(logResponsesError, columns=["Message Error"], index = indexResponseError)
         dataFrame.to_csv(self.pathResponse+self.user+"/"+self.job+"/ResponseProcess_Job_Clustering.csv")
         dataFrameLog.to_csv(self.pathResponse+self.user+"/"+self.job+"/ResponseProcess_Job_Clustering_Error.csv")
-
-
-        #generamos histogramas asociados al proceso y los resultados obtenidos...
-        #createHistogramObject = createHistogram.histograme(dataFrame)
-        #createHistogramObject.generateHistogram('calinski_harabaz_score', self.pathResponse+self.user+"/"+self.job+"/calinski_harabaz_score.svg", "Histogram for calinski harabaz score")
-        #createHistogramObject.generateHistogram('silhouette_score', self.pathResponse+self.user+"/"+self.job+"/silhouette_score.svg", "Histogram for silhouette score")

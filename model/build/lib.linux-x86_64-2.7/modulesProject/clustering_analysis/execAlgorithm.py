@@ -42,21 +42,34 @@ class execAlgorithm(object):
         nameDoc = ""
         if self.algorithm == 1:#kmeans
 
-            self.applyClustering.aplicateKMeans(int(self.params[0]))
+            responseExec = self.applyClustering.aplicateKMeans(int(self.params[0]))
+
             self.response.update({"algorithm": "K Means"})
             paramsData = {}
             paramsData.update({"Number K": self.params[0]})
             self.response.update({"Params": paramsData})
 
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
+
         elif self.algorithm == 2:#Birch
-            self.applyClustering.aplicateBirch(int(self.params[0]))
+
+            responseExec = self.applyClustering.aplicateBirch(int(self.params[0]))
             self.response.update({"algorithm": "Birch"})
             paramsData = {}
             paramsData.update({"Number K": self.params[0]})
             self.response.update({"Params": paramsData})
 
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
+
         elif self.algorithm == 3:#Agglomerative
-            self.applyClustering.aplicateAlgomerativeClustering(self.params[0], self.params[1], int(self.params[2]))
+
+            responseExec = self.applyClustering.aplicateAlgomerativeClustering(self.params[0], self.params[1], int(self.params[2]))
             self.response.update({"algorithm": "Agglomerative Clustering"})
             paramsData = {}
             paramsData.update({"Linkage": self.params[0]})
@@ -64,38 +77,61 @@ class execAlgorithm(object):
             paramsData.update({"Number K": self.params[2]})
             self.response.update({"Params": paramsData})
 
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
+
         elif self.algorithm == 4:#DBSCAN
-            self.applyClustering.aplicateDBSCAN()
+
+            responseExec = self.applyClustering.aplicateDBSCAN()
             self.response.update({"algorithm": "DBSCAN"})
             paramsData = {}
             paramsData.update({"Default": "Default"})
             self.response.update({"Params": paramsData})
 
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
+
         elif self.algorithm == 5:#MeanShift
-            self.applyClustering.aplicateMeanShift()
+
+            responseExec = self.applyClustering.aplicateMeanShift()
             self.response.update({"algorithm": "Mean Shift"})
             paramsData = {}
             paramsData.update({"Default": "Default"})
             self.response.update({"Params": paramsData})
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
 
         else:
-            self.applyClustering.aplicateAffinityPropagation()
+            responseExec = self.applyClustering.aplicateAffinityPropagation()
             self.response.update({"algorithm": "Affinity Propagation"})
             paramsData = {}
             paramsData.update({"Default": "Default"})
             self.response.update({"Params": paramsData})
+            if responseExec == 0:
+                self.response.update({"responseExec":"OK"})
+            else:
+                self.response.update({"responseExec":"ERROR"})
 
-        #evaluamos el clustering y obtenemos los resultados...
-        result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
-        self.response.update({"calinski_harabaz_score": result.calinski})
-        self.response.update({"silhouette_score": result.siluetas})
+        #solo si la ejecucion fue correcta!
+        if self.response['responseExec'] == "OK":
+            #evaluamos el clustering y obtenemos los resultados...
+            result = evaluationClustering.evaluationClustering(self.dataSet, self.applyClustering.labels)#evaluamos...
+            self.response.update({"calinski_harabaz_score": result.calinski})
+            self.response.update({"silhouette_score": result.siluetas})
 
-        #finalmente, agregamos los labels al set de datos y generamos el resultado en el path entregado...
-        self.dataSet["Labels"] = pd.Series(self.applyClustering.labels, index=self.dataSet.index)
-        self.dataSet.to_csv(self.pathResponse+self.user+"/"+self.job+"/responseClustering.csv")
+            #finalmente, agregamos los labels al set de datos y generamos el resultado en el path entregado...
+            self.dataSet["Labels"] = pd.Series(self.applyClustering.labels, index=self.dataSet.index)
+            self.dataSet.to_csv(self.pathResponse+self.user+"/"+self.job+"/responseClustering.csv")
 
-        #hacemos el conteo de los elementos por grupo para la generacion del grafico de torta asociada a la cantidad de grupos...
-        self.response.update({"membersGroup":self.countMemberGroup()})
+            #hacemos el conteo de los elementos por grupo para la generacion del grafico de torta asociada a la cantidad de grupos...
+            self.response.update({"membersGroup":self.countMemberGroup()})
+
         #exportamos tambien el resultado del json
         with open(self.pathResponse+self.user+"/"+self.job+"/responseClustering.json", 'w') as fp:
             json.dump(self.response, fp)
