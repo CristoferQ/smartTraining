@@ -4,9 +4,9 @@ script que permite el envio de un correo electronico cuando se hace un cambio de
 '''
 import os
 import sys
-import smtplib
 import ConnectDataBase
 import CrudDataBase
+import sendEmail
 
 #recolectamos la data recibida por la linea de comandos...
 idUser = sys.argv[1]
@@ -18,14 +18,11 @@ CrudDataBase = CrudDataBase.HandlerQuery()#instance to object CrudDataBase for h
 
 #obtenemos la informacion del responsable...
 Connect.initConnectionDB()
-query = "select * from userMOSST where  iduserMOSST = %s" % idUser
+query = "select user.nameUser, user.emailUser from user where  iduser = %s" % idUser
 List = CrudDataBase.queryBasicDataBase(query, Connect)
 
-userName = List[0][1]
-email = List[0][2]
-
-print userName
-print email
+userName = List[0][0]
+email = List[0][1]
 
 Connect.closeConnectionDB()
 
@@ -33,23 +30,11 @@ Connect.closeConnectionDB()
 msg= ""
 if statusUser == "ACCEPTED":
 
-    msg = 'Dear %s, <br> It is reported that your MOSST user account has been activated.<br>Regards, Team Programming MOSST' % userName
+    msg = 'Dear %s,\nIt is reported that your SmartTraining user account has been activated.\nBest Regards\nSmartTraining Team' % userName
 
 else:
+    msg = 'Dear %s,\nWe inform you that your status has been updated in the SmartTraining user account, your current status is %s.<br>For more details consult the account manager.\nBest Regards\nSmartTraining Team' % (userName, statusUser)
 
-    msg = 'Dear %s, <br> We inform you that your status has been updated in the MOSST user account, your current status is %s.<br>For more details consult the account manager.<br> Regards, Team Programming MOSST' % (userName, statusUser)
-print msg
-
-#hacemos las acciones con respecto al envio de correo
-remitente = "Programacion <programacion@pesb2.cl>"
-destinatario = "%s <%s>" % (userName, email)
-email = "From: %s\nTo: %s\nMIME-Version: 1.0\nContent-type: text/html\nSubject: %s\n%s" % (remitente, destinatario, "Change Status Account", msg)
-try:
-    smtp = smtplib.SMTP('localhost')
-    smtp.sendmail(remitente, destinatario, email)
-    print "BIEN"
-except:
-    print "ERROR"
-    print """Error: el mensaje no pudo enviarse.
-    Compruebe que sendmail se encuentra instalado en su sistema"""
-    pass
+#hacemos la instancia para enviar el email...
+mailSend = sendEmail.sendEmail('smarttrainingserviceteam@gmail.com', email, "Change status account", msg, 'smart123ewq')
+mailSend.sendEmailUser()

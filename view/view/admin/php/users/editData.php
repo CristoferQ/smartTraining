@@ -18,7 +18,7 @@
 			$informacion["respuesta"] ="BIEN";
 
 			//enviamos el correo electronico para notificar la accion...
-			$command = "python /var/www/html/dashboardAdminMOSSTSite/pythonScripts/sendCorreoChangeStatusAccount.py $iduserMOSST $status";
+			$command = "python /var/www/html/smartTraining/view/admin/pythonScripts/sendCorreoChangeStatusAccount.py $iduserMOSST $status";
 
 			//preguntamos por el status... si el status es ACCEPTED se crea directorio...
 			//se crea directorio asociado a la cuenta de usuario...
@@ -27,7 +27,7 @@
 			if (!file_exists($path)) {
 			    mkdir($path, 0777, true);
 			}
-			//exec($command);
+			exec($command);
 		}
 		echo json_encode($informacion);
 	}

@@ -19,7 +19,7 @@ class ConnectDataBase(object):
 		dictionary_keys['user'] = "root"
 		dictionary_keys['password'] = "123ewq"
 		dictionary_keys['host'] = "localhost"
-		dictionary_keys['database'] = "dbMOSSTProyect"
+		dictionary_keys['database'] = "smartTrainingDB"
 		dictionary_keys['raise_on_warnings'] = True
 
 		self.ConfigurationDB = dictionary_keys

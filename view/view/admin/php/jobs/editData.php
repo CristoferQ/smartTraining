@@ -18,7 +18,7 @@
 			$informacion["respuesta"] ="BIEN";
 
 			#enviamos el correo notificando el cambio de estado del trabajo
-			$command = "python /var/www/html/dashboardAdminMOSSTSite/pythonScripts/sendCorreoChangeStatusJob.py $idjob $status";
+			$command = "python /var/www/html/smartTraining/view/admin/pythonScripts/sendCorreoChangeStatusJob.py $idjob $status";
 			exec($command);
 		}
 		echo json_encode($informacion);

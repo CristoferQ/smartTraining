@@ -3,6 +3,7 @@
   #script que permite procesar si la cuenta de usuario existe o no, en caso de que exista
   #incluimos archivo de conexion a la base de datos...
   include("connection.php");
+  include("mail.php");
 
   #recepcion de parametros...
   $fullname = $_REQUEST['fullname'];
@@ -65,8 +66,7 @@
       #hacemos la insercion del usuario...
       $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idInstitution, '$fullname')";
       $resultado = mysqli_query($conexion, $query);
-      echo $query;
-      echo "<br>";
+      
       $dataResponse = "OK";
     }else{
 
@@ -104,9 +104,8 @@
       	}
         #hacemos la insercion del usuario...
         $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idInstitutionValues, '$fullname')";
-        echo $query;
-        echo "<br>";
         $resultado = mysqli_query($conexion, $query);
+        
 
         $dataResponse = "OK";
       }else{
@@ -118,19 +117,14 @@
     #hacemos la insercion del country y de la insitution...
     $idCountry = time();
     $query = "insert into country values ($idCountry, '$country', NOW(), NOW())";
-    echo $query;
-    echo "<br>";
     $resultado = mysqli_query($conexion, $query);
     #hacemos la insercion de la institution...
     $query = "insert into institution values ($idCountry, '$institution', NOW(), NOW(), $idCountry)";
-    echo $query;
-    echo "<br>";
     $resultado = mysqli_query($conexion, $query);
     #hacemos la insercion del usuario...
     $query = "insert into user values ($iduser, '$username', '$password', '$email', 'WAITING', NOW(), NOW(), $idCountry, '$fullname')";
-    echo $query;
-    echo "<br>";
     $resultado = mysqli_query($conexion, $query);
+    
     $dataResponse = "OK";
   }
 
@@ -149,8 +143,6 @@
     }
   }
 
-
-  echo "Esta es la respuesta a entregar: $dataResponse";
 	mysqli_free_result($resultado);
 	mysqli_close($conexion);
 ?>
