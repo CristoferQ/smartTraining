@@ -16,7 +16,7 @@ class SetupConfiguration:
             author='David Medina, Diego Inostroza, Lukas Jeldes',
             author_email='david.medina@cebib.cl',
             license='Open GPL 3',
-            packages=['modulesProject', 'modulesProject.clustering_analysis', 'modulesProject.checks_module', 'modulesProject.feature_analysis', 'modulesProject.statistics_analysis', 'modulesProject.supervised_learning_analysis', 'modulesProject.user_module', 'modulesProject.dataBase_module', 'modulesProject.supervised_learning_predicction' ],)
+            packages=['modulesProject', 'modulesProject.clustering_analysis', 'modulesProject.checks_module', 'modulesProject.feature_analysis', 'modulesProject.statistics_analysis', 'modulesProject.supervised_learning_analysis', 'modulesProject.user_module', 'modulesProject.dataBase_module', 'modulesProject.supervised_learning_predicction', 'modulesProject.utils'],)
 
 def main():
 
