@@ -53,6 +53,13 @@ class deleteUsers(object):
         self.connect.initConnectionDB()
         self.handler.insertToTable(query, self.connect)
 
+        #tambien eliminamos los data set asociados...
+        query = "delete from dataSet where dataSet.job = %s" % job
+        self.connect.initConnectionDB()
+        self.handler.insertToTable(query, self.connect)
+        self.connect.closeConnectionDB()
+
+
     #metodo que permite remover la carpeta del usuario...
     def removeAreaJob(self, user):
 
