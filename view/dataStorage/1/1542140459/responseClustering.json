@@ -1,1 +1,0 @@
-{"silhouette_score": 0.4552181824640712, "membersGroup": {"Group5": 24, "Group4": 4, "Group6": 172, "Group1": 9, "Group0": 13, "Group3": 14, "Group2": 20}, "Params": {"Number K": "7", "Affinity": "manhattan", "Linkage": "complete"}, "calinski_harabaz_score": 134.24123667024421, "algorithm": "Agglomerative Clustering"}

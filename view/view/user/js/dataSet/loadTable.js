@@ -11,6 +11,7 @@ var listar = function(){
 	var t = $('#dataSets').DataTable({
 		"responsive": true,
 		"destroy":true,
+		"order": [[ 1, "desc" ]],
 		"ajax":{
 			"method":"POST",
 			"url": "../php/dataSet/showDataSet.php"
@@ -33,7 +34,9 @@ var listar = function(){
 var getID = function(tbody, table){
 	$(tbody).on("click", "button.delete", function(){
 		var data = table.row( $(this).parents("tr") ).data();
-		var idjob = $("#frmEditar #iddataSet").val( data.iddataSet );
+		var iddataSet = $("#frmEditar #iddataSet").val( data.iddataSet );
+		var job = $("#frmEditar #job").val( data.job );
+		var nameDataSet = $("#frmEditar #nameDataSet").val( data.nameDataSet );
 	});
 }
 
@@ -52,12 +55,16 @@ var removeDataSet = function(){
 	$("#editar-user").on("click", function(){
 
 		var iddataSet = $("#frmEditar #iddataSet").val();
+		var job = $("#frmEditar #job").val();
+		var nameDataSet = $("#frmEditar #nameDataSet").val();
 
 		$.ajax({
 			method: "POST",
 			url: "../php/dataSet/dropDataSet.php",
 			data: {
-					"iddataSet"   : iddataSet
+					"iddataSet"   : iddataSet,
+					"job"   : job,
+					"nameDataSet"   : nameDataSet
 				}
 
 		}).done( function( info ){
@@ -83,6 +90,6 @@ var mostrar_mensaje = function( informacion ){
 	$(".mensaje").html( texto ).css({"color": color });
 	$(".mensaje").fadeOut(5000, function(){
 		$(this).html("");
-		$(this).fadeIn(3000);
+		$(this).fadeIn(300);
 	});
 }

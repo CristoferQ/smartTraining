@@ -86,7 +86,6 @@
     <script src="https://code.highcharts.com/modules/series-label.js"></script>
 
     <script src="../js/dataSet/loadDataSetByStage.js"></script>
-    <script src="../js/dataSet/loadDataSetByStageQueue.js"></script>
     <script src="../js/dataSet/loadTable.js"></script>
 
 </head>
@@ -190,24 +189,14 @@
                 <!--===================================================-->
               <div id="page-content">
                 <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Data Sets by Kind in jobs</h3>
                         </div>
                         <div class="panel-body">
+                          <p class="dataSetKindAlert"></p>
                           <div id="dataSetKind"></div>
-                        </div>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="panel panel-bordered panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Data Sets by Kind in Queue</h3>
-                        </div>
-                        <div class="panel-body">
-                          <div id="dataSetKindQueue"></div>
                         </div>
                     </div>
                   </div>
@@ -421,6 +410,9 @@
    <div>
    	<form id="frmEditar" action="" method="POST" data-parsley-validate class="form-horizontal form-label-left">
    		<input type="hidden" id="iddataSet" name="iddataSet" value="">
+      <input type="hidden" id="job" name="job" value="">
+      <input type="hidden" id="nameDataSet" name="nameDataSet" value="">
+
    		<div class="modal fade" id="myModalEditar" tabindex="-1" role="dialog" aria-labelledby="myModalLabelEdit" aria-hidden="true">
    				<div class="modal-dialog">
    					<div class="modal-content">
@@ -438,7 +430,7 @@
    						  <div class="ln_solid"></div>
    						  <div class="form-group">
    							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-   								<button type="button" id="editar-user" class="btn btn-success" data-dismiss="modal">Delete</button>
+   								<button type="button" id="editar-user" class="btn btn-primary" data-dismiss="modal">Delete</button>
    								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
    							</div>
    						  </div>
