@@ -100,7 +100,6 @@
                 <!--================================-->
                 <!--End brand logo & name-->
 
-characteristic/responseSpatial.php?job=1547424449
                 <!--Navbar Dropdown-->
                 <!--================================-->
                 <div class="navbar-content clearfix">

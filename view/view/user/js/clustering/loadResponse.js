@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   var job = getQuerystring('job');
   var user = getQuerystring('user');
+  showDefinitionData();
 
   var response = "http://localhost/smartTraining/dataStorage/"+user+"/"+job+"/responseClustering.json";
 
@@ -40,6 +41,36 @@ function readTextFile(file, callback) {
     rawFile.send(null);
 }
 
+var showDefinitionData = function(){
+
+  var algorithm = getQuerystring('algorithm');
+  console.log(algorithm);
+	var nameFile = "http://localhost/smartTraining/view/user/resourceData/dataDefinitions.json";
+
+	readTextFile(nameFile, function(text){
+		var data = JSON.parse(text);
+
+		$(".algorithmName").html(data.clusteringAlgorithm[algorithm].nameAlgorithm);
+		$(".description").html(data.clusteringAlgorithm[algorithm].definition);
+    $(".paramsData").html(data.clusteringAlgorithm[algorithm].params);
+
+	});
+
+}
+
+//read document
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
+
 var loadDataPanel = function(data){
 
   var Calinski= data.calinski_harabaz_score;
@@ -56,7 +87,6 @@ var loadDataPanel = function(data){
   for (key in data.Params){
 
     params = params + " " + key + ": " + data.Params[key];
-    console.log("value: ", params);
   }
 
   $(".params").html(params);

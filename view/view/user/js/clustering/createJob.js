@@ -72,6 +72,7 @@ $(document).ready(function() {
 		}).on('success.form.bv', function(e) {
 			e.preventDefault();
 			$('#loading').show();
+			$('#errorResponse').hide();
 			var nameJob = $("#initNewJob #nameJob").val();
 			var descJob = $("#initNewJob #descJob").val();
       var algorithm = $("#initNewJob #algorithm").val();
@@ -88,8 +89,17 @@ $(document).ready(function() {
 				}).done( function( info ){
 					var parse = JSON.parse(info);
 
-	        var job=parse.job;
-					location.href="responseJob.php?job="+job+"&user=1";
+					if (parse.response == "BIEN"){
+
+						//pregunto si los archivos existen...
+		        var job=parse.job;
+						location.href="responseJob.php?job="+job+"&user=1";
+
+					}else{
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}
 
 				});
 			}else{//seleccion de un algoritmo con sus respectivos parametros
@@ -110,9 +120,39 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var parse = JSON.parse(info);
-					console.log(parse);
-					var job=parse.job;
-					location.href="viewResult.php?job="+job+"&user=1";
+
+					if (parse.response == "BIEN"){
+						var job=parse.job;
+						//manejamos el valor del algorithm...
+						if (algorithm == 2){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=0";
+						}
+
+						if (algorithm == 3){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=1";
+						}
+
+						if (algorithm == 4){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=2";
+						}
+
+						if (algorithm == 5){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=3";
+						}
+
+						if (algorithm == 6){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=4";
+						}
+
+						if (algorithm == 7){
+							location.href="viewResult.php?job="+job+"&user=1&algorithm=5";
+						}
+
+					}else{
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}
 
 				});
 			}

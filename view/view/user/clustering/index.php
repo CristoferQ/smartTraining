@@ -298,6 +298,12 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12" id="errorResponse" style="display:none;">
+                          <div class="alert alert-danger" role="alert">
+                            Error during the execution of the process. Please, review the data set. In case of persisting, contact the system administrator.
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

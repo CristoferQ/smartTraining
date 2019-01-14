@@ -107,6 +107,20 @@
         $responseValue['command'] = $command;
         $responseValue['job'] = $idJob;
       }
+
+      //preguntamos si los archivos de salida existen...
+      $response1 = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/responseClustering.csv");
+      $response2 = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/responseClustering.json");
+
+      if ($response1 == true){
+        if ($response2 == true){
+          $responseValue['response'] = "BIEN";
+        }else{
+          $responseValue['response'] = "ERROR";
+        }
+      }else{
+        $responseValue['response'] = "ERROR";
+      }
     }
   }else{
     $responseValue['response'] = "ERROR";

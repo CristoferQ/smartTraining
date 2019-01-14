@@ -12,5 +12,10 @@ class evaluationClustering(object):
 
         self.dataSet = dataSet
         self.labelsResponse = labelsResponse
-        self.calinski = metrics.calinski_harabaz_score(self.dataSet, self.labelsResponse)
-        self.siluetas = metrics.silhouette_score(self.dataSet, self.labelsResponse, metric='euclidean')
+        try:
+            self.calinski = metrics.calinski_harabaz_score(self.dataSet, self.labelsResponse)
+            self.siluetas = metrics.silhouette_score(self.dataSet, self.labelsResponse, metric='euclidean')
+        except:
+            self.calinski = "ERROR"
+            self.siluetas = "ERROR"
+            pass

@@ -185,10 +185,12 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Detail Process
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Detail Process
+                        </h3>
                       </div>
                       <!-- Contact Widget -->
                     <!---------------------------------->
@@ -197,12 +199,10 @@
                             <div class="widget-control">
 
                             </div>
-                            <a href="#">
-                                <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/12.png">
-                                <p class="text-lg text-semibold mar-no text-main">Detail Process Value</p>
-                                <br>
 
-                            </a>
+                              <img alt="Profile Picture" class="img-lg img-circle mar-ver" src="../img/profile-photos/12.png">
+                              <p class="text-lg text-semibold mar-no text-main">Detail Process Value</p>
+                              <br>                            
 
                             <div class="panel-body">
                               <table class="table table-hover table-vcenter">
@@ -213,7 +213,6 @@
                                   </td>
 					                        <td>
                                     <span class="text-main text-semibold algorithm"></span>
-                                    <br>
 					                        </td>
 					                       </tr>
 
@@ -223,7 +222,6 @@
                                       </td>
 					                            <td>
 					                                <span class="text-main text-semibold Calinski"></span>
-					                                <br>
 					                            </td>
 					                        </tr>
 
@@ -233,7 +231,6 @@
                                       </td>
 					                            <td>
 					                                <span class="text-main text-semibold silhouette_score"></span>
-					                                <br>
 					                            </td>
 					                        </tr>
 
@@ -243,7 +240,6 @@
                                       </td>
 					                            <td>
 					                                <span class="text-main text-semibold params"></span>
-					                                <br>
 					                            </td>
 					                        </tr>
 
@@ -253,7 +249,6 @@
                                       </td>
 					                            <td>
 					                                <span class="text-main text-semibold lengthData"></span>
-					                                <br>
 					                            </td>
 					                        </tr>
 
@@ -273,7 +268,6 @@
 
 					                    </tbody>
 					                </table>
-                          <br>
 					                  </div>
 
                         </div>
@@ -283,13 +277,46 @@
 
                   <div class="col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Distribution Members in Groups
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Distribution Members in Groups
+                        </h3>
                       </div>
                       <div class="panel-body">
                         <div id="distributionValues"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title algorithmName"></h3>
+                      </div>
+                      <div class="panel-body">
+                        <p class="description"></p>
+                        <p class="paramsData"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Interpret your results</h3>
+                      </div>
+                      <div class="panel-body">
+                        <p>To interpret the results obtained it is necessary to evaluate both the values of the coefficients of silhouettes and those of Calinski-Harabasz index.</p>
+                        <p>Values greater than 0.6 of the coefficient of silhouettes indicate a good separation of the groups, denoting that the separation is acceptable. However, if your Calinski-Harabasz index is low, it is recommended to generate statistical evaluations about the groups.</p>
+                        <p>If it presents a high value of calinski, it is expected that the elements of each group are similar to each other and that in addition, the intracluster evaluation is acceptable. It is recommended that the silhouettes coefficient be greater than 0.6 and have a high value of calinski, in this way their results can be accepted and the generated grouping is accepted.</p>
                       </div>
                     </div>
                   </div>

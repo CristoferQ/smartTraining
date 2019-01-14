@@ -52,17 +52,21 @@
     exec($command);
 
     #hacemos la ejecucion del clustering si corresponde...
-    if ($algorithm == 1){
-      $responseValue['response'] = "BIEN";
+    $responseValue['response'] = "BIEN";
 
-      #ejecutamos el algoritmo...
-      $command = "python /var/www/html/smartTraining/model/launcherClusteringService.py $pathMove$nameDocument $idJob $idUSer /var/www/html/smartTraining/dataStorage/";
-      exec($command);
-      $responseValue['command'] = $command;
-      $responseValue['job'] = $idJob;
+    #ejecutamos el algoritmo...
+    $command = "python /var/www/html/smartTraining/model/launcherClusteringService.py $pathMove$nameDocument $idJob $idUSer /var/www/html/smartTraining/dataStorage/";
+    exec($command);
+    $responseValue['command'] = $command;
+    $responseValue['job'] = $idJob;
 
+    //pregunto si los archivos de salida existen...
+    $response1 = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/ResponseProcess_Job_Clustering.csv");
+
+    if ($response1 == true){
+        $responseValue['response'] = "BIEN";
     }else{
-      $responseValue['response'] = "CHOOSE";
+      $responseValue['response'] = "ERROR";
     }
   }else{
     $responseValue['response'] = "ERROR";

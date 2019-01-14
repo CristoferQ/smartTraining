@@ -188,10 +188,12 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Silhouette Coefficient Histogram
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Silhouette Coefficient Histogram
+                        </h3>
                       </div>
                       <div class="panel-body">
                         <div id="histogramSiluetas"></div>
@@ -201,10 +203,12 @@
 
                   <div class="col-sm-12 col-md-6 col-lg-6">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Calinski-Harabaz Index Histogram
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Calinski-Harabasz Index Histogram
+                        </h3>
                       </div>
                       <div class="panel-body">
                         <div id="histogramCalinski"></div>
@@ -212,8 +216,201 @@
                     </div>
                   </div>
 
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Silhouette Coefficient: Explanation
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        Silhouette refers to a method of interpretation and validation of consistency within clusters of data. The technique provides a succinct graphical representation of how well each object lies within its cluster.
+                        The silhouette value is a measure of how similar an object is to its own cluster (cohesion) compared to other clusters (separation). The silhouette ranges from −1 to +1, where a high value indicates that the object is well matched to its own cluster and poorly matched to neighboring clusters. If most objects have a high value, then the clustering configuration is appropriate. If many points have a low or negative value, then the clustering configuration may have too many or too few clusters.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Calinski-Harabasz Index: Explanation
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        Another method that is based on the concept of dense and well-separated clusters is the Calinski-Harabasz index. To build it, we need first to define the inter cluster dispersion. If we have k clusters with their relative centroids and the global centroid.
+                        Calinski-Harabasz define two metrics: the intercluster dispersion (BCD) and intracluster dispersion (WCD). Finally, Calinski-Harabasz index is define as the ration between inter cluster values and intra cluster values. The greater the value of this index, the more considerable the separation generated.
+                        It is frequently used when the real labels of the data are unknown, so, together with the silhouettes coefficient, it is a strong indicator of the generated group.
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="col-sm-12 col-md-12 col-lg-12">
 
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary DBScan Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <table id="summaryDBScan" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary Mean Shift Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+
+                        <table id="summaryMean" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary Affinity Propagation Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+
+                        <table id="summaryAffinity" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary K-Means Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+
+                        <table id="summaryKMeans" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary Birch Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <table id="summaryBirch" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+
+                    <div class="panel panel-bordered panel-primary">
+
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Summary Agglomerative Algorithm
+                        </h3>
+                      </div>
+                      <div class="panel-body">
+                        <table id="summaryAgglomerative" class="table table-striped table-bordered" cellspacing="0" width="100%">
+                            <thead>
+                              <tr>
+                                  <th class="min-tablet">Algorithm</th>
+                                  <th class="min-tablet">Params</th>
+                                  <th class="min-tablet">Groups</th>
+                                  <th class="min-tablet">Calinski-Harabaz index</th>
+                                  <th class="min-tablet">Silhouette Coefficient score</th>
+                                  <th class="min-tablet">Detail</th>
+                              </tr>
+                            </thead>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!--
+
+                  <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="panel">
 
                       <div class="panel-title">
@@ -235,7 +432,7 @@
                       </div>
                     </div>
                   </div>
-
+-->
                 </div>
               </div>
             </div>
