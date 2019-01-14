@@ -7,37 +7,41 @@ $(function () {
 			processed_json.push([data[i].statusJob, cantidad]);
 		}
 
-		// draw chart
-        $('#jobsQueue').highcharts({
-			chart: {
-				plotBackgroundColor: null,
-				plotBorderWidth: null,
-				plotShadow: false,
-				type: 'pie'
-			},
+		if (processed_json.length == 0){
+			$(".jobsQueueAlert").html( "No data available in the system yet." );
+		}else{
+			// draw chart
+	        $('#jobsQueue').highcharts({
+				chart: {
+					plotBackgroundColor: null,
+					plotBorderWidth: null,
+					plotShadow: false,
+					type: 'pie'
+				},
 
-			plotOptions: {
-				pie: {
-					allowPointSelect: true,
-					cursor: 'pointer',
-					dataLabels: {
-						enabled: false
-					},
-					showInLegend: true
-				}
-			},
-			credits: {
-			  enabled: false
-			},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						dataLabels: {
+							enabled: false
+						},
+						showInLegend: true
+					}
+				},
+				credits: {
+				  enabled: false
+				},
 
-			title: {
-				text: ""
-			},
+				title: {
+					text: ""
+				},
 
-            series: [{
-				name: 'Categoría',
-                data: processed_json
-			}]
-		});
+	            series: [{
+					name: 'Categoría',
+	                data: processed_json
+				}]
+			});
+		}
 	});
 })

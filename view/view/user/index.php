@@ -100,7 +100,7 @@
                 <!--================================-->
                 <!--End brand logo & name-->
 
-
+characteristic/responseSpatial.php?job=1547424449
                 <!--Navbar Dropdown-->
                 <!--================================-->
                 <div class="navbar-content clearfix">
@@ -235,12 +235,16 @@
 
                     <div class="col-sm-12 col-md-6">
 
-                      <div class="panel">
+                      <div class="panel panel-bordered panel-primary">
 
-                        <div class="panel-title">
-                          My jobs by kind
+                        <div class="panel-heading">
+                          <h3 class="panel-title">
+                            My jobs by Status
+                          </h3>
                         </div>
                         <div class="panel-body">
+                          <p class="jobsKindAlert">
+                          </p>
                           <div id="jobsKind"></div>
                         </div>
                     </div>
@@ -248,12 +252,16 @@
 
                     <div class="col-sm-12 col-md-6">
 
-                      <div class="panel">
+                      <div class="panel panel-bordered panel-primary">
 
-                        <div class="panel-title">
-                          Jobs in queue by status
+                        <div class="panel-heading">
+                          <h3 class="panel-title">
+                            Jobs in queue by status
+                          </h3>
                         </div>
                         <div class="panel-body">
+                          <p class="jobsQueueAlert">
+                          </p>
                           <div id="jobsQueue"></div>
                         </div>
                     </div>
@@ -262,12 +270,16 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Jobs by Date
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Jobs by Date
+                        </h3>
                       </div>
                       <div class="panel-body">
+                        <p class="jobsDateAlert">
+                        </p>
                         <div id="jobsDate"></div>
                       </div>
                     </div>
@@ -276,12 +288,16 @@
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
 
-                    <div class="panel">
+                    <div class="panel panel-bordered panel-primary">
 
-                      <div class="panel-title">
-                        Jobs in queue by Date
+                      <div class="panel-heading">
+                        <h3 class="panel-title">
+                          Jobs in queue by Date
+                        </h3>
                       </div>
                       <div class="panel-body">
+                        <p class="jobsQueueDateAlert">
+                        </p>
                         <div id="jobsQueueDate"></div>
                       </div>
                     </div>
@@ -439,7 +455,7 @@
             <!-- Remove the class "show-fixed" and "hide-fixed" to make the content always appears. -->
             <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-            <p class="pad-lft">&#0169; 2018 Developed by <a href="http://pesb2.cl"> PESB2 Group </a>Centre for Biothecnology and Bioengineering, FCFM, University of Chile</p>
+            <p class="pad-lft">&#0169; 2019 Developed by <a href="http://pesb2.cl/smartTraining"> SmartTraining Group, </a>Centre for Biothecnology and Bioengineering, FCFM, University of Chile</p>
 
 
 

@@ -13,48 +13,53 @@ $(function () {
 
 		}
 
+		if (responseInfo[0].data.length == 0){
+			$(".jobsQueueDateAlert").html( "No data available in the system yet." );
+		}
+		else{
 		// draw chart
         $('#jobsQueueDate').highcharts({
 
-					credits:{
-						enabled:false
-					},
-					chart: {
-        		type: 'spline'
-			    },
-			    title: {
-			        text: ''
-			    },
+						credits:{
+							enabled:false
+						},
+						chart: {
+	        		type: 'spline'
+				    },
+				    title: {
+				        text: ''
+				    },
 
-			    xAxis: {
-			        type: 'datetime',
-			        dateTimeLabelFormats: { // don't display the dummy year
-			            month: '%e. %b',
-			            year: '%b'
-			        },
-			        title: {
-			            text: 'Date'
-			        }
-			    },
-			    yAxis: {
-			        title: {
-			            text: 'Jobs'
-			        },
-			        min: 0
-			    },
-			    tooltip: {
-			        headerFormat: '<b>{series.name}</b><br>',
-			        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
-			    },
+				    xAxis: {
+				        type: 'datetime',
+				        dateTimeLabelFormats: { // don't display the dummy year
+				            month: '%e. %b',
+				            year: '%b'
+				        },
+				        title: {
+				            text: 'Date'
+				        }
+				    },
+				    yAxis: {
+				        title: {
+				            text: 'Jobs'
+				        },
+				        min: 0
+				    },
+				    tooltip: {
+				        headerFormat: '<b>{series.name}</b><br>',
+				        pointFormat: '{point.x:%e. %b}: {point.y:.2f} m'
+				    },
 
-			    plotOptions: {
-			        spline: {
-			            marker: {
-			                enabled: true
-			            }
-			        }
-			    },
-		    series: responseInfo
-		});
+				    plotOptions: {
+				        spline: {
+				            marker: {
+				                enabled: true
+				            }
+				        }
+				    },
+			    series: responseInfo
+			});
+		}
 	});
 })
