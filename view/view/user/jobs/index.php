@@ -196,6 +196,7 @@
                             <h3 class="panel-title">Jobs by Status</h3>
                         </div>
                         <div class="panel-body">
+                          <p class="jobsKindAlert"></p>
                           <div id="jobsKind"></div>
                         </div>
                     </div>
@@ -207,6 +208,7 @@
                             <h3 class="panel-title">User tool</h3>
                         </div>
                         <div class="panel-body">
+                          <p class="jobsDateAlert"></p>
                           <div id="jobsDate"></div>
                         </div>
                     </div>
@@ -441,7 +443,7 @@
    						  <div class="ln_solid"></div>
    						  <div class="form-group">
    							<div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-   								<button type="button" id="editar-user" class="btn btn-success" data-dismiss="modal">Delete</button>
+   								<button type="button" id="editar-user" class="btn btn-primary" data-dismiss="modal">Delete</button>
    								<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
    							</div>
    						  </div>

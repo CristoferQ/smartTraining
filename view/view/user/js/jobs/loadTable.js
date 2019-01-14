@@ -11,6 +11,7 @@ var listar = function(){
 	var t = $('#jobs').DataTable({
 		"responsive": true,
 		"destroy":true,
+		"order": [[ 5, "desc" ]],
 		"ajax":{
 			"method":"POST",
 			"url": "../php/jobs/showJobs.php"
@@ -19,10 +20,10 @@ var listar = function(){
 			{"data":"idjob"},
 			{"data":"nameJob"},
 			{"data":"descriptionJob"},
+			{"data":"tipo_job"},
+			{"data":"statusJob"},
 			{"data":"createdJob"},
 			{"data":"modifiedJob"},
-			{"data":"statusJob"},
-			{"data":"tipo_job"},
 			{"defaultContent": "<button type='button' class='detail btn btn-success'><i class='fa fa-file'></i></button> <button type='button' class='delete btn btn-danger' data-toggle='modal' data-target='#myModalEditar'><i class='fa fa-trash'></i></button>"}
 		]
 	});
