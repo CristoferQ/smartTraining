@@ -53,8 +53,22 @@
     $command = "python /var/www/html/smartTraining/model/launcherSupervisedClaWeb.py $pathMove$nameDocument $idUSer $idJob $pathRespone 3 $params $val";
     exec($command);
     $responseFile = "http://localhost/smartTraining/dataStorage/$idUSer/$idJob/responseTraining$idJob.json";
-    $response['fileResponse'] = $responseFile;
+    $responseData = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/responseTraining$idJob.json");
+
+    if ($responseData == true){
+      $response['fileResponse'] = $responseFile;
+    }else{
+      $response['exec'] = "ERROR";
+
+      $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+      $resultado = mysqli_query($conexion, $query);
+    }
+  }else{
+    $response['exec'] = "ERROR";
+    $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+    $resultado = mysqli_query($conexion, $query);
   }
+
 
   echo json_encode($response);
 

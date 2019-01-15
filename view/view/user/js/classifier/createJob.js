@@ -530,21 +530,28 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=0";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=0";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -576,21 +583,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=1";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=1";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -608,21 +623,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=2";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=2";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -654,21 +677,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=3";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=3";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -686,21 +717,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=4";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=4";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -744,21 +783,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=5";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=5";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -802,21 +849,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=6";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=6";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -876,21 +931,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-				    var data = JSON.parse(text);
-				    console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=7";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+					    var data = JSON.parse(text);
+					    console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=7";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -934,21 +997,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=8";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=8";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -999,21 +1070,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=9";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=9";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
@@ -1058,21 +1137,29 @@ $(document).ready(function() {
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
 
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.errorExec.exec_algorithm == "OK"){
-							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=10";
-						}else{
-							$('#loading').hide();
-							$('#errorResponse').show();
-							setTimeout("location.href=''", 5000);
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+
+						responseData = response.fileResponse;
+
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.errorExec.exec_algorithm == "OK"){
+								job = response.job;
+								location.href="responseTraining.php?job="+job+"&alg=10";
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
 
