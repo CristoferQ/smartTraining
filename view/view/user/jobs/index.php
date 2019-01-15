@@ -216,6 +216,11 @@
                 </div>
 
                 <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12" id="errorResponse" style="display:none;">
+                    <div class="alert alert-danger" role="alert">
+                      Jobs with error during execute.
+                    </div>
+                  </div>
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">

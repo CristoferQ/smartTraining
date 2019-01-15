@@ -48,30 +48,35 @@ var getIDForDetail = function(tbody, table){
 		var idjob = data.idjob;
 		var tipo = data.tipo_job;
 
-		if (tipo == "CORRELATION"){
+		var statusJob = data.statusJob;
 
-			location.href="../characteristic/responseCorrelation.php?job="+idjob;
+		if (statusJob != "ERROR" && statusJob != "START"){
 
-		}else if (tipo == "CHARACTERISTICS") {
+			if (tipo == "CORRELATION"){
 
-			location.href="../characteristic/responseSpatial.php?job="+idjob;
+				location.href="../characteristic/responseCorrelation.php?job="+idjob;
 
-		}else if (tipo == "CLASSIFICATION") {
-			location.href="../training/responseTraining.php?job="+idjob;
+			}else if (tipo == "CHARACTERISTICS") {
 
-		}else if (tipo == "PREDICTION") {
-			location.href="../prediction/responseTraining.php?job="+idjob;
+				location.href="../characteristic/responseSpatial.php?job="+idjob;
 
-		}else if (tipo == "CLUSTERING-FULL") {
-			location.href="../clustering/responseJob.php?job="+idjob+"&user=1";
+			}else if (tipo == "CLASSIFICATION") {
+				location.href="../training/responseTraining.php?job="+idjob;
 
-		}else if (tipo == "CLUSTERING") {
-			location.href="../clustering/viewResult.php?job="+idjob+"&user=1";
+			}else if (tipo == "PREDICTION") {
+				location.href="../prediction/responseTraining.php?job="+idjob;
+
+			}else if (tipo == "CLUSTERING-FULL") {
+				location.href="../clustering/responseJob.php?job="+idjob+"&user=1";
+
+			}else if (tipo == "CLUSTERING") {
+				location.href="../clustering/viewResult.php?job="+idjob+"&user=1";
+			}
+		}else{
+
+			$('#errorResponse').show();
+			setTimeout("location.href=''", 5000);
 		}
-
-
-
-
 	});
 }
 
