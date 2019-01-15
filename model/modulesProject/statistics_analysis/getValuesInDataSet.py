@@ -4,6 +4,7 @@ a la respuesta...
 '''
 
 import json
+import pandas as pd
 
 class searchData(object):
 
@@ -11,6 +12,7 @@ class searchData(object):
 
         self.dataSet = dataSet
         self.key = key
+        self.dataValues = pd.read_csv(self.dataSet)
 
     #metodo que permite hacer la busqueda de los elementos...
     def searchValues(self):
@@ -22,3 +24,10 @@ class searchData(object):
 
         dictData.update({"response":values})
         print json.dumps(dictData)
+
+    def searchValuesInData(self):
+
+        values = []
+        for i in range(len(self.dataValues)):
+            values.append(self.dataValues[self.key][i])
+        return values
