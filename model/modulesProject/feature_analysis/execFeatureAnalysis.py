@@ -20,17 +20,17 @@ class featureAnalysis(object):
         self.checkKindDataSet()#chequeamos el tipo de set de datos
 
     #metodo que permite evaluar el tipo de set de datos que se esta recibiendo
-    def checkKindDataSet(self):#ojo!!! funcion para el diego!!!
+    def checkKindDataSet(self):
 
         #hacemos la consulta a la base de datos, instanciamos a los objetos correspondientes
-        #connectDB = ConnectDataBase.ConnectDataBase()
-        #handler = HandlerQuery.HandlerQuery()
+        connectDB = ConnectDataBase.ConnectDataBase()
+        handler = HandlerQuery.HandlerQuery()
 
-        #query = "select dataSet.tipoDataSet from dataSet where dataSet.job=%s" %self.job
-        #connectDB.initConnectionDB()
-        #response = handler.queryBasicDataBase(query, connectDB)
-        self.tipoDataSet = 'CLASS'
-        #connectDB.closeConnectionDB()
+        query = "select dataSet.tipoDataSet from dataSet where dataSet.job=%s" %self.job
+        connectDB.initConnectionDB()
+        response = handler.queryBasicDataBase(query, connectDB)
+        self.tipoDataSet = response[0][0]
+        connectDB.closeConnectionDB()
 
     #metodo que permite la ejecucion de la correlacion de datos
     def execCorrelationData(self):

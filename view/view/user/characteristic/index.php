@@ -224,7 +224,24 @@
                               <select id="processJob" class="form-control">
                                 <option value="1">Correlation Values</option>
                                 <option value="2">Spatial Deformation</option>
+                                <option value="3">PCA</option>
+                                <option value="4">Mutual Information</option>
+                                <option value="5">Kernel PCA</option>
+                                <option value="6">Incremental PCA</option>
 
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+              							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="kindDataSet">Kind of dataSet <span class="required">*</span>
+              							</label>
+
+                            <div class="col-md-5 col-sm-5 col-xs-12">
+                              <select id="kindDataSet" class="form-control">
+                                <option value="1">With discrete Labels</option>
+                                <option value="2">With continuous response</option>
+                                <option value="3">WIth out response</option>
                               </select>
                             </div>
                           </div>
@@ -248,6 +265,13 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12" id="errorResponse" style="display:none;">
+                          <div class="alert alert-danger" role="alert">
+                            Error during the execution of the process. Please, review the data set. In case of persisting, contact the system administrator.
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </div>

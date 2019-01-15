@@ -28,6 +28,7 @@ $(document).ready(function() {
 			var nameJob = $("#initNewJob #nameJob").val();
 			var descJob = $("#initNewJob #descJob").val();
       var processJob = $("#initNewJob #processJob").val();
+			var kindDataSet = $("#initNewJob #kindDataSet").val();
 
 			if (processJob == 1){//correlation option
 				$.ajax({
@@ -35,23 +36,32 @@ $(document).ready(function() {
 					url: "../php/characteristic/execCorrelation.php",
 					data: {
 						"nameJob"   : nameJob,
-						"descJob"   : descJob
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
-					console.log(response);
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.Response == "OK"){
-							location.href="responseCorrelation.php?job="+response.job;
-						}else{
-							console.log("Job Error");
-						}
-					});
 
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								location.href="responseCorrelation.php?job="+response.job;
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}else if (processJob == 2) {
 				$.ajax({
@@ -59,24 +69,33 @@ $(document).ready(function() {
 					url: "../php/characteristic/execSpatial.php",
 					data: {
 						"nameJob"   : nameJob,
-						"descJob"   : descJob
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
-					responseData = response.fileResponse;
-					console.log(response);
-					readTextFile(responseData, function(text){
-						var data = JSON.parse(text);
-						console.log(data);
-						//trabajamos con la respuesta...
-						if (data.Response == "OK"){
-							location.href="responseSpatial.php?job="+response.job;
 
-						}else{
-							console.log("Job Error");
-						}
-					});
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								location.href="responseSpatial.php?job="+response.job;
 
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
 				});
 			}
     });

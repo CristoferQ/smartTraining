@@ -67,9 +67,7 @@
       $resultado = mysqli_query($conexion, $query);
     }
   }else{
-    $response['exec'] = "ERROR";
-    $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
-    $resultado = mysqli_query($conexion, $query);
+    $response['exec'] = "ERROR";    
   }
 
   echo json_encode($response);

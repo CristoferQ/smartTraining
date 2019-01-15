@@ -7,6 +7,21 @@
   #recibimos los parametros...
   $nameJob = $_REQUEST['nameJob'];
   $descJob = $_REQUEST['descJob'];
+  $kind = $_REQUEST['kindDataSet'];
+
+  $kindData = "";
+
+  if ($kind == 1){
+    $kindData = "CLASS";
+  }
+
+  if ($kind == 2){
+    $kindData = "PREDICTION";
+  }
+
+  if ($kind == 3){
+    $kindData = "CLUSTERING";
+  }
 
   #obtenemos los datos desde la sesion...
   $idUSer = 1;
@@ -21,7 +36,7 @@
 
   #hacemos la insercion a la base de datos...
   $query = "insert into job values ($idJob, '$nameJob', '$descJob', NOW(), NOW(), $idUSer, '$nameDocument', 'START', 'CORRELATION')";
-  $query2 = "insert into dataSet values ($idJob, '$nameDocument', NOW(), NOW(), $idUSer, 'CORRELATION', $idJob)";
+  $query2 = "insert into dataSet values ($idJob, '$nameDocument', NOW(), NOW(), $idUSer, '$kindData', $idJob)";
   $resultado = mysqli_query($conexion, $query);
   $resultado2 = mysqli_query($conexion, $query2);
   $requestData = verificar_resultado($resultado);
@@ -49,9 +64,20 @@
     $command = "python /var/www/html/smartTraining/model/launcherWebFeatureAnalysis.py $idUSer $idJob $pathMove$nameDocument $pathRespone 1";
     exec($command);
     $responseFile = "http://localhost/smartTraining/dataStorage/$idUSer/$idJob/responseCorrelation$idJob.json";
-    $response['fileResponse'] = $responseFile;
-    $response['command'] = $command;
+    $responseData = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/responseCorrelation$idJob.json");
 
+    if ($responseData == true){
+      $response['fileResponse'] = $responseFile;
+      $response['command'] = $command;
+    }else{
+      $response['exec'] = "ERROR";
+
+      $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+      $resultado = mysqli_query($conexion, $query);
+    }
+
+  }else{
+    $response['exec'] = "ERROR";
   }
 
   echo json_encode($response);

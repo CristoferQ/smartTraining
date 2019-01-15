@@ -62,15 +62,15 @@
 
     if ($responseData == true){
       $response['fileResponse'] = $responseFile;
-    }else{
+    }else{$query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+    $resultado = mysqli_query($conexion, $query);
       $response['exec'] = "ERROR";
       $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
       $resultado = mysqli_query($conexion, $query);
     }
   }else{
     $response['exec'] = "ERROR";
-    $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
-    $resultado = mysqli_query($conexion, $query);
+    
   }
   echo json_encode($response);
 
