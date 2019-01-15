@@ -180,7 +180,7 @@
                 <!--===================================================-->
               <div id="page-content">
                 <div class="row">
-                  <div class="col-lg-8 col-md-8 col-sm-8">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Summary Process</h3>
@@ -218,22 +218,21 @@
                                   </td>
                               </tr>
 
+                              <tr>
+                                  <td>
+                                    <span class="text-main text-semibold">Interpret Results</span>
+                                  </td>
+                                  <td>
+                                      <span class="text-semibold interpret"></span>
+                                      <br>
+                                  </td>
+                              </tr>
+
                           </tbody>
                       </table>
                         </div>
                     </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-4 col-sm-4">
-                    <div class="panel panel-bordered panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">What it is?</h3>
-                        </div>
-                        <div class="panel-body">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        </div>
-                    </div>
-                  </div>
+                  </div>                  
                 </div>
 
                 <div class="row">
@@ -274,11 +273,11 @@
                   <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
-                            <h3 class="panel-title algorithmValue"></h3>
+                            <h3 class="panel-title algorithmName"></h3>
                         </div>
                         <div class="panel-body">
-                          <div class="explanation">
-                          </div>
+                          <p class="explanation"></p>
+                          <p class="paramsDefinition"></p>
                         </div>
                     </div>
                   </div>

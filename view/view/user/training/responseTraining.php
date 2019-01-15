@@ -327,72 +327,57 @@
                     </div>
                   </div>
                 </div>
-
                 <div class="row">
 
-                  <div class="col-lg-3 col-md-3 col-sm-3">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Confusion Matrix</h3>
                         </div>
                         <div class="panel-body">
-                          <?php
-
-                            $job=$_GET['job'];
-                            echo "<a href=\"../../../dataStorage/1/$job/confusionMatrix_$job.svg\">";
-                            echo "<img src=\"../../../dataStorage/1/$job/confusionMatrix_$job.svg\" alt=\"Confusion Matrix not available\" class=\"img-thumbnail\">";
-                            echo "</a>";
-
-                          ?>
+                          <img id="confusionMatrixImg" class="img-thumbnail"><br/>
+                          <hr>
+                          <p class="confusionMatrixDef"></p>
                         </div>
                     </div>
                   </div>
 
-                  <div class="col-lg-3 col-md-3 col-sm-3">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">ROC Curve</h3>
                         </div>
                         <div class="panel-body">
-                          <?php
-                            $job=$_GET['job'];
-                            echo "<a href=\"../../../dataStorage/1/$job/curveRoc_$job.svg\">";
-                            echo "<img src=\"../../../dataStorage/1/$job/curveRoc_$job.svg\" alt=\"Curve ROC not available\" class=\"img-thumbnail\">";
-                            echo "</a>";
-                          ?>
+                          <img id="curveRocImg" class="img-thumbnail"><br/>
+                          <hr>
+                          <p class="curveRocDef"></p>
                         </div>
                     </div>
                   </div>
 
-                  <div class="col-lg-3 col-md-3 col-sm-3">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Learning Curve</h3>
                         </div>
                         <div class="panel-body">
-                          <?php
-                            $job=$_GET['job'];
-                            echo "<a href=\"../../../dataStorage/1/$job/curveLearning_$job.svg\">";
-                            echo "<img src=\"../../../dataStorage/1/$job/curveLearning_$job.svg\" alt=\"Learning Curve not available\" class=\"img-thumbnail\">";
-                            echo "</a>";
-                          ?>
+                          <img id="learningCurveImg" class="img-thumbnail"><br/>
+                          <hr>
+                          <p class="learningCurveDef"></p>
                         </div>
                     </div>
                   </div>
 
-                  <div class="col-lg-3 col-md-3 col-sm-3">
+                  <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="panel panel-bordered panel-primary">
                         <div class="panel-heading">
                             <h3 class="panel-title">Precision-Recall Curve</h3>
                         </div>
                         <div class="panel-body">
-                          <?php
+                          <img id="precisionCurveImg" class="img-thumbnail"><br/>
+                          <hr>
+                          <p class="precisionCurveDef"></p>
 
-                            $job=$_GET['job'];
-                            echo "<a href=\"../../../dataStorage/1/$job/precision_recall_curve_$job.svg\">";
-                            echo "<img src=\"../../../dataStorage/1/$job/precision_recall_curve_$job.svg\" alt=\"Precision Recall curve not available\" class=\"img-thumbnail\">";
-                            echo "</a>";
-                          ?>
                         </div>
                     </div>
                   </div>
@@ -405,12 +390,85 @@
                             <h3 class="panel-title algorithmValue"></h3>
                         </div>
                         <div class="panel-body">
-                          <div class="explanation">
-                          </div>
+                          <p class="explanation"></p>
+                          <p class="paramsDefinition"></p>
                         </div>
                     </div>
                   </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="panel panel-bordered panel-primary">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">How to interpret to results?</h3>
+                      </div>
+                      <div class="panel-body">
+                        <table class="table table-hover table-vcenter">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <span class="text-main text-semibold">Precision</span>
+                            </td>
+                            <td>
+                              <span class="text-semibold precisionDef"></span>
+                              <br>
+                            </td>
+                           </tr>
 
+                            <tr>
+                                <td>
+                                  <span class="text-main text-semibold">Accuracy</span>
+                                </td>
+                                <td>
+                                    <span class="text-semibold accuracyDef"></span>
+                                    <br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  <span class="text-main text-semibold">Recall</span>
+                                </td>
+                                <td>
+                                    <span class="text-semibold recallDef"></span>
+                                    <br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  <span class="text-main text-semibold">F1 Score</span>
+                                </td>
+                                <td>
+                                    <span class="text-semibold f1_scoreDef"></span>
+                                    <br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  <span class="text-main text-semibold">FBeta Score</span>
+                                </td>
+                                <td>
+                                    <span class="text-semibold fbetaDef"></span>
+                                    <br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                  <span class="text-main text-semibold">Negloss</span>
+                                </td>
+                                <td>
+                                    <span class="text-semibold neglossDef"></span>
+                                    <br>
+                                </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

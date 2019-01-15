@@ -222,7 +222,6 @@
                             <div class="col-md-5 col-sm-5 col-xs-12">
                               <select id="algorithm" class="form-control">
 
-                                <option>Select Algorithm</option>
                                 <option value="1">AdaBoostRegressor</option>
                                 <option value="2">BaggingRegressor</option>
                                 <option value="3">DecisionTree</option>
@@ -318,7 +317,7 @@
 
                           </div>
 
-                          <div class="form-group" id="AdaBoostClassifier1" style="display:none;">
+                          <div class="form-group" id="AdaBoostClassifier1">
               							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdaBoost_n_estimators">N Estimators
               							</label>
 
@@ -328,7 +327,7 @@
 
                           </div>
 
-                          <div class="form-group" id="AdaBoostClassifier2" style="display:none;">
+                          <div class="form-group" id="AdaBoostClassifier2">
               							<label class="control-label col-md-3 col-sm-3 col-xs-12" for="AdaBoost_loss">Loss
               							</label>
 
@@ -717,6 +716,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-12 col-lg-12" id="errorResponse" style="display:none;">
+                          <div class="alert alert-danger" role="alert">
+                            Error during the execution of the process. Please, review the data set. In case of persisting, contact the system administrator.
+                          </div>
                         </div>
                       </div>
                     </div>

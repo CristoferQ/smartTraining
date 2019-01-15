@@ -15,9 +15,14 @@ function loadTables(){
 	readTextFile(nameFile, function(text){
 		var data = JSON.parse(text);
 
+		var params_values = JSON.stringify(data.Params).replace(new RegExp("{", 'g'), "");
+		var params_values = params_values.replace(new RegExp("}", 'g'), "");
+		var params_values = params_values.replace(new RegExp("\"", 'g'), "");
+		var params_values = params_values.replace(new RegExp(",", 'g'), " ");
+
 		//creamos el text para los params...
 		$(".algorithm").html(data.algorithm);
-		$(".params_values").html(JSON.stringify(data.Params));
+		$(".params_values").html(params_values);
 		$(".r_score").html(JSON.stringify(data.Performance.r_score));
 
 		//obtenemos los valores de las predicciones y los reales...
@@ -93,14 +98,17 @@ function createGraphicDataOnlyTrace(values, xValues){
 function loadInfoAlgorithm(){
 
 	var algorithm = getQuerystring('alg');
-	if (algorithm == 2){//AdaBoostClassifier
+	console.log(algorithm);
+	var nameFile = "http://localhost/smartTraining/view/user/resourceData/dataDefinitions.json";
 
-		var title = "AdaBoostClassifier definition";
-		var resume = "The core principle of AdaBoost is to fit a sequence of weak learners (i.e., models that are only slightly better than random guessing, such as small decision trees) on repeatedly modified versions of the data. The predictions from all of them are then combined through a weighted majority vote (or sum) to produce the final prediction.";
-		$(".algorithmValue").html(title);
-		$(".explanation").html(resume);
+	readTextFile(nameFile, function(text){
+		var data = JSON.parse(text);
+		$(".algorithmName").html(data.predictionAlgorithm[algorithm].nameAlgorithm);
+		$(".explanation").html(data.predictionAlgorithm[algorithm].definition);
+    $(".paramsDefinition").html(data.predictionAlgorithm[algorithm].params);
+		$(".interpret").html(data.resultPrediction[0].definition);
+	});
 
-	}
 }
 //funcion para recuperar la clave del valor obtenido por paso de referencia
 function getQuerystring(key, default_) {

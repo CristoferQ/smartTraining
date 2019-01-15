@@ -497,6 +497,7 @@ $(document).ready(function() {
 			var nameJob = $("#initNewJob #nameJob").val();
 			var descJob = $("#initNewJob #descJob").val();
       var algorithm = $("#initNewJob #algorithm").val();
+			var val = $("#initNewJob #validationOption").val();
 
 			//recuperamos todos los valores de los algoritmos y parametros segun corresponda con respecto al algoritmo y se ejecutara
 			//un script dependiendo del tipo de algoritmo a entrenar.
@@ -523,7 +524,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"AdaBoost_n_estimators" : AdaBoost_n_estimators,
 						"AdaBoost_algorithm" : AdaBoost_algorithm
 					}
@@ -537,9 +538,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=2";
+							location.href="responseTraining.php?job="+job+"&alg=0";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -567,7 +570,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"bagging_n_estimators" : bagging_n_estimators,
 						"bootstrap_bootstrap" : bootstrap_bootstrap
 					}
@@ -581,9 +584,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=3";
+							location.href="responseTraining.php?job="+job+"&alg=1";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -599,7 +604,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 						"algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
@@ -611,9 +616,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=4";
+							location.href="responseTraining.php?job="+job+"&alg=2";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -641,7 +648,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"DecisionTree_splitter" : DecisionTree_splitter,
 						"DecisionTree_criterion" : DecisionTree_criterion
 					}
@@ -655,9 +662,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=5";
+							location.href="responseTraining.php?job="+job+"&alg=3";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -673,7 +682,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 						"algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 					}
 				}).done( function( info ){
 					var response = JSON.parse(info);
@@ -685,9 +694,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=6";
+							location.href="responseTraining.php?job="+job+"&alg=4";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -725,7 +736,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"gradient_loss" : gradient_loss,
 						"gradient_n_estimators" : gradient_n_estimators,
 						"gradient_min_samples_split" : gradient_min_samples_split,
@@ -741,9 +752,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=7";
+							location.href="responseTraining.php?job="+job+"&alg=5";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -781,7 +794,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"knn_neighbors" : knn_neighbors,
 						"knn_metric" : knn_metric,
 						"knn_weight" : knn_weight,
@@ -797,9 +810,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=8";
+							location.href="responseTraining.php?job="+job+"&alg=6";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -847,7 +862,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 	          "algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"MLP_activation" : MLP_activation,
 						"MLP_solver" : MLP_solver,
 						"MLP_alpha" : MLP_alpha,
@@ -869,9 +884,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=9";
+							location.href="responseTraining.php?job="+job+"&alg=7";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -909,7 +926,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 						"algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"NuSVC_kernel" : NuSVC_kernel,
 						"NuSVC_gamma" : NuSVC_gamma,
 						"NuSVC_degree" : NuSVC_degree,
@@ -925,9 +942,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=10";
+							location.href="responseTraining.php?job="+job+"&alg=8";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -970,7 +989,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 						"algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"rf_criterion" : rf_criterion,
 						"rf_bootstrap" : rf_bootstrap,
 						"rf_n_estimators" : rf_n_estimators,
@@ -988,9 +1007,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=11";
+							location.href="responseTraining.php?job="+job+"&alg=9";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});
@@ -1028,7 +1049,7 @@ $(document).ready(function() {
 						"nameJob"   : nameJob,
 						"descJob"   : descJob,
 						"algorithm"   : algorithm,
-						"val" : 10,
+						"val" : val,
 						"SVC_kernel" : SVC_kernel,
 						"SVC_gamma" : SVC_gamma,
 						"SVC_degree" : SVC_degree,
@@ -1045,9 +1066,11 @@ $(document).ready(function() {
 						//trabajamos con la respuesta...
 						if (data.errorExec.exec_algorithm == "OK"){
 							job = response.job;
-							location.href="responseTraining.php?job="+job+"&alg=12";
+							location.href="responseTraining.php?job="+job+"&alg=10";
 						}else{
-							console.log("Error");
+							$('#loading').hide();
+							$('#errorResponse').show();
+							setTimeout("location.href=''", 5000);
 						}
 					});
 				});

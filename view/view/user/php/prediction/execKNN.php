@@ -55,10 +55,23 @@
     //hacemos la ejecucion del script
     $command = "python /var/www/html/smartTraining/model/launcherSupervisedPredictionWeb.py $pathMove$nameDocument $idUSer $idJob $pathRespone 5 $params";
     exec($command);
-    $responseFile = "http://localhost/smartTraining/dataStorage/$idUSer/$idJob/responseTraining$idJob.json";
-    $response['fileResponse'] = $responseFile;
-  }
 
+    //preguntamos si este archivo existe...
+    $responseFile = "http://localhost/smartTraining/dataStorage/$idUSer/$idJob/responseTraining$idJob.json";
+    $responseData = file_exists("/var/www/html/smartTraining/dataStorage/$idUSer/$idJob/responseTraining$idJob.json");
+
+    if ($responseData == true){
+      $response['fileResponse'] = $responseFile;
+    }else{
+      $response['exec'] = "ERROR";
+      $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+      $resultado = mysqli_query($conexion, $query);
+    }
+  }else{
+    $response['exec'] = "ERROR";
+    $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+    $resultado = mysqli_query($conexion, $query);
+  }
   echo json_encode($response);
 
 ?>
