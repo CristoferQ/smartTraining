@@ -117,13 +117,18 @@
           $responseValue['response'] = "BIEN";
         }else{
           $responseValue['response'] = "ERROR";
+          $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+          $resultado = mysqli_query($conexion, $query);
         }
       }else{
         $responseValue['response'] = "ERROR";
+        $query = "update job set job.statusJob = 'ERROR', job.modifiedJob = NOW() where job.idjob = $idJob";
+        $resultado = mysqli_query($conexion, $query);
       }
     }
   }else{
     $responseValue['response'] = "ERROR";
+    
   }
 
   echo json_encode($responseValue);
