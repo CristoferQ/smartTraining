@@ -26,6 +26,7 @@ from modulesProject.statistics_analysis import summaryStatistic
 
 from modulesProject.dataBase_module import ConnectDataBase
 from modulesProject.dataBase_module import HandlerQuery
+from modulesProject.utils import sendEmail
 
 #funcion que permite calcular los estadisticos de un atributo en el set de datos, asociados a las medidas de desempeno
 def estimatedStatisticPerformance(summaryObject, attribute):
@@ -40,6 +41,8 @@ user = sys.argv[1]
 job = sys.argv[2]
 dataSet = pd.read_csv(sys.argv[3])
 pathResponse = sys.argv[4]
+emailUser = sys.argv[5]
+nameUser = sys.argv[6]
 
 #valores iniciales
 start_time = time.time()
@@ -293,3 +296,8 @@ dictionary.update({"iteracionesIncorrectas": iteracionesIncorrectas})
 nameFileExport = "%s%s/%s/summaryProcess_%s.json" % (pathResponse, user, job, job)
 with open(nameFileExport, 'w') as fp:
     json.dump(dictionary, fp)
+
+#enviar correo con finalizacion del job....
+body = "Dear %s.\nThe job with ID: %s has been update to status: FINISH. It will notify by email when job finish.\nBest Regards, SmartTraining Team" % (nameUser, job)
+emailData = sendEmail.sendEmail('smarttrainingserviceteam@gmail.com', emailUser, "Change status in job "+ str(job), body, 'smart123ewq')
+emailData.sendEmailUser()
