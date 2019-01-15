@@ -4,7 +4,7 @@
 	include ("../connection.php");
 
 	$iduser=1;
-	$query = "select * from dataSet where dataSet.user =$iduser";
+	$query = "select * from dataSet join job on (dataSet.job = job.idjob) where job.statusJob = 'FINISH' and dataSet.user =$iduser";
 	$resultado = mysqli_query($conexion, $query);
 
 	if (!$resultado){
