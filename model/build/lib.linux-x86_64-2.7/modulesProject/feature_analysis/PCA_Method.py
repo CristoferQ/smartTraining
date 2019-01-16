@@ -66,8 +66,8 @@ class pca(object):
 			df = pd.DataFrame(Y)
 			df.to_csv(file)
 
-			dfPct= pd.DataFrame(P)
-			dfPct.to_csv(filePCT)
+			dfPct= pd.DataFrame(P, columns=["Component", "Relevance"])
+			dfPct.to_csv(filePCT, index=False)
 
 			okidokie = "OK"
 		except Exception as e:

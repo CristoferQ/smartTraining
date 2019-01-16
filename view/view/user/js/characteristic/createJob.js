@@ -97,6 +97,143 @@ $(document).ready(function() {
 						});
 					}
 				});
+			}else if (processJob == 4) {
+				$.ajax({
+					method: "POST",
+					url: "../php/characteristic/execMutualInformation.php",
+					data: {
+						"nameJob"   : nameJob,
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
+					}
+				}).done( function( info ){
+					var response = JSON.parse(info);
+
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								//location.href="responseSpatial.php?job="+response.job;
+								console.log("Exec OK!!!");
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
+				});
+			}else if (processJob == 3) {
+				$.ajax({
+					method: "POST",
+					url: "../php/characteristic/execPCA.php",
+					data: {
+						"nameJob"   : nameJob,
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
+					}
+				}).done( function( info ){
+					var response = JSON.parse(info);
+
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								location.href="responsePCA.php?job="+response.job;
+								console.log("Exec OK!!!");
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
+				});
+			}
+			else if (processJob == 6) {
+				$.ajax({
+					method: "POST",
+					url: "../php/characteristic/execPCAIncremental.php",
+					data: {
+						"nameJob"   : nameJob,
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
+					}
+				}).done( function( info ){
+					var response = JSON.parse(info);
+
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								location.href="responseIncrementalPCA.php?job="+response.job;
+								console.log("Exec OK!!!");
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
+				});
+			}else if (processJob == 5) {
+				$.ajax({
+					method: "POST",
+					url: "../php/characteristic/execKernelPCA.php",
+					data: {
+						"nameJob"   : nameJob,
+						"descJob"   : descJob,
+						"kindDataSet" : kindDataSet
+					}
+				}).done( function( info ){
+					var response = JSON.parse(info);
+
+					if (response.exec== "ERROR"){
+						$('#loading').hide();
+						$('#errorResponse').show();
+						setTimeout("location.href=''", 5000);
+					}else{
+						responseData = response.fileResponse;
+						console.log(response);
+						readTextFile(responseData, function(text){
+							var data = JSON.parse(text);
+							console.log(data);
+							//trabajamos con la respuesta...
+							if (data.Response == "OK"){
+								location.href="responseKPCA.php?job="+response.job;
+								console.log("Exec OK!!!");
+							}else{
+								$('#loading').hide();
+								$('#errorResponse').show();
+								setTimeout("location.href=''", 5000);
+							}
+						});
+					}
+				});
 			}
     });
 });

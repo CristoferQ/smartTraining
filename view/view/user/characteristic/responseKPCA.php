@@ -69,6 +69,7 @@
     <link href="../premium/icon-sets/icons/line-icons/premium-line-icons.min.css" rel="stylesheet">
     <link href="../plugins/spinkit/css/spinkit.min.css" rel="stylesheet">
     <script src="../plugins/bootstrap-validator/bootstrapValidator.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 </head>
 
@@ -175,22 +176,6 @@
                 <!--Page content-->
                 <!--===================================================-->
               <div id="page-content">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div class="panel panel-bordered panel-primary">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">Correlation Matrix</h3>
-                        </div>
-                        <div class="panel-body">
-                          <?php
-
-                            $job=$_GET['job'];
-                            echo "<img src=\"../../../dataStorage/1/$job/correlationMatrix_$job.svg\" alt=\"Correlation Matrix not available\" class=\"img-thumbnail\">";                            
-                          ?>
-                        </div>
-                    </div>
-                  </div>
-                </div>
 
                 <div class="row">
                   <div class="col-lg-5 col-md-5 col-sm-5">
@@ -207,25 +192,24 @@
                                 <span class="text-main text-semibold">Process</span>
                               </td>
                               <td>
-                                <span class="text-main text-semibold">Correlation of attributes</span>
+                                <span class="text-main text-semibold">Kernel PCA</span>
                                 <br>
                               </td>
                              </tr>
 
                               <tr>
                                   <td>
-                                    <span class="text-main text-semibold">Correlation Matrix</span>
+                                    <span class="text-main text-semibold">File Transfomr</span>
                                   </td>
                                   <td>
                                       <span class="text-main text-semibold">
                                         <?php
 
                                           $job=$_GET['job'];
-                                          echo "<a href=\"../../../dataStorage/1/$job/correlationMatrix_$job.csv\">";
+                                          echo "<a href=\"../../../dataStorage/1/$job/KernelPCA_$job.csv\">";
                                           echo "dataResponse</a>";
 
                                         ?>
-
                                       </span>
                                       <br>
                                   </td>
@@ -319,6 +303,7 @@
           						                </a>
 
           						            </li>
+
 																	<li class="list-header">Process Options</li>
 
                                   <li>
@@ -362,10 +347,11 @@
           						                </a>
 
           						            </li>
+
                                   <li>
           						                <a href="../">
           						                    <i class="fa fa fa-home"></i>
-          						                    <span class="menu-title">Home</span><i class="arrow"></i>
+          						                    <span class="menu-title">home</span><i class="arrow"></i>
           						                </a>
 
           						            </li>
