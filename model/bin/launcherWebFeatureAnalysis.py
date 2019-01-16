@@ -33,27 +33,23 @@ elif option == 2:#deformacion espacio
 
 elif option == 3:#PCA
     dictResponse.update({'Exce': "PCA"})
+    response = execFeatures.execPCA()
+    dictResponse.update({"Response": response})
 
 elif option == 4:#Mutual Information
     dictResponse.update({'Exce': "Mutual Information"})
+    response = execFeatures.execMutualInformation()
+    dictResponse.update({"Response": response})
 
 elif option == 5:#Kernel PCA
     dictResponse.update({'Exce': "Kernel PCA"})
+    response = execFeatures.exec_kernelPCA()
+    dictResponse.update({"Response": response})
 
 elif option == 6:#Incremental PCA
     dictResponse.update({'Exce': "Incremental PCA"})
-
-elif option == 7:#Mini Batch Sparce
-    dictResponse.update({'Exce': "Mini Batch Sparce"})
-
-elif option == 8:#Sparce
-    dictResponse.update({'Exce': "Sparce PCA"})
-
-elif option == 9:#truncated SVD
-    dictResponse.update({'Exce': "Truncated SVD"})
-
-else:#Factor Analysis
-    dictResponse.update({'Exce': "Factor Analysis"})
+    response = execFeatures.execPCA_Incremental()
+    dictResponse.update({"Response": response})
 
 #create file with response...
 with open(pathResponse+user+"/"+job+"/responseCorrelation"+str(job)+".json", 'w') as fp:

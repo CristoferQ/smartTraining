@@ -8,6 +8,9 @@ from modulesProject.dataBase_module import ConnectDataBase
 from modulesProject.dataBase_module import HandlerQuery
 from modulesProject.feature_analysis import correlationValue
 from modulesProject.feature_analysis import spatialDeformation
+from modulesProject.feature_analysis import kernelPCA
+from modulesProject.feature_analysis import mutualInformation
+from modulesProject.feature_analysis import PCA_Method
 
 class featureAnalysis(object):
 
@@ -42,3 +45,27 @@ class featureAnalysis(object):
     def excecSpatialDeformation(self):
         spatial = spatialDeformation.spatialDeformation(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
         return spatial.applySpatialDeformation()
+
+    #metodo que permite la ejecucion de mutual information...
+    def execMutualInformation(self):
+
+        mutualObject = mutualInformation.mutualInformation(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
+        return mutualObject.makeMatrix()
+
+    #metodo que permite la ejecucion de PCA information...
+    def execPCA(self):
+
+        pcaObject = PCA_Method.pca(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
+        return pcaObject.doPCA()
+
+    #metodo que permite la ejecucion de incremental PCA...
+    def execPCA_Incremental(self):
+
+        pcaObject = PCA_Method.pca(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
+        return pcaObject.incrementalPCA()
+
+    #metodo que permite la ejecucion de kernel pca...
+    def exec_kernelPCA(self):
+
+        kernelObject = kernelPCA.kpca(self.user, self.job, self.dataSet, self.pathResponse, self.tipoDataSet)
+        return kernelObject.doKPCA()
